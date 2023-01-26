@@ -11,6 +11,7 @@
   // Replace inputSelector with a CSS selector
   // matching your search input
   container: '#searchbox',
+  debug: true,
   // Set debug to true to inspect the dropdown
   // debug: true,
 });
