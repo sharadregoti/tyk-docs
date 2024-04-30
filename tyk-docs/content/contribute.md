@@ -22,5 +22,5 @@ We appriciate any form of engagement and contribution to our documentation. You 
 
 Our docs are compiled using the [Hugo static site generator](https://gohugo.io/).
 
-The [Readme](https://github.com/TykTechnologies/tyk-docs#readme) has details of how to construct docs pages.
+The [Readme](https://github.com/TykTechnologies/tyk-docs#readme) has details for how to construct docs pages.
 
