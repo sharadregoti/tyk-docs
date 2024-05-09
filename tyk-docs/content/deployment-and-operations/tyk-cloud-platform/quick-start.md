@@ -39,18 +39,18 @@ By default, a cloud data plane will be deployed for you. You can also deploy hyb
   * Select the control plane that was deployed for you.
   * Click on the "Manage APIs" button under "API MANAGER DASHBOARD" in the "Tyk component links" section to access the Tyk Dashboard.
 
-{{< img src="/img/cloud/tyk-cloud-tyk-onboarding-dashboard.png" alt="Accessing Tyk Dashboard from Tyk Cloud" width="500px" >}}
+{{< img src="/img/cloud/tyk-cloud-tyk-onboarding-dashboard.png" alt="Accessing Tyk Dashboard from Tyk Cloud" width="800px" >}}
 
 * Click the "Design new API" button to start the API definition creation process.
 
-{{< img src="/img/cloud/tyk-cloud-create-api.png" alt="Accessing Creating an API" width="500px" >}}
+{{< img src="/img/cloud/tyk-cloud-create-api.png" alt="Accessing Creating an API" width="1000px" >}}
 
 * Give your API a name - We’ll use “httpbin” for the rest of this quick start.
 * In the "Type" section, please select "HTTP".
 * Keep https://httpbin.org/ as the upstream URL.
 * Finally, click on the button "CONFIGURE API".
 
-{{< img src="/img/cloud/create-api-tyk-cloud.png" alt="Accessing Creating an API" width="500px" >}}
+{{< img src="/img/cloud/create-api-tyk-cloud.png" alt="Accessing Creating an API" width="1000px" >}}
 
 * Select to which gateway you want to deploy this API, select the "edge" tags to deploy to the cloud data plane.
 
@@ -65,35 +65,35 @@ In this step, we will guide you through the process of creating a policy and key
 
 #### Create a Policy:
 
-* Click on "Policies" under the "System Management" section on the left-hand side.
+* Click on "Policies" under the "API Management" section on the left-hand side.
 * Click on the button "ADD POLICY".
 
-{{< img src="/img/cloud/tyk-cloud-add-policy.png" alt="Policy section" width="500px" >}}
+{{< img src="/img/cloud/tyk-cloud-add-policy.png" alt="Policy section" width="1000px" >}}
 
 * In the "Access Rights" section, please select "httpbin".
 
-{{< img src="/img/cloud/tyk-cloud-policy-access-rights.png" alt="Policy section" width="500px" >}}
+{{< img src="/img/cloud/tyk-cloud-policy-access-rights.png" alt="Policy section" width="1000px" >}}
 
 * Go to the "Configurations" section and add a Policy Name (e.g., 'Default Policy httpbin').
 * Under the "Settings" section, add an expiry date (e.g., '2 weeks').
 * Click on the button "Create Policy".
-{{< img src="/img/cloud/tyk-cloud-policy-configurations.png" alt="Policy section" width="500px" >}}
+{{< img src="/img/cloud/tyk-cloud-policy-configurations.png" alt="Policy section" width="1000px" >}}
 
 #### Create a Key:
 
-* Click on "Keys" under the "System Management" section on the left-hand side.
+* Click on "Keys" under the "API Management" section on the left-hand side.
 * Click on the button "ADD KEY".
 
-{{< img src="/img/cloud/tyk-cloud-add-key.png" alt="Key section" width="500px" >}}
+{{< img src="/img/cloud/tyk-cloud-add-key.png" alt="Key section" width="1000px" >}}
 
 * In the "Access Rights" section, please select the previously created Policy (e.g., 'Default Policy httpbin').
 
-{{< img src="/img/cloud/tyk-cloud-key-access-rights.png" alt="Key section" width="500px" >}}
+{{< img src="/img/cloud/tyk-cloud-key-access-rights.png" alt="Key section" width="1000px" >}}
 
 * Go to the "Configurations" section and give your key an alias (e.g., 'platform_team').
 * Click on the button "Create Key".
 
-{{< img src="/img/cloud/tyk-cloud-key-configurations.png" alt="Key section" width="500px" >}}
+{{< img src="/img/cloud/tyk-cloud-key-configurations.png" alt="Key section" width="1000px" >}}
 
 Congratulations! Your key has now been created!
 
@@ -109,19 +109,19 @@ Now that your API is created, you can explore and manage it through the Tyk Dash
 
 After creating a Policy and a Key, proceed to "Postman" to test and interact with the API you've just created.
 
-* Click on "APIs" under the "System Management" section on the left-hand side.
+* Click on "APIs" under the "API Management" section on the left-hand side.
 * Select the previously created API (e.g., 'httpbin').
 * Copy the API URL.
 
-{{< img src="/img/cloud/tyk-cloud-copy-api-url.png" alt="API section" width="500px" >}}
+{{< img src="/img/cloud/tyk-cloud-copy-api-url.png" alt="API section" width="800px" >}}
 
 * In Postman, choose "Send an API request".
 
-{{< img src="/img/cloud/tyk-cloud-postman-send-api-request.png" alt="Postman section" width="500px" >}}
+{{< img src="/img/cloud/tyk-cloud-postman-send-api-request.png" alt="Postman section" width="800px" >}}
 
 * Enter the copied URL and add "https://" at the beginning.
 
-{{< img src="/img/cloud/tyk-cloud-postman-enter-url.png" alt="Postman section" width="500px" >}}
+{{< img src="/img/cloud/tyk-cloud-postman-enter-url.png" alt="Postman section" width="800px" >}}
 
 * In the Tyk Gateway Dashboard, navigate to "Keys" under the "System Management" section on the left-hand side.
 * Copy the previously created "Key ID".
@@ -133,7 +133,7 @@ After creating a Policy and a Key, proceed to "Postman" to test and interact wit
 * Paste the "Key ID" into the "Value" field.
 * Click the "Send" button to submit the request.
 
-{{< img src="/img/cloud/tyk-cloud-postman-authorization.png" alt="Key section" width="500px" >}}
+{{< img src="/img/cloud/tyk-cloud-postman-authorization.png" alt="Key section" width="800px" >}}
 
 #### Curl
 
@@ -150,7 +150,7 @@ curl -X GET "${API URL}" -H "Authorization: ${KEY ID}"
 mEyNTVkNzIxM2NkIiwiaCI6Im11cm11cjEyOCJ9"'
 ```
 
-{{< img src="/img/cloud/tyk-cloud-cmd-example.png" alt="Key section" width="800px" >}}
+{{< img src="/img/cloud/tyk-cloud-cmd-example.png" alt="Key section" width="1000px" >}}
 
 ## Next Steps
 
