@@ -41,7 +41,7 @@ By default, a cloud data plane will be deployed for you. You can also deploy hyb
 
 {{< img src="/img/cloud/tyk-cloud-tyk-onboarding-dashboard.png" alt="Accessing Tyk Dashboard from Tyk Cloud" width="800px" >}}
 
-* Click the "Design new API" button to start the API definition creation process.
+* Click the "Add New API" button to start the API definition creation process.
 
 {{< img src="/img/cloud/tyk-cloud-create-api.png" alt="Accessing Creating an API" width="1000px" >}}
 
