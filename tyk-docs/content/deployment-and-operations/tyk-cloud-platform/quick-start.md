@@ -117,7 +117,7 @@ After creating a Policy and a Key, proceed to "Postman" to test and interact wit
 
 * In Postman, choose "Send an API request".
 
-{{< img src="/img/cloud/tyk-cloud-postman-send-api-request.png" alt="Postman section" width="800px" >}}
+{{< img src="/img/cloud/tyk-cloud-postman-send-api-request.png" alt="Postman section" width="600px" >}}
 
 * Enter the copied URL and add "https://" at the beginning.
 
