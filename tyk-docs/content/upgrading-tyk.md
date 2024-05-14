@@ -24,6 +24,7 @@ All our components adhere to a few common standards:
 
 
 ## Upgrade Tyk components in Tyk Cloud 
+
 Tyk Cloud users manage Tyk deployments via the Tyk Cloud Console. You can upgrade Tyk Dashboard and the Gateways in the Cloud Data Planes using this console. Please consult our upgrade guides for [Cloud SaaS]({{< ref "developer-support/upgrading-tyk/cloud/cloud-saas/" >}}) and [Hybrid SaaS]({{< ref "developer-support/upgrading-tyk/cloud/hybrid/" >}}) to learn more!
 
 ---
