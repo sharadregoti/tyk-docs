@@ -38,6 +38,7 @@
 .badge center p {
     text-wrap: balance;
     font-weight: 500;
+    line-height: 1.4em;
 }
 
 .badge p strong {
@@ -110,8 +111,9 @@
   font-weight: bold;
   padding: 4px;
   transform: translateX(-50%);
-  background-color: $brand-light-green;
-  color: $brand-black;
+  background-color: none !important;
+  background: none !important;
+  color: $brand-black !important;
 }
 
 .badge .nav.read::before {
