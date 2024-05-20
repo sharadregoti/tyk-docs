@@ -2212,6 +2212,94 @@ paths:
                 Status: OK
                 Message: User created
                 Meta: ''
+  /api/users/search:
+    get:
+      summary: Retrieve user search results
+      deprecated: true
+      description: |
+        This endpoint allows you to search for users by providing their email address as a query parameter.
+      parameters:
+        - name: q
+          in: query
+          description: Query term used to search for users (email address)
+          required: true
+          schema:
+            type: string
+          example: "user"
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              example:
+                users:
+                  - api_model: { }
+                    id: "65e9a499b1f93be3d4b531fb"
+                    first_name: "John"
+                    last_name: "Smith"
+                    email_address: "user1@tyk.io"
+                    org_id: "65e9a499b1f93be3d4b531ea"
+                    active: true
+                    access_key: "e4800a05614848994429f83d410b549b"
+                    user_permissions:
+                      IsAdmin: "admin"
+                    group_id: ""
+                    password_max_days: 0
+                    password_updated: "2024-03-07T13:27:21.354+02:00"
+                    last_login_date: "0001-01-01T01:44:24+01:44"
+                    created_at: "2024-03-07T13:27:21.354+02:00"
+                pages: 1
+        '404':
+          description: Error response
+          content:
+            application/json:
+              example:
+                status: "Error"
+                message: "Could not search users"
+    post:
+      summary: Retrieve user search results
+      description: |
+        This endpoint allows you to search for users by providing their email address in the request payload.
+      requestBody:
+        description: User search criteria
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserSearchCriteria'
+            example:
+              filters:
+                query: "user"
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              example:
+                users:
+                  - api_model: { }
+                    id: "65e9a499b1f93be3d4b531fb"
+                    first_name: "John"
+                    last_name: "Smith"
+                    email_address: "user1@tyk.io"
+                    org_id: "65e9a499b1f93be3d4b531ea"
+                    active: true
+                    access_key: "e4800a05614848994429f83d410b549b"
+                    user_permissions:
+                      IsAdmin: "admin"
+                    group_id: ""
+                    password_max_days: 0
+                    password_updated: "2024-03-07T13:27:21.354+02:00"
+                    last_login_date: "0001-01-01T01:44:24+01:44"
+                    created_at: "2024-03-07T13:27:21.354+02:00"
+                pages: 1
+        '404':
+          description: Error response
+          content:
+            application/json:
+              example:
+                status: "Error"
+                message: "Could not search users"
 
   /api/users/{USER_ID}:
     get:
@@ -2363,7 +2451,22 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/NewDataSource"
+              oneOf:
+                - $ref: "#/components/schemas/NewDataSource"
+                - $ref: "#/components/schemas/ImportOrPatchFromURL"
+          application/vnd.tyk.udg.v2.openapi:
+            schema:
+              oneOf:
+                - $ref: "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.0/schema.json"
+                - $ref: "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.0/schema.yaml"
+          application/vnd.tyk.udg.v2.asyncapi:
+            schema:
+              oneOf:
+                - $ref: "https://raw.githubusercontent.com/asyncapi/spec-json-schemas/master/schemas/2.0.0.json"
+                - $ref: "https://raw.githubusercontent.com/asyncapi/spec-json-schemas/master/schemas/2.1.0.json"
+                - $ref: "https://raw.githubusercontent.com/asyncapi/spec-json-schemas/master/schemas/2.2.0.json"
+                - $ref: "https://raw.githubusercontent.com/asyncapi/spec-json-schemas/master/schemas/2.3.0.json"
+                - $ref: "https://raw.githubusercontent.com/asyncapi/spec-json-schemas/master/schemas/2.4.0.json"
       responses:
         '200':
           description: A new data source imported
@@ -4385,6 +4488,19 @@ components:
           x-go-name: Triggers
       type: object
       x-go-package: github.com/TykTechnologies/tyk/apidef
+    UserSearchCriteria:
+      type: object
+      properties:
+        filters:
+          type: object
+          properties:
+            query:
+              type: string
+              description: Query term used to search for users (email address)
+          required:
+            - query
+      required:
+        - filters
     ValidatePathMeta:
       properties:
         error_response_code:
