@@ -1,0 +1,48 @@
+{
+    "golang":[
+        {
+            "category": "Auth",
+            "title": "Certificate DN Injector",
+            "description": "Injects client certificate attributes as a Header",
+            "url": "https://github.com/TykTechnologies/custom-plugin-examples/blob/master/plugins/go-pre-cert_inject_dn"
+        },
+        {
+            "category": "Auth",
+            "title": "OAuth2 Introspection",
+            "description": "Performs OAuth2 introspection to validate JWT or opaque token",
+            "url": "https://github.com/TykTechnologies/custom-plugin-examples/tree/master/plugins/go-postauth-oauth2_introspection"
+        },
+        {
+            "category": "Example",
+            "title": "Multiple Hook Example",
+            "description": "Demonstrates using both Post and Auth hooks in a Go plugin",
+            "url": "https://github.com/TykTechnologies/custom-plugin-examples/tree/master/plugins/go-auth-multiple_hook_example"
+        },
+        {
+            "category": "Auth",
+            "title": "Metadata Injector",
+            "description": "Injects key metadata into a header",
+            "url": "https://github.com/TykTechnologies/custom-plugin-examples/tree/master/plugins/go-post-inject_metadata"
+        },
+        {
+            "category": "Auth",
+            "title": "Basic Auth with DynamoDB",
+            "description": "Checks Basic Auth credentials against AWS DynamoDB",
+            "url": "https://github.com/TykTechnologies/custom-plugin-examples/tree/master/plugins/go-auth-basicauth_dynamodb"
+        },
+        {
+            "category": "Caching",
+            "title": "Custom Cache on Upstream Failure",
+            "description": "Implements custom caching when upstream fails",
+            "url": "https://gist.github.com/zalbiraw/d84ab1aef532ddc2b2ee3c6df81d836b"
+        }
+    ],
+    "javascript": [
+        {
+            "category": "Auth",
+            "title": "Auth Token & mTLS",
+            "description": "Implements authentication token and mTLS protection",
+            "url": "https://github.com/TykTechnologies/custom-plugin-examples/tree/master/plugins/js-pre-mtls_token_auth"
+        }
+    ]
+}

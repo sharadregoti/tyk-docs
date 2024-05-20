@@ -2,6 +2,9 @@
 title: Plugins Hub 
 description: "Contains links to resources with example plugins"
 tags: ["custom", "plugin", "plugins hub", "marketplace", "go", "goplugins",  "go plugin", "tyk go plugin", "golang plugin", "Python", "Javascript", "JVMS"]
+diffTitle: true
+landingPage: true
+layout: plugins
 ---
 
 <!-- Want to try and get a design layout setup for this that uses stylesheets from home page to offer similar layout -->

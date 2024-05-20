@@ -10,6 +10,14 @@
   transition: box-shadow 0.3s;
 }
 
+.release-card.visible {
+  display: block;
+}
+
+.release-card:not(.visible) {
+  display: none;
+}
+
 .release-card:hover {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   transform: scale(1.05);
@@ -59,4 +67,37 @@
   &:hover {
     background: #E5E5E8;
   }
+}
+
+.release-header {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.release-card-body {
+  min-height: 0;
+}
+
+.overflow-tooltip {
+  position: relative; /* Ensure the tooltip is positioned relative to this */
+}
+
+.release-tooltip {
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  display: none;
+  z-index: 999;
+  bottom: 100%; /* Position above the text */
+  left: 0; /* Align to the left edge of the parent */
+  white-space: nowrap; /* Ensure the tooltip does not wrap */
+  transform: translateY(-5px); /* Adjust to avoid overlapping */
+}
+
+.overflow-tooltip:hover + .release-tooltip {
+  display: block;
 }
