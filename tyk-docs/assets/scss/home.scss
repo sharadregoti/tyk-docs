@@ -247,10 +247,37 @@ ol, ul {
   .container-xl, .container-xxl {
       max-width: 95% !important;
   }
+  .container-mobile {
+    visibility: hidden;
+  }
+
+  .mobile-banner {
+    visibility: hidden;
+  }
 }
 
 @media (min-width: 1200px) {
   .container-xl {
       max-width: 97%;
+  }
+  .banner-mobile {
+    visibility: hidden;
+  }
+}
+
+/* Mobile Styling */
+
+@media (max-width: 768px) {
+  .container-mobile, .mobile-banner {
+      max-width: 95% !important;
+  }
+
+  /*Hide Desktop Banner */
+  .desktop-banner {
+    display: none;
+  }
+
+  .banner  {
+    display: none;
   }
 }
