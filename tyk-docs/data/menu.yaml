@@ -3788,7 +3788,7 @@ menu:
             path: /product-stack/tyk-operator/release-notes/operator-0.16
             category: Page
             show: True
-    - title: "Tyk Streaming"
+    - title: "Event Streaming"
       category: Directory
       show: True
       menu:
