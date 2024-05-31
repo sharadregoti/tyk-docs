@@ -29,7 +29,8 @@ Tyk Streams seamlessly integrates with the Tyk API Gateway, allowing you to mana
 - **Analytics**: Monitor the usage and performance of your async APIs with detailed analytics and reporting. Gain insights into consumer behaviour and system health.
 - **Developer Portal**: Publish your async APIs to the Tyk Developer Portal, providing a centralised catalogue for discovery, documentation and subscription management.
 
-### Configuration as Code
+
+#### Configuration as Code
 
 Tyk Streams configuration natively integrates with our OpenAPI format. This enables a *configuration-as-code* approach, where async API definitions can be version-controlled, collaborated on and deployed using GitOps workflows.
 
@@ -66,11 +67,12 @@ Tyk Streams configuration natively integrates with our OpenAPI format. This enab
 
 ## Configuring Async APIs via Dashboard UI
 
-The Tyk Dashboard provides a user-friendly interface for defining and managing async APIs. You can easily specify event broker details, subscribe to specific topics or channels, and configure security policies, transformations, and other API management capabilities.
+The Tyk Dashboard provides a user-friendly interface for defining and managing async APIs. You can easily specify event broker details, subscribe to specific topics or channels, configure security policies, transformations and other API management capabilities.
 
 ## Comparison to Other Products
 
 While some API management platforms offer basic support for async APIs and event-driven architectures, Tyk Streams stands out by providing a comprehensive and flexible solution:
+
 - **Extensive protocol support**: Tyk Streams supports a wide range of event brokers and protocols out of the box, including Kafka, MQTT, WebSocket, and more.
 - **Powerful mediation capabilities**: Tyk Streams allows you to transform and enrich event data, enabling protocol mediation and compatibility with diverse client requirements.
 - **Seamless integration**: Async APIs are managed alongside synchronous APIs within the Tyk platform, providing a unified developer portal, consistent security policies and centralised analytics.
