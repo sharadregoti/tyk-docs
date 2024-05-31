@@ -14,6 +14,7 @@ tags: [ "streaming", "events", "event driven architecture", "event driven archit
 - Current limitations
 - Dependencies -->
 
+**TO DO add CTA and Async API Management Capabilities here**
 
 Tyk Streams is a powerful new feature in the Tyk API Management platform that enables organisations to securely expose, manage and monetise real-time event streams and asynchronous APIs. With Tyk Streams, you can easily connect to various event brokers and streaming platforms, such as Apache Kafka, MQTT, AMQP etc, and expose them as managed API endpoints to internal and external consumers.
 
