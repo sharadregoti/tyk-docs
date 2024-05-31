@@ -1,5 +1,5 @@
 ---
-title: Key Concepts
+title: Gloassary
 description: Explains key concepts of streaming
 tags: [ "streaming", "events", "event driven architecture", "event driven architectures", "kafka" ]
 ---
