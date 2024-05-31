@@ -18,11 +18,11 @@ To effectively use Tyk Streams for managing async APIs, it's important to first 
 
 An event represents a significant change or occurrence within a system, such as a user action, a sensor reading, or a data update. Events are typically lightweight and contain minimal data, often just a unique identifier and a timestamp.
 
-## Stream*
+## Stream
 
 A stream is a continuous flow of events ordered by time. Streams allow for efficient, real-time processing and distribution of events to multiple consumers.
 
-## Publisher* (or Producer)
+## Publisher (or Producer)
 
 A publisher is an application or system that generates events and sends them to a broker or event store for distribution to interested parties.
 
