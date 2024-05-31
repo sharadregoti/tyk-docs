@@ -22,7 +22,8 @@ Terms
 - Infrastructure
     - Message queues (RabbitMQ, Kafka)
     - MQTT
-    - Failure semantics, e.g. exactly-once, at-most-once, at-least-once
+
+- Failure semantics, e.g. exactly-once, at-most-once, at-least-once
 
 - Example application scenarios
     - IoT
