@@ -4,7 +4,7 @@ description: Explains purpose of Tyk Streaming and use cases
 tags: [ "streaming", "events", "event driven architecture", "event driven architectures", "kafka" ]
 ---
 
-Here explain the following content:
+<!-- Here explain the following content:
 
 - Purpose of Tyk streaming
 - Use cases of Tyk streaming
@@ -12,4 +12,20 @@ Here explain the following content:
     - Append information to event message from publisher
 - Streaming technologies that can integrate with Tyk
 - Current limitations
-- Dependencies
+- Dependencies -->
+
+## What is Tyk Streams?
+
+Tyk Streams is a powerful new feature in the Tyk API Management platform that enables organisations to securely expose, manage and monetise real-time event streams and asynchronous APIs. With Tyk Streams, you can easily connect to various event brokers and streaming platforms, such as Apache Kafka, MQTT, AMQP etc, and expose them as managed API endpoints to internal and external consumers.
+
+The purpose of Tyk Streams is to provide a unified platform for managing both synchronous APIs (such as REST and GraphQL) and asynchronous APIs and event-driven architectures. This allows organisations to leverage the full potential of their event-driven systems while maintaining the same level of security, control, and visibility they expect from their API management solution.
+
+## How Tyk Streams Enables Async API Support?
+
+Tyk Streams seamlessly integrates with the Tyk API Gateway, allowing you to manage asynchronous APIs and event streams alongside your existing synchronous APIs. It provides a range of capabilities to support async API management, including:
+
+- Protocol Mediation: Tyk Streams can mediate between different asynchronous protocols and API styles, such as WebSocket, Server-Sent Events (SSE), and Webhooks. This allows you to expose your event streams in a format that is compatible with your consumers' requirements.
+- Security: Apply the same security policies and controls to your async APIs as you do to your synchronous APIs. This includes features like  authentication and authorization.
+- Transformations: Transform and enrich your event data on the fly using Tyk's powerful middleware and plugin system. This allows you to adapt your event streams to meet the needs of different consumers.
+- Analytics: Monitor the usage and performance of your async APIs with detailed analytics and reporting. Gain insights into consumer behaviour and system health.
+- Developer Portal: Publish your async APIs to the Tyk Developer Portal, providing a centralised catalogue for discovery, documentation, and subscription management.
