@@ -8,5 +8,8 @@ Here explain the following content:
 
 - Purpose of Tyk streaming
 - Use cases of Tyk streaming
+    - Tyk can act as ETL
+    - Append information to event message from publisher
 - Streaming technologies that can integrate with Tyk
 - Current limitations
+- Dependencies

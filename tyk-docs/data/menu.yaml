@@ -3796,6 +3796,10 @@ menu:
         path: /product-stack/tyk-streaming/overview
         category: Page
         show: True
+      - title: "Glossary"
+        path: /product-stack/tyk-streaming/glossary
+        category: Page
+        show: True
       - title: "Key Concepts"
         path: /product-stack/tyk-streaming/key-concepts
         category: Page

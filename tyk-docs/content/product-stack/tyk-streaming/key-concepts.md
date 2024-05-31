@@ -9,6 +9,8 @@ Architectural overview
 - Integrate with multiple brokers
 - API Management hooks between publisher, gateway and subscriber (Events are availble as APIs)
 
+Explain example roles of publisher and subscriber
+
 Structure of a Tyk Stream Event
 
 Terms
