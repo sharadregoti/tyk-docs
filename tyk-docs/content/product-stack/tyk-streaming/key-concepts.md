@@ -9,6 +9,8 @@ Architectural overview
 - Integrate with multiple brokers
 - API Management hooks between publisher, gateway and subscriber (Events are availble as APIs)
 
+Structure of a Tyk Stream Event
+
 Terms
 - Asynchronous
 - Publish/subscribe
