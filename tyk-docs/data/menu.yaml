@@ -3788,6 +3788,22 @@ menu:
             path: /product-stack/tyk-operator/release-notes/operator-0.16
             category: Page
             show: True
+    - title: "Tyk Streaming"
+      category: Directory
+      show: True
+      menu:
+      - title: "Overview"
+        path: /product-stack/tyk-streaming/overview
+        category: Page
+        show: True
+      - title: "Key Concepts"
+        path: /product-stack/tyk-streaming/key-concepts
+        category: Page
+        show: True
+      - title: "Getting Started"
+        path: /product-stack/tyk-streaming/configuration
+        category: Page
+        show: True
     - title: "Tyk Sync (Open Source)"
       category: Directory
       show: True
