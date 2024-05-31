@@ -256,7 +256,7 @@ ol, ul {
     visibility: hidden;
   }
 
-  .mobile-banner {
+  .mobile-banner, .mobile-home-section {
     display: none;
     visibility: hidden;
   }
@@ -269,7 +269,7 @@ ol, ul {
   }
 
   /* Mobile Banner - hidden */
-  .mobile-banner {
+  .mobile-banner, .learn, .mobile-explore-section {
     display: none;
 }
 
@@ -289,7 +289,7 @@ ol, ul {
   }
   
 
-  .banner  {
+  .banner, .home-section  {
     display: none;
   }
 
@@ -317,7 +317,7 @@ ol, ul {
       
   }
 
-  .mobile-content {
+  .mobile-content, .learn-about {
     text-align: center;
   }
 
@@ -353,5 +353,8 @@ ol, ul {
     text-decoration: underline;
 } 
 
+.mobile-home-section {
+  padding-top: 15%;
+}
 
 }

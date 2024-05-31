@@ -21,7 +21,7 @@
 </div>
 
 <!-- Start of mobile banner-->
-<div class="banner border mobile-banner">
+<div class="banner  mobile-banner">
     <div class="container-mobile mobile-section-padding">
         <div class="mobile-row">
             <div class="col-12 col-lg-7">
@@ -91,7 +91,65 @@
     </div>
 </div>
 
-<!-- Mobile search -->
+<!-- Start of Learn about Tyk API management on Mobile-->
+<section class="learn">
+    <div class="container-xl section-padding">
+        <div class="learn-about ">
+            <a class="home_btn sec-btn"
+               href= "{{ "apim/" | relURL }}">
+                Learn about Tyk API management
+                <img class="home-img" title="Learn about Tyk API management"
+                     alt="Learn about Tyk API management" src="{{ "img/black-forward-arrow.svg" | relURL }}"/>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!--Start of browse by product on mobile-->
+<section class="mobile-home-section explore-section mobile-explore-section">
+    <div class="container-xl section-padding">
+        <div class="d-flex justify-content-between align-items-center component-heading">
+            <div>
+                <div class="home-section-heading">Browse by Product</div>
+                <div class="fs-16  font-400 fs-normal text-sec lh-normal">
+                    Deployment and Operations
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {{- range $.Site.Data.tyk_stack.stacks -}}
+
+            <div class="col-12 col-md-6">
+                {{- range . -}}
+                <a href="{{.path | relURL }}" class="stack-box d-flex align-items-center">
+                    <div class="me-2">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="32"
+                                height="32"
+                                viewBox="0 0 32 32"
+                                fill="none"
+                        >
+                            <path
+                                    d="M31.9559 14.5613C31.2507 6.45232 24.5069 0.0871935 16.2204 0H3.17355H2.73278H0V2.74659V3.57493V16.654C0.352617 24.9809 7.05234 31.6948 15.427 32H28.8264H29.2672H32V29.2534V14.6049C32 14.5613 31.9559 14.5613 31.9559 14.5613Z"
+                                    fill="#20EDBA"
+                            />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="stack-heading">{{.title}}</div>
+                        <div class="fs-xs text-sec font-400 lh-20">
+                            {{.description}}
+                        </div>
+                    </div>
+                </a>
+                {{- end -}}
+            </div>
+            {{- end -}}
+        </div>
+    </div>
+</section>
+
 
 
 <!--Start of Try it out section is here-->
