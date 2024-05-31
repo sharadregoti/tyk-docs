@@ -5,7 +5,7 @@ tags: [ "streaming", "events", "event driven architecture", "event driven archit
 ---
 
 Architectural overview
-- Tyk is now a intermediate broker between broker and subscribers, Gravitee calls this broker proxy
+- Tyk is now a intermediate broker between broker and subscribers, This is sometimes known as broker proxy
 - Integrate with multiple brokers
 - API Management hooks between publisher, gateway and subscriber (Events are availble as APIs)
 
