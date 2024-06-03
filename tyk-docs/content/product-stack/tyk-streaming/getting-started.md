@@ -21,15 +21,17 @@ To get started with Tyk Streams, you will need:
 
 In the Tyk Dashboard, create a new API and select the *Open API* option.
 
-**TODO add image here**
+{{< img src="/img/streams/create-new-api.png" alt="Create New API" width="1000px" >}}
+
+Select *Active* from the *Gateway Status* drop down list and then select *External* from the *Access* drop down list.
 
 Navigate to the *Streaming* section and click on *Add Stream*.
 
-**TODO add image here**
+{{< img src="/img/streams/streams.png" alt="Add Stream" width="1000px" >}}
 
 Provide a name for your stream.
 
-**TODO add image here with name added**
+{{< img src="/img/streams/name-streams.png" alt="Add stream name" width="1000px" >}}
 
 In the stream configuration, define your input and output:
 
