@@ -4,14 +4,6 @@ description: Explains key concepts of streaming
 tags: [ "streaming", "events", "event driven architecture", "event driven architectures", "kafka" ]
 ---
 
-<!-- The glossary could either be integrated with key concepts or in a separate page.
-
-Should we explain the following terms here also:
-
-- synchronous
-- asynchronous
-- event driven architecture (EDA) -->
-
 To effectively use Tyk Streams for managing async APIs, it's important to first understand the terminology and [key concepts]({{< ref "product-stack/tyk-streaming/key-concepts" >}})
 
 ## Event
