@@ -12,7 +12,7 @@ Tyk Streams is fully embedded within the Tyk Gateway, enabling seamless scaling 
 
 Key benefits of this embedded architecture include:
 
-- **Unified scaling**:** Tyk Streams inherits the scaling capabilities of Tyk Gateway, ensuring optimal performance as your API workload increases.
+- **Unified scaling**: Tyk Streams inherits the scaling capabilities of Tyk Gateway, ensuring optimal performance as your API workload increases.
 - **Efficient resource utilization**: By leveraging the same infrastructure as Tyk Gateway, Tyk Streams minimizes resource overhead and simplifies deployment.
 - **Seamless integration**: Tyk Streams works seamlessly with existing Tyk Gateway deployments, requiring no changes to your current architecture.
 
