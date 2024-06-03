@@ -3824,6 +3824,10 @@ menu:
         path: /product-stack/tyk-streaming/configuration
         category: Page
         show: True
+      - title: "Developer Portal Integration"
+        path: /product-stack/tyk-streaming/developer-portal-integration
+        category: true
+        show: True
       - title: "Troubleshooting & FAQs"
         path: /product-stack/tyk-streaming/troubleshooting
         category: Page
