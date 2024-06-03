@@ -4,6 +4,8 @@ description: Explains deployment considerations for APIs
 tags: [ "Deployment", "Async APIs" ]
 ---
 
+When deploying Tyk Streams, understanding its scaling and performance capabilities, as well as its high availability features, is crucial for ensuring a robust and efficient API infrastructure.
+
 ## Scaling and Performance
 
 Tyk Streams is fully embedded within the Tyk Gateway, enabling seamless scaling and high performance. As your API traffic grows, Tyk Streams scales effortlessly alongside your Tyk Gateway instances. No additional configuration or separate infrastructure is required.
