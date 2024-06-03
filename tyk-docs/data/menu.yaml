@@ -3820,10 +3820,6 @@ menu:
         path: /product-stack/tyk-streaming/getting-started
         category: Page
         show: True
-      - title: "Configuration"
-        path: /product-stack/tyk-streaming/configuration
-        category: Page
-        show: True
       - title: "Deployment Considerations"
         path: /product-stack/tyk-streaming/deployment-considerations
         category: Page
