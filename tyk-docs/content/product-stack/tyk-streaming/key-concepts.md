@@ -29,9 +29,11 @@ Terms
     - IoT
     - Infrastructure for domain driven design, e.g. event bus to notify state changes between micro-services -->
 
-Tyk Streams seamlessly integrates with the Tyk API Gateway to provide a unified platform for managing both synchronous and asynchronous APIs. This section will provide an overview of the architecture, integration points, and key capabilities. Tyk Streams natively integrated as part of Tyk API Gateway and does not have any third party dependencies.
+Tyk Streams seamlessly integrates with the Tyk API Gateway to provide a unified platform for managing both synchronous and asynchronous APIs. This section will provide an overview of the architecture, integration points, and key capabilities. Please consult the [glossary]({{< ref "product-stack/tyk-streaming/glossary" >}}) for explanations of key terminology.
 
-<!TODO: Add architectural image>
+Tyk Streams natively integrated as part of Tyk API Gateway and does not have any third party dependencies.
+
+<!-- <!TODO: Add architectural image> -->
 
 The above diagram illustrates the high-level architecture of Tyk Streams and its integration with the Tyk API Gateway. Key components include:
 - **Tyk API Gateway**: The core API management platform that handles API requests, applies policies and routes requests to the appropriate backend services.
@@ -48,8 +50,6 @@ Tyk Streams integrates with the Tyk API Gateway through the following mechanisms
 **Analytics**: Async API traffic is captured and reported via Prometheus, OpenTelementry or StatsD, providing visibility into usage, performance, and errors.
 
 ## Connectors and Protocol Mediation
-
-**TODO: Explain connectors here**
 
 Tyk Streams provides out-of-the-box connectors for popular event brokers and async protocols, including:
 
