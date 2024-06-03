@@ -4,18 +4,6 @@ description: Explains purpose of Tyk Streaming and use cases
 tags: [ "streaming", "events", "event driven architecture", "event driven architectures", "kafka" ]
 ---
 
-<!-- Here explain the following content:
-
-- Purpose of Tyk streaming
-- Use cases of Tyk streaming
-    - Tyk can act as ETL
-    - Append information to event message from publisher
-- Streaming technologies that can integrate with Tyk
-- Current limitations
-- Dependencies -->
-
-**TO DO add CTA and Async API Management Capabilities here**
-
 Tyk Streams is a powerful new feature in the Tyk API Management platform that enables organisations to securely expose, manage and monetise real-time event streams and asynchronous APIs. With Tyk Streams, you can easily connect to various event brokers and streaming platforms, such as Apache Kafka, MQTT, AMQP etc, and expose them as managed API endpoints to internal and external consumers.
 
 The purpose of Tyk Streams is to provide a unified platform for managing both synchronous APIs (such as REST and GraphQL) and asynchronous APIs and event-driven architectures. This allows organisations to leverage the full potential of their event-driven systems while maintaining the same level of security, control, and visibility they expect from their API management solution.
