@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   tyk-hugo:
-    image: klakegg/hugo:latest-ext
+    image: klakegg/hugo:0.92.1-ext-alpine
     container_name: tyk-hugo
 
     environment:

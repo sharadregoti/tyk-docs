@@ -71,6 +71,8 @@ curl -X POST -d '{"message":"Hello, Tyk Streams!"}' http://localhost:8080/<liste
 
 Verify that the message posted in step 1 is received in the *wscat* terminal.
 
+{{< img src="/img/streams/streams-ws-example.png" alt="streams websocket example" width="1000px" >}}
+
 ## Debugging
 
 If you encounter issues, here are a few things to check:
