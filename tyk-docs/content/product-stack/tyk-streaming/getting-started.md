@@ -12,6 +12,8 @@ To get started with Tyk Streams, you will need:
 - Docker installed on your machine
 - A WebSocket testing tool like [wscat](https://github.com/websockets/wscat) for testing your async APIs
 
+---
+
 ## Install Tyk Streams Demo
 
 The *stream* branch of the [tyk-pro-docker-demo](https://github.com/TykTechnologies/tyk-pro-docker-demo) repository provides a docker compose environment that can be run locally to try out Tyk streams, using the following docker images:
@@ -24,20 +26,21 @@ The *stream* branch of the [tyk-pro-docker-demo](https://github.com/TykTechnolog
 
 Clone the [tyk-pro-docker-demo](https://github.com/TykTechnologies/tyk-pro-docker-demo) repository using *git* or the *GitHub CLI* command:
 
-#### git
+##### git
 
 Issue the following *git* command to download the Tyk streams demo:
 
 ```bash
 git clone https://github.com/TykTechnologies/tyk-pro-docker-demo
 ```
-#### GitHub CLI
+##### GitHub CLI
 
 Issue the following **Github CLI** command to download the Tyk streams demo:
 
 ```bash
 gh repo clone TykTechnologies/tyk-pro-docker-demo
 ```
+---
 
 ### Post Install
 
@@ -46,6 +49,8 @@ Once the demo has downloaded, checkout the stream branch by issuing the followin
 ```bash
 git checkout stream
 ```
+
+---
 
 ### Start Demo
 
@@ -57,6 +62,8 @@ Start the Tyk Streams demo by issuing the following command:
 
 - When prompted enter your Tyk license key. Login credentials will then be provided in the console output.
 - Open Tyk Dashboard in your browser by visiting [http://localhost:3000](http://localhost:3000) and login with the provided credentials.
+
+---
 
 ## Configuring a Basic Async API
 
@@ -94,6 +101,8 @@ In the above configuration it can be seen that:
 
 Save your API definition.
 
+---
+
 ## Testing Your Async API
 
 Lets test the async API we just created.
@@ -114,6 +123,8 @@ Verify that the message posted in step 1 is received in the *wscat* terminal.
 
 {{< img src="/img/streams/streams-ws-example.png" alt="streams websocket example" width="1000px" >}}
 
+---
+
 ## Debugging
 
 If you encounter issues, here are a few things to check:
@@ -121,4 +132,13 @@ If you encounter issues, here are a few things to check:
 - Verify the API definition is properly configured in the Tyk Dashboard
 - Check the Tyk Gateway logs for any error messages
 
-With this, you have successfully set up Tyk Streams and created your first async API! You can now start exploring more advanced configurations and use cases.
+Tyk Streams is currently an [Early Access]({{< ref "frequently-asked-questions/using-early-access-features" >}}) feature. If a crash or an issue is encountered then Tyk Gateway can be restarted and the logs can be inspected as follows:
+
+```bash
+docker compose restart tyk-gateway
+docker compose logs tyk-gateway -f
+```
+
+---
+
+With this getting started guide, you have successfully set up Tyk Streams and created your first async API! You can now start exploring more [advanced configurations]({{< ref "api-management/async-apis/advanced-use-cases" >}}) and [use cases]({{< ref "api-management/async-apis/use-cases" >}}).
