@@ -37,13 +37,13 @@ In the *Stream configuration*, define your stream input and output:
 
 ```yaml
 input:
-    - http_server:
-        path: /post
-        timeout: 1s
-
+  http_server:
+    path: /post
+  label: example_generator_input
 output:
-    - http_server:
-        ws_path: /subscribe
+  http_server:
+    ws_path: /subscribe
+  label: example_websocket_output
 ```
 
 In the above configuration it can be seen that:
