@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: Tyk Streams
 description: Explains purpose of Tyk Streaming and use cases
 tags: [ "streaming", "events", "event driven architecture", "event driven architectures", "kafka" ]
 ---
