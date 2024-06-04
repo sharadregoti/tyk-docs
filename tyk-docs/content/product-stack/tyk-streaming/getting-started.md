@@ -23,17 +23,17 @@ In the Tyk Dashboard, create a new API and select the *Open API* option.
 
 {{< img src="/img/streams/create-new-api.png" alt="Create New API" width="1000px" >}}
 
-Select *Active* from the *Gateway Status* drop down list and then select *External* from the *Access* drop down list.
+Select *Active* from the *Gateway Status* drop-down list and then select *External* from the *Access* drop-down list.
 
 Navigate to the *Streaming* section and click on *Add Stream*.
 
-{{< img src="/img/streams/streams.png" alt="Add Stream" width="1000px" >}}
+{{< img src="/img/streams/streams.png" alt="Click the Add Stream button" width="1000px" >}}
 
-Provide a name for your stream.
+Provide a name for your stream in the *Stream name* textbox
 
 {{< img src="/img/streams/name-streams.png" alt="Add stream name" width="1000px" >}}
 
-In the stream configuration, define your input and output:
+In the *Stream configuration*, define your stream input and output:
 
 ```yaml
 input:
