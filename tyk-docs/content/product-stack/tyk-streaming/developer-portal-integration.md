@@ -46,21 +46,23 @@ To enable webhook subscriptions for an API product:
 <!-- [Placeholder for screenshot showing the API product settings with webhook configuration] -->
 
 Once webhook subscriptions are enabled, developers can subscribe to events and streams by following these steps:
-- In the Developer Portal, navigate to the API Products page.
-- Select the desired API credential (e.g., application or key).
+- In the Developer Portal, navigate to the My Apps page.
+- Select the desired app.
 - In the "Webhooks" section, click on "Subscribe".
 - Provide the necessary details:
     - *Webhook URL*: The URL where the event notifications will be sent.
-    - *Events*: Select the specific events to subscribe to.
     - *HMAC Secret*: Provide a secret key used to sign the webhook messages for authentication.
+    - *Events*: Select the specific events to subscribe to.
 - Save the subscription settings.
 - Copy code
 <!-- [Placeholder for screenshot illustrating the developer's view of subscribing to webhooks] -->
 
+{{< img src="/img/streams/subscribe-webhooks.png" alt="subscribe to webhooks from portal" width="1000" >}}
+
 To configure the async API stream for webhook subscriptions, use the following output configuration in your API definition:
-outputs:
 
 ```yaml
+outputs:
   - portal_webhook:
       event_type: bar
       portal_url: http://localhost:3001
