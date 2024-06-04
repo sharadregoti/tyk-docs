@@ -6,6 +6,8 @@ tags: [ "streaming", "getting started" ]
 
 This guide will walk you through setting up Tyk Streams and configuring your first async API.
 
+---
+
 ## Prerequisites
 
 To get started with Tyk Streams, you will need:
@@ -35,12 +37,11 @@ git clone https://github.com/TykTechnologies/tyk-pro-docker-demo
 ```
 ##### GitHub CLI
 
-Issue the following **Github CLI** command to download the Tyk streams demo:
+Issue the following *Github CLI* command to download the Tyk streams demo:
 
 ```bash
 gh repo clone TykTechnologies/tyk-pro-docker-demo
 ```
----
 
 ### Post Install
 
@@ -49,8 +50,6 @@ Once the demo has downloaded, checkout the stream branch by issuing the followin
 ```bash
 git checkout stream
 ```
-
----
 
 ### Start Demo
 
@@ -140,5 +139,8 @@ docker compose logs tyk-gateway -f
 ```
 
 ---
+
+
+## Next Steps
 
 With this getting started guide, you have successfully set up Tyk Streams and created your first async API! You can now start exploring more [advanced configurations]({{< ref "api-management/async-apis/advanced-use-cases" >}}) and [use cases]({{< ref "api-management/async-apis/use-cases" >}}).
