@@ -20,25 +20,34 @@ The *stream* branch of the [tyk-pro-docker-demo](https://github.com/TykTechnolog
 - [tykio/tyk-dashboard:s5.4.0-alpha1](https://hub.docker.com/r/tykio/tyk-dashboard/tags?page=&page_size=&ordering=&name=s5.4.0-alpha1)
 - [tykio/tyk-gateway:v5.4.0-alpha5](https://hub.docker.com/r/tykio/tyk-gateway/tags?page=&page_size=&ordering=&name=s5.4.0-alpha5)
 
-Clone the tyk-pro-docker-demo repository using *git* or the *GitHub CLI* command:
+### Download
 
-**git clone**
+Clone the [tyk-pro-docker-demo](https://github.com/TykTechnologies/tyk-pro-docker-demo) repository using *git* or the *GitHub CLI* command:
+
+#### git
+
+Issue the following *git* command to download the Tyk streams demo:
 
 ```bash
 git clone https://github.com/TykTechnologies/tyk-pro-docker-demo
 ```
+#### GitHub CLI
 
-**GitHub CLI**
+Issue the following **Github CLI** command to download the Tyk streams demo:
 
 ```bash
 gh repo clone TykTechnologies/tyk-pro-docker-demo
 ```
 
-Checkout the stream branch by issuing the following command:
+### Post Install
+
+Once the demo has downloaded, checkout the stream branch by issuing the following command:
 
 ```bash
 git checkout stream
 ```
+
+### Start Demo
 
 Start the Tyk Streams demo by issuing the following command:
 
@@ -46,10 +55,8 @@ Start the Tyk Streams demo by issuing the following command:
 ./up.sh
 ```
 
-When prompted enter your Tyk license key. Login credentials will then be provided in the console output.
-
-Visit [http://localhost:3000](http://localhost:3000) and login with the provided credentials.
-
+- When prompted enter your Tyk license key. Login credentials will then be provided in the console output.
+- Open Tyk Dashboard in your browser by visiting [http://localhost:3000](http://localhost:3000) and login with the provided credentials.
 
 ## Configuring a Basic Async API
 
