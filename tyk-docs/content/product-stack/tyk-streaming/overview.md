@@ -8,6 +8,16 @@ Tyk Streams is a powerful new feature in the Tyk API Management platform that en
 
 The purpose of Tyk Streams is to provide a unified platform for managing both synchronous APIs (such as REST and GraphQL) and asynchronous APIs and event-driven architectures. This allows organisations to leverage the full potential of their event-driven systems while maintaining the same level of security, control, and visibility they expect from their API management solution.
 
+</br>
+
+{{< note success >}}
+
+**Note**
+
+Please note that Tyk Streams is currently a public [Early Access]({{< ref "frequently-asked-questions/using-early-access-features" >}}) feature.
+
+{{< /note >}}
+
 ## How Tyk Streams Enables Async API Support?
 
 Tyk Streams seamlessly integrates with the Tyk API Gateway, allowing you to manage asynchronous APIs and event streams alongside your existing synchronous APIs. It provides a range of capabilities to support async API management, including:
