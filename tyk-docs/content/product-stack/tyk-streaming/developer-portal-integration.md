@@ -41,10 +41,12 @@ To enable webhook subscriptions for an API product:
 2. Enable the "Webhooks" option and specify the available events for subscription.
 3. Save the API product settings.
 
+{{< img src="/img/streams/enable-portal-webhooks.png" alt="Enable Portal Webhooks" width="1000" >}}
+
 <!-- [Placeholder for screenshot showing the API product settings with webhook configuration] -->
 
 Once webhook subscriptions are enabled, developers can subscribe to events and streams by following these steps:
-- In the Developer Portal, navigate to the API product page.
+- In the Developer Portal, navigate to the API Products page.
 - Select the desired API credential (e.g., application or key).
 - In the "Webhooks" section, click on "Subscribe".
 - Provide the necessary details:
