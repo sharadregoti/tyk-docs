@@ -37,7 +37,6 @@ In the stream configuration, define your input and output:
 
 ```yaml
 input:
-  inputs:
     - http_server:
         path: /post
         timeout: 1s
