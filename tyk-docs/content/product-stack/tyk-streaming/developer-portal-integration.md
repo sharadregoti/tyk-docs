@@ -5,7 +5,19 @@ tags: [ "Developer Portal Integration", "Developer Portal", "EDP" ]
 ---
 
 
-Tyk Streams seamlessly integrates with the Tyk Developer Portal, enabling developers to easily discover, subscribe to, and consume async APIs and event streams. This section covers how to publish async APIs to the developer portal, provide documentation, and enable developers to subscribe to events and streams.
+Tyk Streams seamlessly integrates with the Tyk Developer Portal, enabling developers to easily discover, subscribe to, and consume async APIs and event streams. This section covers how to publish async APIs to the developer portal, provide documentation and enable developers to subscribe to events and streams.
+
+</br>
+
+{{< warning success >}}
+
+**Warning**
+
+Tyk streams is currently available in beta. As a beta feature, Tyk streams may not function perfectly which means you may encounter some bugs or unexpected behaviour. While we strive to ensure data integrity, there is a small risk of data loss or corruption when using this feature. Please back up important information regularly.
+
+{{< /warning >}}
+
+---
 
 ## Publishing Async APIs to the Developer Portal
 
@@ -18,6 +30,8 @@ To publish an async API:
 - Copy code
 
 <!-- [Placeholder for screenshot or GIF demonstrating the process of publishing an async API to the Developer Portal] -->
+
+---
 
 ## Async API Documentation
 
@@ -32,6 +46,8 @@ When publishing an async API to the Developer Portal, consider including the fol
 - Error handling and troubleshooting guidelines
 
 <!-- [Placeholder for screenshot showcasing async API documentation in the Developer Portal] -->
+
+---
 
 ## Enabling Developers to Subscribe to Events and Streams
 
