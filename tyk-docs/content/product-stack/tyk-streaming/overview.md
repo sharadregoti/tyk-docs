@@ -22,6 +22,8 @@ Tyk streams is currently available in beta. As a beta feature, Tyk streams may n
 
 {{< /warning >}}
 
+---
+
 ## How Tyk Streams Enables Async API Support?
 
 Tyk Streams seamlessly integrates with the Tyk API Gateway, allowing you to manage asynchronous APIs and event streams alongside your existing synchronous APIs. It provides a range of capabilities to support async API management, including:
@@ -68,9 +70,15 @@ Tyk Streams configuration natively integrates with our OpenAPI format. This enab
 }
 ```
 
+---
+
 ## Configuring Async APIs via Dashboard UI
 
 The Tyk Dashboard provides a user-friendly interface for defining and managing async APIs. You can easily specify event broker details, subscribe to specific topics or channels, configure security policies, transformations and other API management capabilities.
+
+{{< img src="/img/streams/configure-streams.png" alt="Tyk Dashboard API Streams" width="1000px" >}}
+
+---
 
 ## Comparison to Other Products
 
