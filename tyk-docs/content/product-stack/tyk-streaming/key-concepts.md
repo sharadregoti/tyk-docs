@@ -47,7 +47,7 @@ Tyk Streams integrates with the Tyk API Gateway through the following mechanisms
 
 - **API Definitions**: Tyk Streams are defined using the standard Tyk OpenAPI API definition format, with additional fields specific to async protocols and event configurations.
 - **Middleware**: Tyk Streams introduces new middleware components that handle async-specific functionality such as protocol mediation, event transformations and pub/sub messaging.
-**Analytics**: Async API traffic is captured and reported via Prometheus, OpenTelementry or StatsD, providing visibility into usage, performance, and errors.
+- **Analytics**: Async API traffic is captured and reported via Prometheus, OpenTelementry or StatsD, providing visibility into usage, performance, and errors.
 
 ## Connectors and Protocol Mediation
 
