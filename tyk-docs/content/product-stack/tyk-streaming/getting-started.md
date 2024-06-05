@@ -18,11 +18,7 @@ To get started with Tyk Streams, you will need:
 
 ## Install Tyk Streams Demo
 
-The *stream* branch of the [tyk-pro-docker-demo](https://github.com/TykTechnologies/tyk-pro-docker-demo) repository provides a docker compose environment that can be run locally to try out Tyk streams, using the following docker images:
-
-- [tykio/portal:v1.10.0-alpha2](https://hub.docker.com/r/tykio/portal/tags?page=&page_size=&ordering=&name=v1.10.0-alpha2)
-- [tykio/tyk-dashboard:s5.4.0-alpha1](https://hub.docker.com/r/tykio/tyk-dashboard/tags?page=&page_size=&ordering=&name=s5.4.0-alpha1)
-- [tykio/tyk-gateway:v5.4.0-alpha5](https://hub.docker.com/r/tykio/tyk-gateway/tags?page=&page_size=&ordering=&name=s5.4.0-alpha5)
+The [tyk-pro-docker-demo](https://github.com/TykTechnologies/tyk-pro-docker-demo) repository provides a docker compose environment that can be run locally to try out Tyk streams.
 
 ### Download
 
@@ -45,10 +41,13 @@ gh repo clone TykTechnologies/tyk-pro-docker-demo
 
 ### Post Download
 
-Once the demo has downloaded, checkout the stream branch by issuing the following command:
+Once downloaded, create and save a *.env* file with your Tyk Dashboard license key and configure the demo to use the Tyk Streams docker images:
 
-```bash
-git checkout stream
+```text
+DASH_LICENSE=<paste_your_license_here>
+GATEWAY_VERSION="v5.4.0-alpha5"
+DASHBOARD_VERSION="s5.4.0-alpha1"
+PORTAL_VERSION="v1.10.0-alpha2"
 ```
 
 ### Start Demo
