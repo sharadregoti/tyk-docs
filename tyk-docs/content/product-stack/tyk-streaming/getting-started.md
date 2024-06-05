@@ -58,7 +58,6 @@ Start the Tyk Streams demo by issuing the following command:
 ./up.sh
 ```
 
-- When prompted enter your Tyk license key. Login credentials will then be provided in the console output.
 - Open Tyk Dashboard in your browser by visiting [http://localhost:3000](http://localhost:3000) and login with the provided credentials.
 
 ---
