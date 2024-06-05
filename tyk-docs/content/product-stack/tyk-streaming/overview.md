@@ -8,13 +8,15 @@ Tyk Streams is a powerful new feature in the Tyk API Management platform that en
 
 The purpose of Tyk Streams is to provide a unified platform for managing both synchronous APIs (such as REST and GraphQL) and asynchronous APIs, in addition to event-driven architectures. This allows organisations to leverage the full potential of their event-driven systems while maintaining the same level of security, control and visibility they expect from their API management solution.
 
+{{< img src="/img/streams/tyk-streams-overview.png" alt="Tyk Streams Overview" width="450px" >}}
+
 </br>
 
 {{< note success >}}
 
 **Note**
 
-Please note that Tyk Streams is currently a public feature. 
+Tyk streams is currently available in beta. This feature is still in development, which means you may encounter some bugs or unexpected behavior.
 
 {{< /note >}}
 
