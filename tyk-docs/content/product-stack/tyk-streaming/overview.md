@@ -16,7 +16,7 @@ The purpose of Tyk Streams is to provide a unified platform for managing both sy
 
 **Note**
 
-Tyk streams is currently available in beta. This feature is still in development, which means you may encounter some bugs or unexpected behavior.
+Tyk streams is currently available in beta. As a beta feature, Tyk streams may not function perfectly which means you may encounter some bugs or unexpected behaviour. While we strive to ensure data integrity, there is a small risk of data loss or corruption when using this feature. Please back up important information regularly.
 
 {{< /note >}}
 
