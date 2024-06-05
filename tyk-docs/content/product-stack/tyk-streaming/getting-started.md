@@ -67,7 +67,7 @@ Start the Tyk Streams demo by issuing the following command:
 
 ## Configuring a Basic Async API
 
-In the Tyk Dashboard, create a new API and select the *Open API* option.
+In the Tyk Dashboard, create a new API. Click the *+CONFIGURE API* button to continue.
 
 {{< img src="/img/streams/create-new-api.png" alt="Create New API" width="1000px" >}}
 
