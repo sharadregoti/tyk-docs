@@ -43,7 +43,7 @@ Issue the following *Github CLI* command to download the Tyk streams demo:
 gh repo clone TykTechnologies/tyk-pro-docker-demo
 ```
 
-### Post Install
+### Post Download
 
 Once the demo has downloaded, checkout the stream branch by issuing the following command:
 
