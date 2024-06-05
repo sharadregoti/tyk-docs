@@ -119,7 +119,7 @@ wscat -c ws://localhost:8080/<listen-path>/subscribe
 curl -X POST -d '{"message":"Hello, Tyk Streams!"}' http://localhost:8080/<listen-path>/post
 ```
 
-Verify that the message posted in step 1 is received in the *wscat* terminal.
+3. Verify that the message posted in step 1 is received in the *wscat* terminal.
 
 {{< img src="/img/streams/streams-ws-example.png" alt="streams websocket example" width="1000px" >}}
 
