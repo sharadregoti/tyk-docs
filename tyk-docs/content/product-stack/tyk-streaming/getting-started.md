@@ -43,7 +43,7 @@ gh repo clone TykTechnologies/tyk-pro-docker-demo
 
 Once downloaded, create and save a *.env* file with your Tyk Dashboard license key and configure the demo to use the Tyk Streams docker images:
 
-```text
+```env
 DASH_LICENSE=<paste_your_license_here>
 GATEWAY_VERSION="v5.4.0-alpha5"
 DASHBOARD_VERSION="s5.4.0-alpha1"
