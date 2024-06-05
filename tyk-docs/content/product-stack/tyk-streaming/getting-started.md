@@ -107,7 +107,7 @@ Save your API definition.
 
 Lets test the async API we just created.
 
-Subscribe to the WebSocket using wscat:
+1. Subscribe to the WebSocket using wscat:
 
 ```bash
 wscat -c ws://localhost:8080/<listen-path>/subscribe
