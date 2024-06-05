@@ -15,7 +15,7 @@ Tyk Streams allows you to perform complex event processing on streams of events 
 - Detect patterns and sequences of events
 - Trigger actions or notifications based on event conditions
 
-Here's an example of a Tyk Streams configuration that performs complex event processing, specifically it creates a new event stream, which filters high value orders and enriches them with customer email address, by doing an additional HTTP request.
+Here's an example of a Tyk Streams configuration that performs complex event processing, specifically it creates a new event stream, which filters high-value orders and enriches them with customer email addresses, by making an additional HTTP request.
  
 ```yaml
 input:
