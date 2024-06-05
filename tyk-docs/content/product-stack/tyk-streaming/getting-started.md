@@ -113,7 +113,7 @@ Lets test the async API we just created.
 wscat -c ws://localhost:8080/<listen-path>/subscribe
 ```
 
-Post a message to the `/post` endpoint using curl:
+2. Post a message to the `/post` endpoint using curl:
 
 ```bash
 curl -X POST -d '{"message":"Hello, Tyk Streams!"}' http://localhost:8080/<listen-path>/post
