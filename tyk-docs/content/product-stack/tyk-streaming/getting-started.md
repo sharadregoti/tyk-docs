@@ -45,7 +45,7 @@ gh repo clone TykTechnologies/tyk-pro-docker-demo
 
 ### Post Download
 
-Once the demo has downloaded, checkout the stream branch by issuing the following command:
+Once the repo has downloaded, checkout the `stream` branch by issuing the following command:
 
 ```bash
 git checkout stream
