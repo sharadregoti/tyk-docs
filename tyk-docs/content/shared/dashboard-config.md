@@ -86,7 +86,7 @@ Increasing this number can decrease dashboard performance. This value cannot be 
 ENV: <b>TYK_DB_MONGODRIVER</b><br />
 Type: `string`<br />
 
-Determines the MongoDB driver used. It could be `mongo-go` to use the official [mongo driver for go v1.11](https://www.mongodb.com/docs/drivers/go/v1.11/) or `mgo` to use [mgo driver](https://github.com/go-mgo/mgo). By default, the value is `mgo`. It can be set at storage level as well if the database type is mongo. This config is available since dashboard v5.0.2
+Determines the MongoDB driver used. It could be `mongo-go` to use the official [mongo driver for go v1.12](https://www.mongodb.com/docs/drivers/go/v1.12/) or `mgo` to use [mgo driver](https://github.com/go-mgo/mgo). Since v5.3, the default value is `mongo-go`. It can be set at storage level as well if the database type is mongo. This config is available since dashboard v5.0.2.
 
 ### mongo_direct_connection
 ENV: <b>TYK_DB_MONGODIRECTCONNECTION</b><br />
@@ -105,7 +105,7 @@ Type: `int`<br />
 The page size that the dashboard should use. Defaults to 10.
 
 ### storage
-This option allows you to store different types of data in different databases. For example, logs can be stored in one database, analytics in another, and master resources in another.
+This option allows you to store different types of data in different databases. For example, logs can be stored in one database, analytics in another, and main resources in another.
 
 ### storage.main
 Main database where the dashboard resources are stored (users, orgs, policies, etc)
@@ -117,7 +117,7 @@ Connection setting for a mongo database
 ENV: <b>TYK_DB_STORAGE_MAIN_MONGO_DRIVER</b><br />
 Type: `string`<br />
 
-Driver to use when connected to a mongo database. It could be `mongo-go` to use the official [mongo driver for go v1.11](https://www.mongodb.com/docs/drivers/go/v1.11/) or `mgo` to use [mgo driver](https://github.com/go-mgo/mgo). By default, the value is `mgo`. This config is available since dashboard v5.0.2
+Driver to use when connected to a mongo database. It could be `mongo-go` to use the official [mongo driver for go v1.12](https://www.mongodb.com/docs/drivers/go/v1.12/) or `mgo` to use [mgo driver](https://github.com/go-mgo/mgo). Since v5.3, the default value is `mongo-go`. This config is available since dashboard v5.0.2
 
 ### storage.main.postgres
 Connection settings for a Postgres database
@@ -171,7 +171,7 @@ Connection setting for a mongo database
 ENV: <b>TYK_DB_STORAGE_ANALYTICS_MONGO_DRIVER</b><br />
 Type: `string`<br />
 
-Driver to use when connected to a mongo database. It could be `mongo-go` to use the official [mongo driver for go v1.11](https://www.mongodb.com/docs/drivers/go/v1.11/) or `mgo` to use [mgo driver](https://github.com/go-mgo/mgo). By default, the value is `mgo`. This config is available since dashboard v5.0.2
+Driver to use when connected to a mongo database. It could be `mongo-go` to use the official [mongo driver for go v1.12](https://www.mongodb.com/docs/drivers/go/v1.12/) or `mgo` to use [mgo driver](https://github.com/go-mgo/mgo). Since v5.3, the default value is `mongo-go`. This config is available since dashboard v5.0.2
 
 ### storage.analytics.postgres
 Connection settings for a Postgres database
@@ -222,7 +222,7 @@ Connection setting for a mongo database
 ENV: <b>TYK_DB_STORAGE_LOGS_MONGO_DRIVER</b><br />
 Type: `string`<br />
 
-Driver to use when connected to a mongo database. It could be `mongo-go` to use the official [mongo driver for go v1.11](https://www.mongodb.com/docs/drivers/go/v1.11/) or `mgo` to use [mgo driver](https://github.com/go-mgo/mgo). By default, the value is `mgo`. This config is available since dashboard v5.0.2
+Driver to use when connected to a mongo database. It could be `mongo-go` to use the official [mongo driver for go v1.12](https://www.mongodb.com/docs/drivers/go/v1.12/) or `mgo` to use [mgo driver](https://github.com/go-mgo/mgo). Since v5.3, the default value is `mongo-go`. This config is available since dashboard v5.0.2
 
 ### storage.logs.postgres
 Connection settings for a Postgres database
@@ -276,7 +276,7 @@ Connection setting for a mongo database
 ENV: <b>TYK_DB_STORAGE_UPTIME_MONGO_DRIVER</b><br />
 Type: `string`<br />
 
-Driver to use when connected to a mongo database. It could be `mongo-go` to use the official [mongo driver for go v1.11](https://www.mongodb.com/docs/drivers/go/v1.11/) or `mgo` to use [mgo driver](https://github.com/go-mgo/mgo). By default, the value is `mgo`. This config is available since dashboard v5.0.2
+Driver to use when connected to a mongo database. It could be `mongo-go` to use the official [mongo driver for go v1.12](https://www.mongodb.com/docs/drivers/go/v1.12/) or `mgo` to use [mgo driver](https://github.com/go-mgo/mgo). Since v5.3, the default value is `mongo-go`. This config is available since dashboard v5.0.2
 
 ### storage.uptime.postgres
 Connection settings for a Postgres database
@@ -422,7 +422,65 @@ Use Redis SSL connection
 ENV: <b>TYK_DB_REDISSSLINSECURESKIPVERIFY</b><br />
 Type: `bool`<br />
 
-Ignore TLS verification for Redis connectin
+Ignore TLS verification for Redis connections.
+
+### redis_ca_file
+ENV: <b>TYK_DB_REDISCAFILE</b><br />
+Type: `string`<br />
+
+Redis SSL CA File
+
+The SSL CA file is imported into an X509 certificate pool. It
+contains the set of root certificate authorities. When establishing
+a connection to redis, Tyk will use this to verify server certificates.
+
+If empty, Tyk will use the host's root CA set.
+
+### redis_cert_file
+ENV: <b>TYK_DB_REDISCERTFILE</b><br />
+Type: `string`<br />
+
+Redis SSL Cert file.
+
+The cert file and the key file combine to form an X509 certificate.
+The certificate is presented when establishing a connection to redis.
+
+For more information, see [crypto/tls#X509KeyPair](https://pkg.go.dev/crypto/tls#X509KeyPair).
+
+### redis_key_file
+ENV: <b>TYK_DB_REDISKEYFILE</b><br />
+Type: `string`<br />
+
+Redis SSL Key file.
+
+The cert file and the key file combine to form an X509 certificate.
+The certificate is presented when establishing a connection to redis.
+
+For more information, see [crypto/tls#X509KeyPair](https://pkg.go.dev/crypto/tls#X509KeyPair).
+
+### redis_tls_max_version
+ENV: <b>TYK_DB_REDISTLSMAXVERSION</b><br />
+Type: `string`<br />
+
+Maximum TLS version that is supported.
+
+Options: ["1.0", "1.1", "1.2", "1.3"].
+Defaults to "1.3".
+
+### redis_tls_min_version
+ENV: <b>TYK_DB_REDISTLSMINVERSION</b><br />
+Type: `string`<br />
+
+Minimum TLS version that is supported.
+
+Options: ["1.0", "1.1", "1.2", "1.3"].
+Defaults to "1.2".
+
+### redis_max_active
+ENV: <b>TYK_DB_REDISMAXACTIVE</b><br />
+Type: `int`<br />
+
+Set the number of maximum connections in the Redis connection pool, which defaults to 500. Set to a higher value if you are expecting more traffic.
 
 ### notify_on_change
 ENV: <b>TYK_DB_NOTIFYONCHANGE</b><br />
@@ -1068,4 +1126,19 @@ ENV: <b>TYK_DB_ALLOWUNSAFEOAS</b><br />
 Type: `bool`<br />
 
 Allow the modification of Tyk OAS APIs via the Tyk Classic API endpoints. Note that this is not recommended but is provided for early adopters and will be deprecated later
+
+### oas_config
+OAS holds the configuration for various OpenAPI-specific functionalities
+
+### oas_config.validate_examples
+ENV: <b>TYK_DB_OAS_VALIDATEEXAMPLES</b><br />
+Type: `bool`<br />
+
+ValidateExamples enables validation of values provided in `example` and `examples` fields against the declared schemas in the OpenAPI Document. Defaults to false.
+
+### oas_config.validate_schema_defaults
+ENV: <b>TYK_DB_OAS_VALIDATESCHEMADEFAULTS</b><br />
+Type: `bool`<br />
+
+ValidateSchemaDefaults enables validation of values provided in `default` fields against the declared schemas in the OpenAPI Document. Defaults to false.
 
