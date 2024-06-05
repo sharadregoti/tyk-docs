@@ -4,9 +4,9 @@ description: Explains purpose of Tyk Streaming and use cases
 tags: [ "streaming", "events", "event driven architecture", "event driven architectures", "kafka" ]
 ---
 
-Tyk Streams is a powerful new feature in the Tyk API Management platform that enables organisations to securely expose, manage and monetise real-time event streams and asynchronous APIs. With Tyk Streams, you can easily connect to various event brokers and streaming platforms, such as Apache Kafka, MQTT, AMQP etc, and expose them as managed API endpoints to internal and external consumers.
+Tyk Streams is a powerful new feature in the Tyk API Management platform that enables organisations to securely expose, manage and monetise real-time event streams and asynchronous APIs. With Tyk Streams, you can easily connect to various event brokers and streaming platforms, such as Apache Kafka, MQTT, AMQP etc. and expose them as managed API endpoints to internal and external consumers.
 
-The purpose of Tyk Streams is to provide a unified platform for managing both synchronous APIs (such as REST and GraphQL) and asynchronous APIs and event-driven architectures. This allows organisations to leverage the full potential of their event-driven systems while maintaining the same level of security, control, and visibility they expect from their API management solution.
+The purpose of Tyk Streams is to provide a unified platform for managing both synchronous APIs (such as REST and GraphQL) and asynchronous APIs, in addition to event-driven architectures. This allows organisations to leverage the full potential of their event-driven systems while maintaining the same level of security, control and visibility they expect from their API management solution.
 
 </br>
 
@@ -14,7 +14,7 @@ The purpose of Tyk Streams is to provide a unified platform for managing both sy
 
 **Note**
 
-Please note that Tyk Streams is currently a public [Early Access]({{< ref "frequently-asked-questions/using-early-access-features" >}}) feature.
+Please note that Tyk Streams is currently a public feature. 
 
 {{< /note >}}
 
