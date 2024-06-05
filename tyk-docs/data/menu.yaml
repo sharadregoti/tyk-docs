@@ -3800,7 +3800,7 @@ menu:
             path: /product-stack/tyk-operator/release-notes/operator-0.16
             category: Page
             show: True
-    - title: "Tyk Streams (Open Source)"
+    - title: "Tyk Streams"
       category: Directory
       show: True
       menu:
