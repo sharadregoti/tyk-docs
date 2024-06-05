@@ -2462,10 +2462,50 @@ menu:
           - title: "[version]"
             category: Page
             show: False
-      - title: "Important Prerequisites"
-        path: /tyk-stack/tyk-gateway/important-prerequisites
-        category: Page
+      - title: "OSS Tutorials"
+        path: /product-stack/tyk-gateway/oss-tutorials
+        category: Directory
         show: True
+        menu:
+          - title: "Manage APIs"
+            path: /product-stack/tyk-gateway/oss-tutorials
+            category: Directory
+            show: True
+            menu:
+            - title: "Overview"
+              path: /product-stack/tyk-gateway/oss-tutorials/overview
+              category: page
+              show: True
+            - title: "Important Prerequisites"
+              path: /tyk-stack/tyk-gateway/important-prerequisites
+              category: Page
+              show: True
+            - title: "Tyk OAS APIs"
+              path: /product-stack/tyk-gateway/oss-tutorials/tyk-oas-apis
+              category: directory
+              show: True
+              menu:
+                - title: "Create API Definition"
+                  path: /product-stack/tyk-gateway/oss-tutorials/tyk-oas-apis/create-api-definition
+                  category: Page
+                  show: True
+                - title: "Import API Definition"
+                  path: /product-stack/tyk-gateway/oss-tutorials/tyk-oas-apis/import-api-definition
+                  category: Page
+                  show: True
+            - title: "Tyk Classic APIs"
+              path: /product-stack/tyk-gateway/oss-tutorials/tyk-classic-apis
+              category: directory
+              show: True
+              menu:
+                - title:  "Create API Definition"
+                  path: /product-stack/tyk-gateway/oss-tutorials/tyk-classic-apis/create-api-definition
+                  category: Page
+                  show: True
+                - title: "Import API Definition"
+                  path: /product-stack/tyk-gateway/oss-tutorials/tyk-classic-apis/import-api-definition
+                  category: Page
+                  show: True
     - title: "Tyk Dashboard"
       category: Directory
       show: True
