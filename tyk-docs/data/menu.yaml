@@ -3824,18 +3824,38 @@ menu:
         category: Directory
         show: True
         menu:
-        - title: "Key Concepts"
-          path: /product-stack/tyk-streaming/configuration/key-concepts
-          category: Page
+        - title: "Components"
+          category: Directory
           show: True
-        - title: "Inputs"
-          path: /product-stack/tyk-streaming/configuration/inputs
-          category: Page
-          show: True
-        - title: "Outputs"
-          path: /product-stack/tyk-streaming/configuration/outputs
-          catgory: Page
-          show: True
+          menu:
+          - title: "Overview"
+            path: /product-stack/tyk-streaming/documentation/components/overview
+            category: Page
+            show: True
+          - title: "Inputs"
+            category: Directory
+            show: True
+            menu:
+            - title: "Overview"
+              path: /product-stack/tyk-streaming/documentation/components/inputs/overview
+              category: Page
+              show: True
+          - title: "Outputs"
+            category: Directory
+            show: True
+            menu:
+            - title: "Overview"
+              path: /product-stack/tyk-streaming/documentation/components/outputs/overview
+              catgory: Page
+              show: True
+          - title: "Processors"
+            category: Directory
+            show: True
+            menu:
+            - title: "Overview"
+              path: /product-stack/tyk-streaming/documentation/components/processors/overview
+              catgory: Page
+              show: True
       - title: "Deployment Considerations"
         path: /product-stack/tyk-streaming/deployment-considerations
         category: Page
