@@ -95,7 +95,7 @@ seed_brokers:
 ### topic
 
 A topic to write messages to.
-This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries).
+<!-- TODO add interpolation functions This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries). -->
 
 
 Type: `string`  
@@ -103,7 +103,7 @@ Type: `string`
 ### key
 
 An optional key to populate for each message.
-This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries).
+<!-- TODO add interpolation functions This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries). -->
 
 
 Type: `string`  
@@ -126,8 +126,7 @@ Type: `string`
 ### partition
 
 An optional explicit partition to set for each message. This field is only relevant when the `partitioner` is set to `manual`. The provided interpolation string must be a valid integer.
-This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries).
-
+<!-- TODO add interpolation functions This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries). -->
 
 Type: `string`  
 
@@ -226,7 +225,8 @@ Default: `"10s"`
 
 ### batching
 
-Allows you to configure a [batching policy](/docs/configuration/batching).
+<!-- TODO: add link to batching policy -->
+Allows you to configure a batching policy.
 
 
 Type: `object`  
@@ -285,7 +285,8 @@ period: 500ms
 
 ### batching.check
 
-A [Bloblang query](/docs/guides/bloblang/about/) that should return a boolean value indicating whether a message should end a batch.
+<!-- TODO: add link to bloblang query -->
+A Bloblang query that should return a boolean value indicating whether a message should end a batch.
 
 
 Type: `string`  
@@ -299,7 +300,9 @@ check: this.type == "end_of_transaction"
 
 ### batching.processors
 
-A list of [processors](/docs/components/processors/about) to apply to a batch as it is flushed. This allows you to aggregate and archive the batch however you see fit. Please note that all resulting messages are flushed as a single batch, therefore splitting the batch into smaller batches using these processors is a no-op.
+<!-- TODO: add link to processors -->
+
+A list of processors to apply to a batch as it is flushed. This allows you to aggregate and archive the batch however you see fit. Please note that all resulting messages are flushed as a single batch, therefore splitting the batch into smaller batches using these processors is a no-op.
 
 
 Type: `array`  
@@ -379,9 +382,9 @@ Requires version 3.45.0 or newer
 ### tls.root_cas
 
 An optional root certificate authority to use. This is a string, representing a certificate chain from the parent trusted root certificate, to possible intermediate signing certificates, to the host certificate.
-:::warning Secret
+<!-- TODO: add link to secrets :::warning Secret
 This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
-:::
+::: -->
 
 
 Type: `string`  
@@ -441,9 +444,9 @@ Default: `""`
 ### tls.client_certs[].key
 
 A plain text certificate key to use.
-:::warning Secret
+<!-- TODO add links to secrets :::warning Secret
 This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
-:::
+::: -->
 
 
 Type: `string`  
@@ -468,9 +471,9 @@ Default: `""`
 ### tls.client_certs[].password
 
 A plain text password for when the private key is password encrypted in PKCS#1 or PKCS#8 format. The obsolete `pbeWithMD5AndDES-CBC` algorithm is not supported for the PKCS#8 format. Warning: Since it does not authenticate the ciphertext, it is vulnerable to padding oracle attacks that can let an attacker recover the plaintext.
-:::warning Secret
+<!-- TODO: add links to secret :::warning Secret
 This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
-:::
+::: -->
 
 
 Type: `string`  
@@ -528,9 +531,9 @@ Default: `""`
 ### sasl[].password
 
 A password to provide for PLAIN or SCRAM-* authentication.
-:::warning Secret
+<!-- TODO add link to secret :::warning Secret
 This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
-:::
+::: -->
 
 
 Type: `string`  
@@ -576,7 +579,9 @@ Default: `""`
 
 ### sasl[].aws.credentials
 
-Optional manual configuration of AWS credentials to use. More information can be found [in this document](/docs/guides/cloud/aws).
+Optional manual configuration of AWS credentials to use. 
+
+<!-- TODO: add link More information can be found [in this document](/docs/guides/cloud/aws). -->
 
 
 Type: `object`  
