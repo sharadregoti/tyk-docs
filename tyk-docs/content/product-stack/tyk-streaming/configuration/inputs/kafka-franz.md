@@ -4,12 +4,6 @@ description: Explains an overview of Kafka input for Kafka franz client
 tags: [ "Tyk Streams", "Stream Inputs", "Inputs", "Kafka", "Kafka Franz" ]
 ---
 
-{{< warning success >}}
-
-This component is mostly stable but breaking changes could still be made outside of major version releases if a fundamental problem with the component is found.
-
-{{< /warning >}}
-
 A Kafka input using the [Franz Kafka client library](https://github.com/twmb/franz-go).
 
 ## Common
@@ -236,9 +230,9 @@ Requires version 3.45.0 or newer
 ### tls.root_cas
 
 An optional root certificate authority to use. This is a string, representing a certificate chain from the parent trusted root certificate, to possible intermediate signing certificates, to the host certificate.
-:::warning Secret
+<!-- TODO add secret link :::warning Secret
 This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
-:::
+::: -->
 
 
 Type: `string`  
@@ -298,9 +292,9 @@ Default: `""`
 ### tls.client_certs[].key
 
 A plain text certificate key to use.
-:::warning Secret
+<!-- TODO add secret link :::warning Secret
 This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
-:::
+::: -->
 
 
 Type: `string`  
@@ -325,9 +319,9 @@ Default: `""`
 ### tls.client_certs[].password
 
 A plain text password for when the private key is password encrypted in PKCS#1 or PKCS#8 format. The obsolete `pbeWithMD5AndDES-CBC` algorithm is not supported for the PKCS#8 format. Warning: Since it does not authenticate the ciphertext, it is vulnerable to padding oracle attacks that can let an attacker recover the plaintext.
-:::warning Secret
+<!-- TODO add secret link :::warning Secret
 This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
-:::
+::: -->
 
 
 Type: `string`  
@@ -385,9 +379,9 @@ Default: `""`
 ### sasl[].password
 
 A password to provide for PLAIN or SCRAM-* authentication.
-:::warning Secret
+<!-- TODO add secret link :::warning Secret
 This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
-:::
+::: -->
 
 
 Type: `string`  
@@ -433,12 +427,14 @@ Default: `""`
 
 ### sasl[].aws.credentials
 
-Optional manual configuration of AWS credentials to use. More information can be found [in this document](/docs/guides/cloud/aws).
+Optional manual configuration of AWS credentials to use. 
+
+<!-- TODO add link More information can be found [in this document](/docs/guides/cloud/aws). --> -->
 
 
 Type: `object`  
 
-### `sasl[].aws.credentials.profile`
+### sasl[].aws.credentials.profile
 
 A profile from `~/.aws/credentials` to use.
 
@@ -457,15 +453,15 @@ Default: `""`
 ### sasl[].aws.credentials.secret
 
 The secret for the credentials being used.
-:::warning Secret
+<!-- TODO add secret link :::warning Secret
 This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
-:::
+::: -->
 
 
 Type: `string`  
 Default: `""`  
 
-### `sasl[].aws.credentials.token`
+### sasl[].aws.credentials.token
 
 The token for the credentials being used, required when using short term credentials.
 
@@ -508,7 +504,8 @@ Default: `false`
 
 ### batching
 
-Allows you to configure a [batching policy](/docs/configuration/batching) that applies to individual topic partitions in order to batch messages together before flushing them for processing. Batching can be beneficial for performance as well as useful for windowed processing, and doing so this way preserves the ordering of topic partitions.
+<!-- TODO add batching policy link -->
+Allows you to configure a batching policy that applies to individual topic partitions in order to batch messages together before flushing them for processing. Batching can be beneficial for performance as well as useful for windowed processing, and doing so this way preserves the ordering of topic partitions.
 
 
 Type: `object`  
@@ -567,7 +564,9 @@ period: 500ms
 
 ### batching.check
 
-A [Bloblang query](/docs/guides/bloblang/about/) that should return a boolean value indicating whether a message should end a batch.
+<!-- TODO: Add Bloblang query link -->
+
+A Bloblang query that should return a boolean value indicating whether a message should end a batch.
 
 
 Type: `string`  
@@ -581,7 +580,8 @@ check: this.type == "end_of_transaction"
 
 ### batching.processors
 
-A list of [processors](/docs/components/processors/about) to apply to a batch as it is flushed. This allows you to aggregate and archive the batch however you see fit. Please note that all resulting messages are flushed as a single batch, therefore splitting the batch into smaller batches using these processors is a no-op.
+<!-- TODO add processors link -->
+A list of processors to apply to a batch as it is flushed. This allows you to aggregate and archive the batch however you see fit. Please note that all resulting messages are flushed as a single batch, therefore splitting the batch into smaller batches using these processors is a no-op.
 
 
 Type: `array`  
