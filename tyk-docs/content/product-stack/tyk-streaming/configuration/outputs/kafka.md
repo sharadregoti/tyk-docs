@@ -89,9 +89,10 @@ output:
 
 The config field `ack_replicas` determines whether we wait for acknowledgement from all replicas or just a single broker.
 
-Both the `key` and `topic` fields can be dynamically set using function interpolations described [here](/docs/configuration/interpolation#bloblang-queries).
+<!-- Add links to bloblang queries : Both the `key` and `topic` fields can be dynamically set using function interpolations described [here](/docs/configuration/interpolation#bloblang-queries). -->
 
-[Metadata](/docs/configuration/metadata) will be added to each message sent as headers (version 0.11+), but can be restricted using the field [`metadata`](#metadata).
+<!-- TODO add metadata link -->
+Metadata will be added to each message sent as headers (version 0.11+), but can be restricted using the field [`metadata`](#metadata).
 
 ### Strict Ordering and Retries
 
@@ -99,11 +100,12 @@ When strict ordering is required for messages written to topic partitions it is 
 
 You must also ensure that failed batches are never rerouted back to the same output. This can be done by setting the field `max_retries` to `0` and `backoff.max_elapsed_time` to empty, which will apply back pressure indefinitely until the batch is sent successfully.
 
-However, this also means that manual intervention will eventually be required in cases where the batch cannot be sent due to configuration problems such as an incorrect `max_msg_bytes` estimate. A less strict but automated alternative would be to route failed batches to a dead letter queue using a [`fallback` broker](/docs/components/outputs/fallback), but this would allow subsequent batches to be delivered in the meantime whilst those failed batches are dealt with.
+<!-- TODO: Add link to fallback broker -->
+However, this also means that manual intervention will eventually be required in cases where the batch cannot be sent due to configuration problems such as an incorrect `max_msg_bytes` estimate. A less strict but automated alternative would be to route failed batches to a dead letter queue using a `fallback` broker, but this would allow subsequent batches to be delivered in the meantime whilst those failed batches are dealt with.
 
 ### Troubleshooting
 
-If you're seeing issues writing to or reading from Kafka with this component then it's worth trying out the newer [`kafka_franz` output](/docs/components/outputs/kafka_franz).
+If you're seeing issues writing to or reading from Kafka with this component then it's worth trying out the newer [kafka_franz output]({{< ref "/product-stack/tyk-streaming/configuration/outputs/kafka-franz" >}}).
 
 - I'm seeing logs that report `Failed to connect to kafka: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)`, but the brokers are definitely reachable.
 
@@ -113,7 +115,9 @@ Unfortunately this error message will appear for a wide range of connection prob
 
 This output benefits from sending multiple messages in flight in parallel for improved performance. You can tune the max number of in flight messages (or message batches) with the field `max_in_flight`.
 
-This output benefits from sending messages as a batch for improved performance. Batches can be formed at both the input and output level. You can find out more [in this doc](/docs/configuration/batching).
+This output benefits from sending messages as a batch for improved performance. Batches can be formed at both the input and output level. 
+
+<!-- TODO add link to batching You can find out more [in this doc](/docs/configuration/batching). -->
 
 ## Fields
 
@@ -173,9 +177,9 @@ Requires version 3.45.0 or newer
 ### tls.root_cas
 
 An optional root certificate authority to use. This is a string, representing a certificate chain from the parent trusted root certificate, to possible intermediate signing certificates, to the host certificate.
-:::warning Secret
+<!-- TODO add secrets link :::warning Secret
 This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
-:::
+::: -->
 
 
 Type: `string`  
@@ -235,9 +239,9 @@ Default: `""`
 ### tls.client_certs[].key
 
 A plain text certificate key to use.
-:::warning Secret
+<!-- TODO: add secrets link :::warning Secret
 This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
-:::
+::: -->
 
 
 Type: `string`  
@@ -262,9 +266,9 @@ Default: `""`
 ### tls.client_certs[].password
 
 A plain text password for when the private key is password encrypted in PKCS#1 or PKCS#8 format. The obsolete `pbeWithMD5AndDES-CBC` algorithm is not supported for the PKCS#8 format. Warning: Since it does not authenticate the ciphertext, it is vulnerable to padding oracle attacks that can let an attacker recover the plaintext.
-:::warning Secret
+<!-- TODO add secret link :::warning Secret
 This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
-:::
+::: -->
 
 
 Type: `string`  
@@ -319,9 +323,9 @@ user: ${USER}
 ### sasl.password
 
 A PLAIN password. It is recommended that you use environment variables to populate this field.
-:::warning Secret
+<!-- TODO add secret link :::warning Secret
 This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
-:::
+::: -->
 
 
 Type: `string`  
@@ -343,8 +347,8 @@ Default: `""`
 
 ### sasl.token_cache
 
-Instead of using a static `access_token` allows you to query a [`cache`](/docs/components/caches/about) resource to fetch OAUTHBEARER tokens from
-
+Instead of using a static `access_token` allows you to query a `cache` resource to fetch OAUTHBEARER tokens from
+<!-- TODO: add cache resource link -->
 
 Type: `string`  
 Default: `""`  
@@ -360,7 +364,7 @@ Default: `""`
 ### topic
 
 The topic to publish messages to.
-This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries).
+<!-- TODO: add interpolation functions link - This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries). -->
 
 
 Type: `string`  
@@ -399,7 +403,7 @@ Default: `""`
 ### key
 
 The key to publish messages with.
-This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries).
+<!-- TODO: add interpolation functions link - This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries). -->
 
 
 Type: `string`  
@@ -417,7 +421,7 @@ Options: `fnv1a_hash`, `murmur2_hash`, `random`, `round_robin`, `manual`.
 ### partition
 
 The manually-specified partition to publish messages to, relevant only when the field `partitioner` is set to `manual`. Must be able to parse as a 32-bit integer.
-This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries).
+<!-- TODO: add interpolation functions link - This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries). -->
 
 
 Type: `string`  
@@ -495,7 +499,9 @@ Default: `[]`
 
 ### inject_tracing_map
 
-EXPERIMENTAL: A [Bloblang mapping](/docs/guides/bloblang/about) used to inject an object containing tracing propagation information into outbound messages. The specification of the injected fields will match the format used by the service wide tracer.
+<!-- TODO: Add bloblang mapping link -->
+
+EXPERIMENTAL: A Bloblang mapping used to inject an object containing tracing propagation information into outbound messages. The specification of the injected fields will match the format used by the service wide tracer.
 
 
 Type: `string`  
@@ -559,7 +565,8 @@ Default: `false`
 
 ### batching
 
-Allows you to configure a [batching policy](/docs/configuration/batching).
+<!-- TODO: add batching policy link -->
+Allows you to configure a batching policy.
 
 
 Type: `object`  
@@ -618,7 +625,8 @@ period: 500ms
 
 ### batching.check
 
-A [Bloblang query](/docs/guides/bloblang/about/) that should return a boolean value indicating whether a message should end a batch.
+<!-- TODO: Add bloblang query link -->
+A Bloblang query that should return a boolean value indicating whether a message should end a batch.
 
 
 Type: `string`  
@@ -632,7 +640,9 @@ check: this.type == "end_of_transaction"
 
 ### batching.processors
 
-A list of [processors](/docs/components/processors/about) to apply to a batch as it is flushed. This allows you to aggregate and archive the batch however you see fit. Please note that all resulting messages are flushed as a single batch, therefore splitting the batch into smaller batches using these processors is a no-op.
+<!-- TODO: add list of processors link -->
+
+A list of processors to apply to a batch as it is flushed. This allows you to aggregate and archive the batch however you see fit. Please note that all resulting messages are flushed as a single batch, therefore splitting the batch into smaller batches using these processors is a no-op.
 
 
 Type: `array`  
