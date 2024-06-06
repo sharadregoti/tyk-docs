@@ -3828,6 +3828,10 @@ menu:
           category: Directory
           show: True
           menu:
+          - title: "Http Server"
+            path: /product-stack/tyk-streaming/configuration/inputs/http-server
+            category: Page
+            show: True
           - title: "Kafka"
             path: /product-stack/tyk-streaming/configuration/inputs/kafka
             category: Page
