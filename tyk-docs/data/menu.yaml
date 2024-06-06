@@ -3844,6 +3844,10 @@ menu:
               path: /product-stack/tyk-streaming/documentation/components/inputs/kafka
               category: Page
               show: True
+            - title: "Kafka Franz"
+              path: /product-stack/tyk-streaming/documentation/components/inputs/kafka-franz
+              category: Page
+              show: True
           - title: "Outputs"
             category: Directory
             show: True
