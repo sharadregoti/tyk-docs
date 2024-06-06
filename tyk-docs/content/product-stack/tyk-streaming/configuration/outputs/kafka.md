@@ -1,7 +1,7 @@
 ---
 title: Kafka
-description: Explains an overview of Kafka output
-tags: [ "Tyk Streams", "Stream Inputs", "Outputs", "Kafka" ]
+description: Explains an overview of configuring Kafka output
+tags: [ "Tyk Streams", "Stream Outputs", "Outputs", "Kafka" ]
 ---
 
 The kafka output type writes a batch of messages to Kafka brokers and waits for acknowledgement before propagating it back to the input.

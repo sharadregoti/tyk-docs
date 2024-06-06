@@ -3844,6 +3844,10 @@ menu:
             path: /product-stack/tyk-streaming/configuration/outputs/kafka
             category: Page
             show: True
+          - title: "Kafka Franz"
+            path: /product-stack/tyk-streaming/configuration/outputs/kafka-franz
+            category: Page
+            show: True
       - title: "Deployment Considerations"
         path: /product-stack/tyk-streaming/deployment-considerations
         category: Page
