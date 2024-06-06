@@ -3840,6 +3840,10 @@ menu:
           category: Directory
           show: True
           menu:
+          - title: "Http Server"
+            path: /product-stack/tyk-streaming/configuration/outputs/http-server
+            category: Page
+            show: True
           - title: "Kafka"
             path: /product-stack/tyk-streaming/configuration/outputs/kafka
             category: Page
