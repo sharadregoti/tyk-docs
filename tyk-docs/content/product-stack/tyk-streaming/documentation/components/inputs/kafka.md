@@ -1,6 +1,6 @@
 ---
 title: Kafka
-description: Explains an overview of Kafka
+description: Explains an overview of Kafka input
 tags: [ "Tyk Streams", "Stream Inputs", "Inputs", "Kafka" ]
 ---
 
@@ -70,11 +70,11 @@ input:
 
 Offsets are managed within Kafka under the specified consumer group, and partitions for each topic are automatically balanced across members of the consumer group.
 
-The Kafka input allows parallel processing of messages from different topic partitions, and messages of the same topic partition are processed with a maximum parallelism determined by the field [`checkpoint_limit`](#checkpoint_limit).
+The Kafka input allows parallel processing of messages from different topic partitions, and messages of the same topic partition are processed with a maximum parallelism determined by the field [checkpoint_limit](#checkpoint_limit).
 
-In order to enforce ordered processing of partition messages set the [`checkpoint_limit`](#checkpoint_limit) to `1` and this will force partitions to be processed in lock-step, where a message will only be processed once the prior message is delivered.
+In order to enforce ordered processing of partition messages set the [checkpoint_limit](#checkpoint_limit) to `1` and this will force partitions to be processed in lock-step, where a message will only be processed once the prior message is delivered.
 
-Batching messages before processing can be enabled using the [`batching`](#batching) field, and this batching is performed per-partition such that messages of a batch will always originate from the same partition. This batching mechanism is capable of creating batches of greater size than the [`checkpoint_limit`](#checkpoint_limit), in which case the next batch will only be created upon delivery of the current one.
+Batching messages before processing can be enabled using the [batching](#batching) field, and this batching is performed per-partition such that messages of a batch will always originate from the same partition. This batching mechanism is capable of creating batches of greater size than the [checkpoint_limit](#checkpoint_limit), in which case the next batch will only be created upon delivery of the current one.
 
 ### Metadata
 
@@ -109,7 +109,7 @@ Unfortunately this error message will appear for a wide range of connection prob
 
 ## Fields
 
-### `addresses`
+### addresses
 
 A list of broker addresses to connect to. If an item of the list contains commas it will be expanded into multiple addresses.
 
@@ -130,7 +130,7 @@ addresses:
   - localhost:9042
 ```
 
-### `topics`
+### topics
 
 A list of topics to consume from. Multiple comma separated topics can be listed in a single element. Partitions are automatically distributed across consumers of a topic. Alternatively, it's possible to specify explicit partitions to consume from with a colon after the topic name, e.g. `foo:0` would consume the partition 0 of the topic foo. This syntax supports ranges, e.g. `foo:0-10` would consume partitions 0 through to 10 inclusive.
 
@@ -160,7 +160,7 @@ topics:
   - foo:0-5
 ```
 
-### `target_version`
+### target_version
 
 The version of the Kafka protocol to use. This limits the capabilities used by the client and should ideally match the version of your brokers. Defaults to the oldest supported stable version.
 
@@ -175,14 +175,14 @@ target_version: 2.1.0
 target_version: 3.1.0
 ```
 
-### `tls`
+### tls
 
 Custom TLS settings can be used to override system defaults.
 
 
 Type: `object`  
 
-### `tls.enabled`
+### tls.enabled
 
 Whether custom TLS settings are enabled.
 
@@ -190,7 +190,7 @@ Whether custom TLS settings are enabled.
 Type: `bool`  
 Default: `false`  
 
-### `tls.skip_cert_verify`
+### tls.skip_cert_verify
 
 Whether to skip server side certificate verification.
 
@@ -198,7 +198,7 @@ Whether to skip server side certificate verification.
 Type: `bool`  
 Default: `false`  
 
-### `tls.enable_renegotiation`
+### tls.enable_renegotiation
 
 Whether to allow the remote server to repeatedly request renegotiation. Enable this option if you're seeing the error message `local error: tls: no renegotiation`.
 
@@ -207,7 +207,7 @@ Type: `bool`
 Default: `false`  
 Requires version 3.45.0 or newer  
 
-### `tls.root_cas`
+### tls.root_cas
 
 An optional root certificate authority to use. This is a string, representing a certificate chain from the parent trusted root certificate, to possible intermediate signing certificates, to the host certificate.
 :::warning Secret
@@ -227,7 +227,7 @@ root_cas: |-
   -----END CERTIFICATE-----
 ```
 
-### `tls.root_cas_file`
+### tls.root_cas_file
 
 An optional path of a root certificate authority file to use. This is a file, often with a .pem extension, containing a certificate chain from the parent trusted root certificate, to possible intermediate signing certificates, to the host certificate.
 
@@ -241,7 +241,7 @@ Default: `""`
 root_cas_file: ./root_cas.pem
 ```
 
-### `tls.client_certs`
+### tls.client_certs
 
 A list of client certificates to use. For each certificate either the fields `cert` and `key`, or `cert_file` and `key_file` should be specified, but not both.
 
@@ -261,7 +261,7 @@ client_certs:
     key_file: ./example.key
 ```
 
-### `tls.client_certs[].cert`
+### tls.client_certs[].cert
 
 A plain text certificate to use.
 
@@ -269,7 +269,7 @@ A plain text certificate to use.
 Type: `string`  
 Default: `""`  
 
-### `tls.client_certs[].key`
+### tls.client_certs[].key
 
 A plain text certificate key to use.
 :::warning Secret
@@ -280,7 +280,7 @@ This field contains sensitive information that usually shouldn't be added to a c
 Type: `string`  
 Default: `""`  
 
-### `tls.client_certs[].cert_file`
+### tls.client_certs[].cert_file
 
 The path of a certificate to use.
 
@@ -288,7 +288,7 @@ The path of a certificate to use.
 Type: `string`  
 Default: `""`  
 
-### `tls.client_certs[].key_file`
+### tls.client_certs[].key_file
 
 The path of a certificate key to use.
 
@@ -296,7 +296,7 @@ The path of a certificate key to use.
 Type: `string`  
 Default: `""`  
 
-### `tls.client_certs[].password`
+### tls.client_certs[].password
 
 A plain text password for when the private key is password encrypted in PKCS#1 or PKCS#8 format. The obsolete `pbeWithMD5AndDES-CBC` algorithm is not supported for the PKCS#8 format. Warning: Since it does not authenticate the ciphertext, it is vulnerable to padding oracle attacks that can let an attacker recover the plaintext.
 :::warning Secret
@@ -315,14 +315,14 @@ password: foo
 password: ${KEY_PASSWORD}
 ```
 
-### `sasl`
+### sasl
 
 Enables SASL authentication.
 
 
 Type: `object`  
 
-### `sasl.mechanism`
+### sasl.mechanism
 
 The SASL authentication mechanism, if left empty SASL authentication is not used.
 
@@ -339,7 +339,7 @@ Default: `"none"`
 | `none` | Default, no SASL authentication. |
 
 
-### `sasl.user`
+### sasl.user
 
 A PLAIN username. It is recommended that you use environment variables to populate this field.
 
@@ -353,7 +353,7 @@ Default: `""`
 user: ${USER}
 ```
 
-### `sasl.password`
+### sasl.password
 
 A PLAIN password. It is recommended that you use environment variables to populate this field.
 :::warning Secret
@@ -370,7 +370,7 @@ Default: `""`
 password: ${PASSWORD}
 ```
 
-### `sasl.access_token`
+### sasl.access_token
 
 A static OAUTHBEARER access token
 
@@ -378,7 +378,7 @@ A static OAUTHBEARER access token
 Type: `string`  
 Default: `""`  
 
-### `sasl.token_cache`
+### sasl.token_cache
 
 Instead of using a static `access_token` allows you to query a [`cache`](/docs/components/caches/about) resource to fetch OAUTHBEARER tokens from
 
@@ -386,7 +386,7 @@ Instead of using a static `access_token` allows you to query a [`cache`](/docs/c
 Type: `string`  
 Default: `""`  
 
-### `sasl.token_key`
+### sasl.token_key
 
 Required when using a `token_cache`, the key to query the cache with for tokens.
 
@@ -394,7 +394,7 @@ Required when using a `token_cache`, the key to query the cache with for tokens.
 Type: `string`  
 Default: `""`  
 
-### `consumer_group`
+### consumer_group
 
 An identifier for the consumer group of the connection. This field can be explicitly made empty in order to disable stored offsets for the consumed topic partitions.
 
@@ -402,7 +402,7 @@ An identifier for the consumer group of the connection. This field can be explic
 Type: `string`  
 Default: `""`  
 
-### `client_id`
+### client_id
 
 An identifier for the client connection.
 
@@ -410,7 +410,7 @@ An identifier for the client connection.
 Type: `string`  
 Default: `"benthos"`  
 
-### `rack_id`
+### rack_id
 
 A rack identifier for this client.
 
@@ -418,7 +418,7 @@ A rack identifier for this client.
 Type: `string`  
 Default: `""`  
 
-### `start_from_oldest`
+### start_from_oldest
 
 Determines whether to consume from the oldest available offset, otherwise messages are consumed from the latest offset. The setting is applied when creating a new consumer group or the saved offset no longer exists.
 
@@ -426,7 +426,7 @@ Determines whether to consume from the oldest available offset, otherwise messag
 Type: `bool`  
 Default: `true`  
 
-### `checkpoint_limit`
+### checkpoint_limit
 
 The maximum number of messages of the same topic and partition that can be processed at a given time. Increasing this limit enables parallel processing and batching at the output level to work on individual partitions. Any given offset will not be committed unless all messages under that offset are delivered in order to preserve at least once delivery guarantees.
 
@@ -435,7 +435,7 @@ Type: `int`
 Default: `1024`  
 Requires version 3.33.0 or newer  
 
-### `auto_replay_nacks`
+### auto_replay_nacks
 
 Whether messages that are rejected (nacked) at the output level should be automatically replayed indefinitely, eventually resulting in back pressure if the cause of the rejections is persistent. If set to `false` these messages will instead be deleted. Disabling auto replays can greatly improve memory efficiency of high throughput streams as the original shape of the data can be discarded immediately upon consumption and mutation.
 
@@ -443,7 +443,7 @@ Whether messages that are rejected (nacked) at the output level should be automa
 Type: `bool`  
 Default: `true`  
 
-### `commit_period`
+### commit_period
 
 The period of time between each commit of the current partition offsets. Offsets are always committed during shutdown.
 
@@ -451,7 +451,7 @@ The period of time between each commit of the current partition offsets. Offsets
 Type: `string`  
 Default: `"1s"`  
 
-### `max_processing_period`
+### max_processing_period
 
 A maximum estimate for the time taken to process a message, this is used for tuning consumer group synchronization.
 
@@ -459,7 +459,7 @@ A maximum estimate for the time taken to process a message, this is used for tun
 Type: `string`  
 Default: `"100ms"`  
 
-### `extract_tracing_map`
+### extract_tracing_map
 
 EXPERIMENTAL: A [Bloblang mapping](/docs/guides/bloblang/about) that attempts to extract an object containing tracing propagation information, which will then be used as the root tracing span for the message. The specification of the extracted fields must match the format used by the service wide tracer.
 
@@ -475,14 +475,14 @@ extract_tracing_map: root = @
 extract_tracing_map: root = this.meta.span
 ```
 
-### `group`
+### group
 
 Tuning parameters for consumer group synchronization.
 
 
 Type: `object`  
 
-### `group.session_timeout`
+### group.session_timeout
 
 A period after which a consumer of the group is kicked after no heartbeats.
 
@@ -490,7 +490,7 @@ A period after which a consumer of the group is kicked after no heartbeats.
 Type: `string`  
 Default: `"10s"`  
 
-### `group.heartbeat_interval`
+### group.heartbeat_interval
 
 A period in which heartbeats should be sent out.
 
@@ -498,7 +498,7 @@ A period in which heartbeats should be sent out.
 Type: `string`  
 Default: `"3s"`  
 
-### `group.rebalance_timeout`
+### group.rebalance_timeout
 
 A period after which rebalancing is abandoned if unresolved.
 
@@ -506,7 +506,7 @@ A period after which rebalancing is abandoned if unresolved.
 Type: `string`  
 Default: `"60s"`  
 
-### `fetch_buffer_cap`
+### fetch_buffer_cap
 
 The maximum number of unprocessed messages to fetch at a given time.
 
@@ -514,7 +514,7 @@ The maximum number of unprocessed messages to fetch at a given time.
 Type: `int`  
 Default: `256`  
 
-### `multi_header`
+### multi_header
 
 Decode headers into lists to allow handling of multiple values with the same key
 
@@ -522,7 +522,7 @@ Decode headers into lists to allow handling of multiple values with the same key
 Type: `bool`  
 Default: `false`  
 
-### `batching`
+### batching
 
 Allows you to configure a [batching policy](/docs/configuration/batching).
 
@@ -547,7 +547,7 @@ batching:
   period: 1m
 ```
 
-### `batching.count`
+### batching.count
 
 A number of messages at which the batch should be flushed. If `0` disables count based batching.
 
@@ -555,7 +555,7 @@ A number of messages at which the batch should be flushed. If `0` disables count
 Type: `int`  
 Default: `0`  
 
-### `batching.byte_size`
+### batching.byte_size
 
 An amount of bytes at which the batch should be flushed. If `0` disables size based batching.
 
@@ -563,7 +563,7 @@ An amount of bytes at which the batch should be flushed. If `0` disables size ba
 Type: `int`  
 Default: `0`  
 
-### `batching.period`
+### batching.period
 
 A period in which an incomplete batch should be flushed regardless of its size.
 
@@ -581,7 +581,7 @@ period: 1m
 period: 500ms
 ```
 
-### `batching.check`
+### batching.check
 
 A [Bloblang query](/docs/guides/bloblang/about/) that should return a boolean value indicating whether a message should end a batch.
 
@@ -595,7 +595,7 @@ Default: `""`
 check: this.type == "end_of_transaction"
 ```
 
-### `batching.processors`
+### batching.processors
 
 A list of [processors](/docs/components/processors/about) to apply to a batch as it is flushed. This allows you to aggregate and archive the batch however you see fit. Please note that all resulting messages are flushed as a single batch, therefore splitting the batch into smaller batches using these processors is a no-op.
 
