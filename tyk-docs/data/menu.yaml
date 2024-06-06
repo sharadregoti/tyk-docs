@@ -3824,50 +3824,26 @@ menu:
         category: Directory
         show: True
         menu:
-        - title: "Components"
+        - title: "Inputs"
           category: Directory
           show: True
           menu:
-          - title: "Overview"
-            path: /product-stack/tyk-streaming/documentation/components/overview
+          - title: "Kafka"
+            path: /product-stack/tyk-streaming/configuration/inputs/kafka
             category: Page
             show: True
-          - title: "Inputs"
-            category: Directory
+          - title: "Kafka Franz"
+            path: /product-stack/tyk-streaming/configuration/inputs/kafka-franz
+            category: Page
             show: True
-            menu:
-            - title: "Overview"
-              path: /product-stack/tyk-streaming/documentation/components/inputs/overview
-              category: Page
-              show: True
-            - title: "Kafka"
-              path: /product-stack/tyk-streaming/documentation/components/inputs/kafka
-              category: Page
-              show: True
-            - title: "Kafka Franz"
-              path: /product-stack/tyk-streaming/documentation/components/inputs/kafka-franz
-              category: Page
-              show: True
-          - title: "Outputs"
-            category: Directory
+        - title: "Outputs"
+          category: Directory
+          show: True
+          menu:
+          - title: "Kafka"
+            path: /product-stack/tyk-streaming/configuration/outputs/kafka
+            category: Page
             show: True
-            menu:
-            - title: "Overview"
-              path: /product-stack/tyk-streaming/documentation/components/outputs/overview
-              catgory: Page
-              show: True
-            - title: "Kafka"
-              path: /product-stack/tyk-streaming/documentation/components/outputs/kafka
-              category: Page
-              show: True
-          - title: "Processors"
-            category: Directory
-            show: True
-            menu:
-            - title: "Overview"
-              path: /product-stack/tyk-streaming/documentation/components/processors/overview
-              catgory: Page
-              show: True
       - title: "Deployment Considerations"
         path: /product-stack/tyk-streaming/deployment-considerations
         category: Page
