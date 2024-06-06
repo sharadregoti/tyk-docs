@@ -3840,6 +3840,10 @@ menu:
               path: /product-stack/tyk-streaming/documentation/components/inputs/overview
               category: Page
               show: True
+            - title: "Kafka"
+              path: /product-stack/tyk-streaming/documentation/components/inputs/kafka
+              category: Page
+              show: True
           - title: "Outputs"
             category: Directory
             show: True
