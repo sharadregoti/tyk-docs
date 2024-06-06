@@ -93,7 +93,7 @@ This input adds the following metadata fields to each message:
 
 The field `kafka_lag` is the calculated difference between the high water mark offset of the partition at the time of ingestion and the current message offset.
 
-You can access these metadata fields using [function interpolation](/docs/configuration/interpolation#bloblang-queries).
+<!-- TODO add lin to bloblang-queries You can access these metadata fields using [function interpolation](/docs/configuration/interpolation#bloblang-queries). -->
 
 ### Ordering
 
@@ -101,7 +101,7 @@ By default messages of a topic partition can be processed in parallel, up to a l
 
 ### Troubleshooting
 
-If you're seeing issues writing to or reading from Kafka with this component then it's worth trying out the newer [`kafka_franz` input](/docs/components/inputs/kafka_franz).
+If you're seeing issues writing to or reading from Kafka with this component then it's worth trying out the newer [`kafka_franz` input]({{< ref "/product-stack/tyk-streaming/configuration/inputs/kafka-franz" >}}).
 
 - I'm seeing logs that report `Failed to connect to kafka: kafka: client has run out of available brokers to talk to (Is your cluster reachable?)`, but the brokers are definitely reachable.
 
@@ -210,9 +210,10 @@ Requires version 3.45.0 or newer
 ### tls.root_cas
 
 An optional root certificate authority to use. This is a string, representing a certificate chain from the parent trusted root certificate, to possible intermediate signing certificates, to the host certificate.
-:::warning Secret
+
+<!-- TO DO add secrets link :::warning Secret
 This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
-:::
+::: -->
 
 
 Type: `string`  
@@ -272,9 +273,10 @@ Default: `""`
 ### tls.client_certs[].key
 
 A plain text certificate key to use.
-:::warning Secret
+
+<!-- TODO add secrets link :::warning Secret
 This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
-:::
+::: -->
 
 
 Type: `string`  
@@ -299,9 +301,10 @@ Default: `""`
 ### tls.client_certs[].password
 
 A plain text password for when the private key is password encrypted in PKCS#1 or PKCS#8 format. The obsolete `pbeWithMD5AndDES-CBC` algorithm is not supported for the PKCS#8 format. Warning: Since it does not authenticate the ciphertext, it is vulnerable to padding oracle attacks that can let an attacker recover the plaintext.
-:::warning Secret
+
+<!-- TODO add secret link :::warning Secret
 This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
-:::
+::: -->
 
 
 Type: `string`  
@@ -356,9 +359,9 @@ user: ${USER}
 ### sasl.password
 
 A PLAIN password. It is recommended that you use environment variables to populate this field.
-:::warning Secret
+<!-- TODO add secret link :::warning Secret
 This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
-:::
+::: -->
 
 
 Type: `string`  
@@ -378,9 +381,9 @@ A static OAUTHBEARER access token
 Type: `string`  
 Default: `""`  
 
-### sasl.token_cache
+<!-- TODO add ### sasl.token_cache
 
-Instead of using a static `access_token` allows you to query a [`cache`](/docs/components/caches/about) resource to fetch OAUTHBEARER tokens from
+Instead of using a static `access_token` allows you to query a [`cache`](/docs/components/caches/about) resource to fetch OAUTHBEARER tokens from -->
 
 
 Type: `string`  
@@ -461,7 +464,8 @@ Default: `"100ms"`
 
 ### extract_tracing_map
 
-EXPERIMENTAL: A [Bloblang mapping](/docs/guides/bloblang/about) that attempts to extract an object containing tracing propagation information, which will then be used as the root tracing span for the message. The specification of the extracted fields must match the format used by the service wide tracer.
+<!-- TODO add link to bloblang mapping -->
+EXPERIMENTAL: A Bloblang mapping that attempts to extract an object containing tracing propagation information, which will then be used as the root tracing span for the message. The specification of the extracted fields must match the format used by the service wide tracer.
 
 
 Type: `string`  
@@ -524,8 +528,8 @@ Default: `false`
 
 ### batching
 
-Allows you to configure a [batching policy](/docs/configuration/batching).
-
+<!-- TODO Add link to batching policy -->
+Allows you to configure a batching policy.
 
 Type: `object`  
 
@@ -583,8 +587,8 @@ period: 500ms
 
 ### batching.check
 
-A [Bloblang query](/docs/guides/bloblang/about/) that should return a boolean value indicating whether a message should end a batch.
-
+<!-- TODO add bloblang query link -->
+A Bloblang query that should return a boolean value indicating whether a message should end a batch.
 
 Type: `string`  
 Default: `""`  
@@ -597,7 +601,7 @@ check: this.type == "end_of_transaction"
 
 ### batching.processors
 
-A list of [processors](/docs/components/processors/about) to apply to a batch as it is flushed. This allows you to aggregate and archive the batch however you see fit. Please note that all resulting messages are flushed as a single batch, therefore splitting the batch into smaller batches using these processors is a no-op.
+A list of processors to apply to a batch as it is flushed. This allows you to aggregate and archive the batch however you see fit. Please note that all resulting messages are flushed as a single batch, therefore splitting the batch into smaller batches using these processors is a no-op.
 
 
 Type: `array`  
