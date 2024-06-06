@@ -42,7 +42,7 @@ Issue the following *Github CLI* command to download the Tyk streams demo:
 gh repo clone TykTechnologies/tyk-pro-docker-demo
 ```
 
-### Post Download
+### Configure the installation
 
 Once downloaded, create and save a *.env* file with your Tyk Dashboard license key and configure the demo to use the Tyk Streams docker images:
 
