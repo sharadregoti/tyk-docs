@@ -1016,7 +1016,7 @@ menu:
       category: Directory
       show: True
       menu:
-      - title: "Use Cases"
+      - title: "Capabilities"
         category: Page
         path: /api-management/async-apis/use-cases
         show: True
