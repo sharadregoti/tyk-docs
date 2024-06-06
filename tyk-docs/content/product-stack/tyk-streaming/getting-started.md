@@ -133,7 +133,7 @@ If you encounter issues, here are a few things to check:
 - Verify the API definition is properly configured in the Tyk Dashboard
 - Check the Tyk Gateway logs for any error messages. Most of the time it'll be syntax errors in the stream configuration. In such case, you might see 404 since the API definition has not been created in Tyk
 
-Tyk Streams is currently an [Early Access]({{< ref "frequently-asked-questions/using-early-access-features" >}}) feature. If a crash or an issue is encountered then Tyk Gateway can be restarted and the logs can be inspected as follows:
+Tyk Streams is currently in [Lab release ]({{< ref "frequently-asked-questions/dddd" >}}) feature. If a crash or an issue is encountered then Tyk Gateway can be restarted and the logs can be inspected as follows:
 
 ```bash
 docker compose restart tyk-gateway
