@@ -3852,6 +3852,10 @@ menu:
               path: /product-stack/tyk-streaming/documentation/components/outputs/overview
               catgory: Page
               show: True
+            - title: "Kafka"
+              path: /product-stack/tyk-streaming/documentation/components/outputs/kafka
+              category: Page
+              show: True
           - title: "Processors"
             category: Directory
             show: True
