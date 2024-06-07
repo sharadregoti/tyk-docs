@@ -27,5 +27,3 @@ losses or damages are due to our fraud, wilful misconduct or gross negligence.
 This limitation does not apply to limitations that cannot be limited by law.
 
 Thank you for your understanding and cooperation
-
-agree to provide feedback to help us improve our offerings.
