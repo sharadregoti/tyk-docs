@@ -3844,6 +3844,10 @@ menu:
             path: /product-stack/tyk-streaming/configuration/inputs/kafka-franz
             category: Page
             show: True
+          - title: "Stdin"
+            path: /product-stack/tyk-streaming/configuration/inputs/stdin
+            category: Page
+            show: True
         - title: "Outputs"
           category: Directory
           show: True
@@ -3858,6 +3862,10 @@ menu:
             show: True
           - title: "Kafka Franz"
             path: /product-stack/tyk-streaming/configuration/outputs/kafka-franz
+            category: Page
+            show: True
+          - title: "Stdout"
+            path: /product-stack/tyk-streaming/configuration/outputs/stdout
             category: Page
             show: True
         - title: "Processors"
