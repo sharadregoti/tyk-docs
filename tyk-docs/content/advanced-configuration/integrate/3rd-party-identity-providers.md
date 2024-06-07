@@ -11,7 +11,7 @@ aliases:
 
 Tyk supports integration with 3rd Party Identity Providers (IdPs) for Single Sign-On (SSO) using several different approaches, providing complete flexibility to work within your existing software stack.
 
-This makes use of the [Tyk Identity Broker]({{< ref "tyk-identity-broker" >}}) (TIB) which provides a service-level component that enables delegated identities to be authorised and provide authenticated access to various Tyk components such as the Tyk Dashboard, the Tyk Developer Portal and Tyk Gateway API.
+This makes use of the [Tyk Identity Broker]({{< ref "tyk-identity-broker" >}}) (TIB) which provides a service-level component that enables delegated identities to be authorised and provide authenticated access to various Tyk components such as the Tyk Dashboard, the [Tyk Classic Developer Portal]({{< ref "tyk-developer-portal/tyk-portal-classic" >}}) and Tyk Gateway API.
 
 The following methods are supported:
 - [OpenID Connect (OIDC)](#sso-using-open-id-connect)
@@ -37,9 +37,9 @@ To configure your Tyk Dashboard to work with a 3rd Party IdP all you need to do 
 
 ## SSO using SAML
 
-SAML authentication is a way for a service provider, such as the Tyk Dashboard or Portal, to assert the Identity of a User via a third party.
+SAML authentication is a way for a service provider, such as the Tyk Dashboard or Tyk Classic Developer Portal, to assert the Identity of a User via a third party.
 
-Tyk Identity Broker can act as the go-between for the Tyk Dashboard and Portal and a third party identity provider. Tyk Identity broker can also interpret and pass along information about the user who is logging in such as Name, Email and group or role metadata for enforcing role based access control in the Tyk Dashboard.
+Tyk Identity Broker can act as the go-between for the Tyk Dashboard and Tyk Classic Developer Portal and a third party identity provider. Tyk Identity broker can also interpret and pass along information about the user who is logging in such as Name, Email and group or role metadata for enforcing role based access control in the Tyk Dashboard.
 
 The provider config for SAML has the following values that can be configured in a Profile:
 
