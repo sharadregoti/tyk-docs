@@ -116,7 +116,6 @@ If HTTPS is enabled, the following fields are added as well:
 
 ## Examples
 
-]}>
 
 ### Path Switching
 
