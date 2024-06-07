@@ -3856,6 +3856,24 @@ menu:
             path: /product-stack/tyk-streaming/configuration/outputs/kafka-franz
             category: Page
             show: True
+        - title: "Processors"
+          category: "Directory"
+          show: True
+          menu:
+          - title: "Bloblang"
+            path: /product-stack/tyk-streaming/configuration/processors/bloblang
+            category: Page
+            show: True
+          - title: "Mapping"
+            path: /product-stack/tyk-streaming/configuration/processors/mapping
+            category: Page
+            show: True
+title: bloblang
+slug: bloblang
+type: processor
+status: stable
+categories: ["Mapping","Parsing"]
+---
       - title: "Deployment Considerations"
         path: /product-stack/tyk-streaming/deployment-considerations
         category: Page
