@@ -3844,10 +3844,6 @@ menu:
             path: /product-stack/tyk-streaming/configuration/inputs/kafka-franz
             category: Page
             show: True
-          - title: "Stdin"
-            path: /product-stack/tyk-streaming/configuration/inputs/stdin
-            category: Page
-            show: True
         - title: "Outputs"
           category: Directory
           show: True
