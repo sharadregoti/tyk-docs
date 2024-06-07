@@ -76,7 +76,7 @@ The Multi Data Centre Bridge allows for centralised management of multiple indep
 The Tyk Identity Broker (TIB) is a microservice portal that provides a bridge between various Identity Management Systems and your Tyk installation.
 {{< /badge >}}
 
-{{< badge href="/product-stack/tyk-streaming/overview/" image="leaf as a bullet list" imageStyle="height:150px" >}}
+{{< badge href="/product-stack/tyk-streaming/overview/" image="" alt="leaf as a bullet list" imageStyle="height:150px" >}}
 ## Tyk Streams
 
 Tyk Streams enables organisations to securely expose, manage and monetise real-time event streams, brokers and asynchronous APIs.
