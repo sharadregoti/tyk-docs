@@ -116,7 +116,6 @@ If HTTPS is enabled, the following fields are added as well:
 
 ## Examples
 
-{ label: 'Path Switching', value: 'Path Switching', },
 { label: 'Mock OAuth 2.0 Server', value: 'Mock OAuth 2.0 Server', },
 ]}>
 
