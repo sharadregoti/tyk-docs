@@ -28,7 +28,7 @@ tasks:
         cmd: |
           if [ -f "{{.change}}" ]; then
             echo {{.change}}
-            mdox fmt {{.change}}
+            mdox fmt --soft-wraps {{.change}}
             # list item formatting
             perl -pi -e 's/^\* /- /g' {{.change}}
             # leading space before list (-) after colon (:)
