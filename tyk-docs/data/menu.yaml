@@ -3856,6 +3856,11 @@ menu:
             path: /product-stack/tyk-streaming/configuration/inputs/nats
             category: Page
             show: True
+          - title: "Amqp_1"
+            path: /product-stack/tyk-streaming/configuration/inputs/amqp-1
+            category: Page
+            show: True
+
         - title: "Outputs"
           category: Directory
           show: True
