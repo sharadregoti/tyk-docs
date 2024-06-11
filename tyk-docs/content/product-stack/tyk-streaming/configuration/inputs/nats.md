@@ -54,7 +54,7 @@ This input adds the following metadata fields to each message:
 - All message headers (when supported by the connection)
 ```
 
-You can access these metadata fields using [function interpolation](/docs/configuration/interpolation#bloblang-queries).
+You can access these metadata fields using [function interpolation]({{< ref /product-stack/tyk-streaming/configuration/common-configuration/interpolation >}}).
 
 ### Connection Name
 
@@ -62,11 +62,11 @@ When monitoring and managing a production NATS system, it is often useful to
 know which connection a message was send/received from. This can be achieved by
 setting the connection name option when creating a NATS connection.
 
-Benthos will automatically set the connection name based off the label of the given
-NATS component, so that monitoring tools between NATS and benthos can stay in sync.
+Tyk Streams will automatically set the connection name based off the label of the given
+NATS component, so that monitoring tools between NATS and Tyk Streams can stay in sync.
 ### Authentication
 
-There are several components within Benthos which utilise NATS services. You will find that each of these components
+There are several components within Tyk Streams which utilise NATS services. You will find that each of these components
 support optional advanced authentication parameters for [NKeys](https://docs.nats.io/nats-server/configuration/securing_nats/auth_intro/nkey_auth)
 and [User Credentials](https://docs.nats.io/developing-with-nats/security/creds).
 
@@ -204,7 +204,7 @@ Requires version 3.45.0 or newer
 
 An optional root certificate authority to use. This is a string, representing a certificate chain from the parent trusted root certificate, to possible intermediate signing certificates, to the host certificate.
 :::warning Secret
-This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
+This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info]({{< ref /product-stack/tyk-streaming/configuration/common-configuration/secrets >}}).
 :::
 
 
@@ -266,7 +266,7 @@ Default: `""`
 
 A plain text certificate key to use.
 :::warning Secret
-This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
+This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info]({{< ref /product-stack/tyk-streaming/configuration/common-configuration/secrets >}}).
 :::
 
 
@@ -293,7 +293,7 @@ Default: `""`
 
 A plain text password for when the private key is password encrypted in PKCS#1 or PKCS#8 format. The obsolete `pbeWithMD5AndDES-CBC` algorithm is not supported for the PKCS#8 format. Warning: Since it does not authenticate the ciphertext, it is vulnerable to padding oracle attacks that can let an attacker recover the plaintext.
 :::warning Secret
-This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
+This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info]({{< ref /product-stack/tyk-streaming/configuration/common-configuration/secrets >}}).
 :::
 
 
@@ -345,7 +345,7 @@ user_credentials_file: ./user.creds
 
 An optional plain text user JWT (given along with the corresponding user NKey Seed).
 :::warning Secret
-This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
+This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info]({{< ref /product-stack/tyk-streaming/configuration/common-configuration/secrets >}}).
 :::
 
 
@@ -355,7 +355,7 @@ Type: `string`
 
 An optional plain text user NKey Seed (given along with the corresponding user JWT).
 :::warning Secret
-This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info](/docs/configuration/secrets).
+This field contains sensitive information that usually shouldn't be added to a config directly, read our [secrets page for more info]({{< ref /product-stack/tyk-streaming/configuration/common-configuration/secrets >}}).
 :::
 
 
