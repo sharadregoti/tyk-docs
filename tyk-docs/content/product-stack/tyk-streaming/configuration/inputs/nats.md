@@ -363,7 +363,7 @@ Type: `string`
 
 ### `extract_tracing_map`
 
-EXPERIMENTAL: A [Bloblang mapping](/docs/guides/bloblang/about) that attempts to extract an object containing tracing propagation information, which will then be used as the root tracing span for the message. The specification of the extracted fields must match the format used by the service wide tracer.
+EXPERIMENTAL: A Bloblang mapping that attempts to extract an object containing tracing propagation information, which will then be used as the root tracing span for the message. The specification of the extracted fields must match the format used by the service wide tracer.
 
 
 Type: `string`  
