@@ -26,7 +26,7 @@ the config becomes structurally different. Therefore, it's always best to wrap e
 quotes so that when the variable is unset you still have a valid config (with an empty string).
 {{< /note >}}
 
-More information about this syntax can be found on the [interpolation page]({{< ref /product-stack/tyk-streaming/configuration/common-configuration/interpolation >}}).
+More information about this syntax can be found on the [interpolation page]({{< ref “/product-stack/tyk-streaming/configuration/common-configuration/interpolation“ >}}).
 
 
 ## Avoiding Leaked Secrets
