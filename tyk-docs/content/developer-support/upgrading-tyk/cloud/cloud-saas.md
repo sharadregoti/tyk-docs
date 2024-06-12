@@ -205,7 +205,7 @@ See Tyk Guide for [Upgrading Cloud Data Planes]({{< ref "tyk-cloud/environments-
 
 ## Upgrade Guide Video
 
-Please refer to our supporting [video](https://tyk-1.wistia.com/medias/t0oamm63ae) below for further guidance.
+Please refer to our [upgrade guide video](https://tyk-1.wistia.com/medias/t0oamm63ae) below for visual guidance:
 
 <div>
 <iframe src="https://fast.wistia.net/embed/iframe/t0oamm63ae" title="Wistia video player" allowfullscreen frameborder="0" scrolling="no" class="responsive-frame" name="wistia_embed" ></iframe>
