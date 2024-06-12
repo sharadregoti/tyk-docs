@@ -40,7 +40,7 @@ This section explains the process for upgrading your custom Go plugins on Tyk Cl
  go mod vendor
  ```
 
-3. Download the plugin compiler for the target version you’re upgrading to (e.g. 4.0.9).  See the Tyk Docker Hub [repo](https://hub.docker.com/r/tykio/tyk-plugin-compiler) for available versions. 
+3. Download the plugin compiler for the target version you’re upgrading to (e.g. for v5.3 `docker pull tykio/tyk-plugin-compiler:v5.3`).  See the Tyk Docker Hub [repo](https://hub.docker.com/r/tykio/tyk-plugin-compiler) for available versions. 
 4. [Compile]({{< ref "plugins/supported-languages/golang#building-the-plugin">}}) your plugin using this compiler 
 5. [Create a plugin bundle]({{< ref "plugins/how-to-serve-plugins/plugin-bundles" >}}) that includes the newly compiled version
 
