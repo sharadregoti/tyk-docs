@@ -11,7 +11,7 @@ The Control Plane includes the following components:
 - Tyk Dashboard
 - MongoDB 
 - Redis (Master Instance)
-- Management Gateway
+- Control Plane
 - MDCB
 
 The Data Plane includes the following components: 
