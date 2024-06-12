@@ -23,7 +23,7 @@ When considering upgrading your current configuration to a new Tyk release, our 
 
 ## Next Steps {#next-steps}
 
-Consult our [upgrade strategy]({{< ref "developer-support/upgrading-tyk/upgrade-strategy" >}}) guidelines to help you decide between a [Rolling]({{< ref "developer-support/upgrading-tyk/upgrade-strategy#rolling-upgrade" >}}) or [Blue-Green]({{< ref "developer-support/upgrading-tyk/upgrade-strategy#blue-green" >}}) upgrade.
+Review our [upgrade strategy guidelines]({{< ref "developer-support/upgrading-tyk/upgrade-strategy" >}}) to decide between a [Rolling]({{< ref "developer-support/upgrading-tyk/upgrade-strategy#rolling-upgrade" >}}) or [Blue-Green]({{< ref "developer-support/upgrading-tyk/upgrade-strategy#blue-green" >}}) upgrade.
 
 Use the table below to follow the upgrade guide appropriate for your platform:
 
