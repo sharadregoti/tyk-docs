@@ -213,25 +213,11 @@ See Tyk Guide for how to [Upgrade Control Planes]({{< ref "tyk-cloud/environment
 
 ## 3. Upgrade your Data Plane Hybrid Gateway(s){#upgrading-data-plane-hybrid-gateways}
 Follow the instructions for component deployment type:
-- **Docker**
-    1. Backup your Gateway config file `tyk.conf`
-    2. Update the image version in the docker command or script to the target version
-    3. Restart the Gateway
-- **Helm**
-    1. Backup your Gateway config file `tyk.conf`. Note this step may not be relevant if you’re exclusively using the environment variables from the `values.yaml` to define your configuration.
-    2. Update the image version in your `values.yaml` to the target version
-    3. Run helm upgrade with the updated `values.yaml` file
-- **Other (Linux)**
-    1. Find the target version you want to upgrade in the Packagecloud repository: https://packagecloud.io/tyk/tyk-gateway
-    2. Follow the upgrade instructions for your distro
-        - RHEL/CentOS Upgrade
-        ```bash
-        sudo yum upgrade tyk-gateway-5.2.5
-        ```
-        - Debian/Ubuntu
-        ```bash
-        sudo apt-get install tyk-gateway-5.2.5 
-        ```
+- [Docker]({{< ref "/developer-support/upgrading-tyk/other-upgrade-options/docker" >}})
+- [Helm]({{< ref "/developer-support/upgrading-tyk/other-upgrade-options/helm" >}})
+- [Linux Debian]({{< ref "/developer-support/upgrading-tyk/self-managed/linux-distributions/self-managed-deb" >}})
+- [Linux RHEL/CENTOS]({{< ref "/developer-support/upgrading-tyk/self-managed/linux-distributions/self-managed-rpm" >}})
+
 ## Upgrade Guide Video
 
 Please refer to our [video](https://tyk-1.wistia.com/medias/4nf9fggatz) for further supporting with upgrading Tyk Self-Managed (RPM).
