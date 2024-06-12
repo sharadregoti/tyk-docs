@@ -19,7 +19,7 @@ The Data Plane includes the following components:
 - Redis instance 
 - Tyk Pump (optional)
 
-After reviewing your [upgrade pre-requisites]({{< ref "developer-support/upgrading-tyk/upgrade-prerequisites" >}}), 
+After reviewing your [upgrade prerequisites]({{< ref "developer-support/upgrading-tyk/upgrade-prerequisites" >}}), 
 follow the instructions below to upgrade your Tyk components and plugins.
 
 
