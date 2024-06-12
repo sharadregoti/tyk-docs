@@ -1,5 +1,5 @@
 ---
-title: "Upgrade Pre-Requisites"
+title: "Planning For Upgrade"
 date: 2024-02-26
 tags: ["Upgrade Go Plugins", "Tyk plugins", "DEB", "Self Managed"]
 description: "Explains the pre-requesites to consider prior to upgrading"
