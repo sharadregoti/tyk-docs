@@ -39,9 +39,9 @@ See Tyk Guide for how to [Upgrade Control Planes]({{< ref "tyk-cloud/environment
 
  | Upgrade Path | Current Version | Target Version |
  | ---- | --------------- | -------------- |
- | [1](#path-1)    | < 4.1.0         | < 4.1.0        |
- | [2](#path-2)    | < 4.1.0         | \>= 4.1.0      |
- | [3](#path-3)    | \>= 4.1.0       | \>=5.1.0       |
+ | [Path 1](#path-1)    | < 4.1.0         | < 4.1.0        |
+ | [Path 2](#path-2)    | < 4.1.0         | \>= 4.1.0      |
+ | [Path 3](#path-3)    | \>= 4.1.0       | \>=5.1.0       |
 
 ### Path 1 - Current Version < 4.1.0 and Target Version < 4.1.0 {#path-1}
  1. Open a terminal/command prompt in the directory of your plugin source file(s)  
