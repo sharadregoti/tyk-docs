@@ -33,4 +33,7 @@ Use the table below to follow the upgrade guide appropriate for your platform:
 | | [Hybrid]({{< ref "developer-support/upgrading-tyk/cloud/hybrid" >}}) | Guide for Hybrid environments with Gateway Data Plane(s) deployed on a local server or within a third party cloud provider |
 | Tyk Self Managed | [RHEL or CentOS]({{< ref "developer-support/upgrading-tyk/self-managed/linux-distributions/self-managed-rpm" >}}) | Guide for RPM based Linux distributions |
 | | [Debian or Ubuntu]({{< ref "developer-support/upgrading-tyk/self-managed/linux-distributions/self-managed-deb" >}}) | Guide for DEB based Linux distributions |
+| Other           | [Docker]({{< ref "/developer-support/upgrading-tyk/other-upgrade-options/docker" >}}) | Guide for Docker |
+| | [Helm]({{< ref "/developer-support/upgrading-tyk/other-upgrade-options/helm" >}}) | Guide for upgrading Helm Charts |
+| | [Kubernetes]({{< ref "/developer-support/upgrading-tyk/other-upgrade-options/kubernetes" >}}) | Guide for upgrading Tyk in a Kubernetes environment |
 
