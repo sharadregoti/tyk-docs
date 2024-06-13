@@ -9,6 +9,8 @@ menu:
 
 This page provides guidance for upgrading your Tyk installation. When upgrading Tyk, you need to consider each component (e.g. Gateway, Pump, Dashboard) separately, taking into account the deployment style you've implemented. We have structured this guide by deployment type (e.g. Cloud, Self-Managed, etc.) to keep all the information you need in one place.
 
+---
+
 ## Upgrade standards and recommendations
 All our components adhere to a few common standards:
 
@@ -19,6 +21,7 @@ All our components adhere to a few common standards:
 - Make sure you follow our [comprehensive guide for backing up Tyk]({{< ref "frequently-asked-questions/how-to-backup-tyk" >}}) before starting the upgrade.
 - If you experience any issues with the new version you pulled, please contact Tyk Support or [Tyk community forum](https://community.tyk.io/).
 
+---
 
 ## Upgrade Guides
 
@@ -26,7 +29,10 @@ Tyk provide upgrade guides for a variety of platforms.
 
 ### Tyk Cloud 
 
-Tyk Cloud users manage Tyk deployments via the Tyk Cloud Console. You can upgrade Tyk Dashboard and the Gateways in the Cloud Data Planes using this console. Please consult our upgrade guides for [Cloud SaaS]({{< ref "developer-support/upgrading-tyk/cloud/cloud-saas/" >}}) and [Hybrid SaaS]({{< ref "developer-support/upgrading-tyk/cloud/hybrid/" >}}) to learn more!
+Tyk Cloud users manage Tyk deployments via the Tyk Cloud Console. You can upgrade Tyk Dashboard and the Gateways in the Cloud Data Planes using this console. Please consult the following upgrade guides to learn more:
+
+- [Cloud SaaS]({{< ref "developer-support/upgrading-tyk/cloud/cloud-saas/" >}})
+- [Hybrid SaaS]({{< ref "developer-support/upgrading-tyk/cloud/hybrid/" >}})
 
 ### Self Managed
 
