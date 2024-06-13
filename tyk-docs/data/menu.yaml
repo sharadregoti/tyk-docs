@@ -4212,7 +4212,7 @@ menu:
         path: /upgrading-tyk
         category: Page
         show: True
-      - title: "Planning For Upgrade"
+      - title: "Preparing For Upgrade"
         path: /developer-support/upgrading-tyk/upgrade-prerequisites
         category: Page
         show: True
