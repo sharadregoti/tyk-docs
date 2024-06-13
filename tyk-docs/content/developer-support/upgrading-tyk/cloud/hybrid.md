@@ -213,8 +213,8 @@ See Tyk Guide for how to [Upgrade Control Planes]({{< ref "tyk-cloud/environment
 
 ## 3. Upgrade your Data Plane Hybrid Gateway(s){#upgrading-data-plane-hybrid-gateways}
 Follow the instructions for component deployment type:
-- [Docker]({{< ref "/developer-support/upgrading-tyk/other-upgrade-options/docker" >}})
-- [Helm]({{< ref "/developer-support/upgrading-tyk/other-upgrade-options/helm" >}})
+- [Docker]({{< ref "/developer-support/upgrading-tyk/self-managed/docker" >}})
+- [Helm]({{< ref "/developer-support/upgrading-tyk/self-managed/helm" >}})
 - [Linux Debian]({{< ref "/developer-support/upgrading-tyk/self-managed/linux-distributions/self-managed-deb" >}})
 - [Linux RHEL/CENTOS]({{< ref "/developer-support/upgrading-tyk/self-managed/linux-distributions/self-managed-rpm" >}})
 

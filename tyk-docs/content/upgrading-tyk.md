@@ -35,9 +35,9 @@ Please consult our guides for upgrading Tyk Gateway in a self managed environmen
 ### Other
 
 We also offer upgrade guides for:
-- [Docker]({{< ref "developer-support/upgrading-tyk/other-upgrade-options/docker" >}})
-- [Helm]({{< ref "developer-support/upgrading-tyk/other-upgrade-options/helm" >}})
-- [Kubernetes]({{< ref "developer-support/upgrading-tyk/other-upgrade-options/kubernetes" >}})
+- [Docker]({{< ref "developer-support/upgrading-tyk/self-managed/docker" >}})
+- [Helm]({{< ref "developer-support/upgrading-tyk/self-managed/helm" >}})
+- [Kubernetes]({{< ref "developer-support/upgrading-tyk/self-managed/kubernetes" >}})
 
 ---
 

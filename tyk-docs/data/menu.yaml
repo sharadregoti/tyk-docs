@@ -4240,37 +4240,37 @@ menu:
           category: Directory
           show: True
           menu:
-          - title: "Upgrade Custom Plugins"
-            path: /developer-support/upgrading-tyk/self-managed/go-plugins
-            category: Page
-            show: True
-          - title: "Upgrade OS Packages"
+          - title: "Linux"
             category: Directory
             show: True
             menu:
-            - title: "Debian"
-              path: /developer-support/upgrading-tyk/self-managed/linux-distributions/self-managed-deb
+            - title: "Upgrade Custom Plugins"
+              path: /developer-support/upgrading-tyk/self-managed/go-plugins
               category: Page
               show: True
-            - title: "Redhat (Cent OS)"
-              path: /developer-support/upgrading-tyk/self-managed/linux-distributions/self-managed-rpm
-              category: Page
+            - title: "Upgrade OS Packages"
+              category: Directory
               show: True
-      - title: "Other Upgrade Options"
-        category: Directory
-        show: True
-        menu:
-        - title: "Docker"
-          path: /developer-support/upgrading-tyk/other-upgrade-options/docker
-          category: Page
-          show: True
-        - title: "Helm Charts"
-          path: /developer-support/upgrading-tyk/other-upgrade-options/helm
-          show: True
-        - title: "Kubernetes"
-          path: /developer-support/upgrading-tyk/other-upgrade-options/kubernetes
-          category: Page
-          show: True
+              menu:
+              - title: "Debian"
+                path: /developer-support/upgrading-tyk/self-managed/linux-distributions/self-managed-deb
+                category: Page
+                show: True
+              - title: "Redhat (Cent OS)"
+                path: /developer-support/upgrading-tyk/self-managed/linux-distributions/self-managed-rpm
+                category: Page
+                show: True
+          - title: "Docker"
+            path: /developer-support/upgrading-tyk/self-managed/docker
+            category: Page
+            show: True
+          - title: "Helm Charts"
+            path: /developer-support/upgrading-tyk/self-managed/helm
+            show: True
+          - title: "Kubernetes"
+            path: /developer-support/upgrading-tyk/self-managed/kubernetes
+            category: Page
+            show: True
     - title: "Backup APIs and Policies"
       path: /developer-support/backups/backup-apis-and-policies
       category: Page
