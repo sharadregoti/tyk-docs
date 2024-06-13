@@ -30,11 +30,15 @@ Tyk Cloud users manage Tyk deployments via the Tyk Cloud Console. You can upgrad
 
 ### Self Managed
 
-Please consult our guides for upgrading Tyk Gateway in a self managed environment for [RHEL (CentOS)]({{< ref "developer-support/upgrading-tyk/self-managed/linux-distributions/self-managed-rpm" >}}) and [Debian]({{< ref "developer-support/upgrading-tyk/self-managed/linux-distributions/self-managed-deb" >}}) Linux distributions.
+Please consult our guides for upgrading Tyk Gateway in a self managed environment:
 
-### Other
+##### Linux
 
-We also offer upgrade guides for:
+- [Debian]({{< ref "developer-support/upgrading-tyk/self-managed/linux-distributions/self-managed-deb" >}})
+- [RHEL (CentOS)]({{< ref "developer-support/upgrading-tyk/self-managed/linux-distributions/self-managed-rpm" >}})
+
+##### Other
+
 - [Docker]({{< ref "developer-support/upgrading-tyk/self-managed/docker" >}})
 - [Helm]({{< ref "developer-support/upgrading-tyk/self-managed/helm" >}})
 - [Kubernetes]({{< ref "developer-support/upgrading-tyk/self-managed/kubernetes" >}})
