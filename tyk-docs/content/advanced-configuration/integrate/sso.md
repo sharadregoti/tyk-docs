@@ -73,7 +73,7 @@ You can implement custom authentication schemes for the Dashboard and Classic Po
 Both APIs' `/sso` endpoints will generate a temporary authentication token, valid for 60 seconds, that can be used to log in to the `/tap` endpoint, or to the portal using the `<portal-url>/sso` endpoint, providing the token via the `nonce` query param. If `nonce` is valid, Tyk will create a temporary user and log them in. 
 
 For example:
-```.http
+```http
 GET /tap?nonce=YTNiOGUzZjctYWZkYi00OTNhLTYwODItZTAzMDI3MjM0OTEw HTTP/1.1
 Host: localhost:3000    
 ```
