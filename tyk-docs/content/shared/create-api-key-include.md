@@ -94,6 +94,13 @@ curl -X POST -H "authorization: 1238b7e0e2ff4c2957321724409ee2eb" \
     "quota_renews": 1449051461,
     "quota_remaining": -1,
     "quota_renewal_rate": 60,
+    "smoothing": {
+        "enabled": true,
+        "threshold": 100,
+        "trigger": 0.5,
+        "step": 100,
+        "delay": 10
+    },
     "access_rights": {
       "ad5004d961a147d4649fd3216694ebe2": {
         "api_id": "ad5004d961a147d4649fd3216694ebe2",
