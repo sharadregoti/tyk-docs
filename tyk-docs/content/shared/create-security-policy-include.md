@@ -128,6 +128,13 @@ curl -X POST -H "authorization: {API-TOKEN}" \
     "name": "POLICY NAME",
     "rate": 100,
     "per": 1,
+    "smoothing": {
+        "enabled": true,
+        "threshold": 100,
+        "trigger": 0.5,
+        "step": 100,
+        "delay": 10
+    },
     "quota_max": 10000,
     "quota_renewal_rate": 3600,
     "state": "active",
@@ -146,6 +153,7 @@ The important elements:
 
 *   `access_rights`: A list of objects representing which APIs that you have configured to grant access to.
 *   `rate` and `per`: The number of requests to allow per period.
+*   `smoothing`: The Rate Limit Smooting configuration for Redis Rate Limiter.
 *   `quota_max`: The maximum number of allowed requests over a quota period.
 *   `quota_renewal_rate`: how often the quota resets, in seconds. In this case we have set it to renew every hour.
 *   `state`: New from **v3.0**, this can be used instead of `active` and `is_inactive`. You can use the following values:
