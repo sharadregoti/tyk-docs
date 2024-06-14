@@ -23,7 +23,7 @@ Check out [this section]({{< ref "advanced-configuration/integrate" >}}) for SSO
 
 ### Configuring your Social IdP in Tyk Dashboard
 
-In short, all you need to do is as follow:
+Follow the steps below to configure your social IdP in Tyk Dashboard:
 
 1. Access the **Identity Manager** under System Management in the Tyk Dashboard
 2. Create a profile for your preferred IdP
