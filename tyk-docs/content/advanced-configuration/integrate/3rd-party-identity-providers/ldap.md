@@ -14,7 +14,7 @@ The Lightweight Directory Access Protocol (LDAP) is a standard protocol that mai
 
 ## Log into the Dashboard using LDAP
 
-This is an example of a TIB profile could be used to log a user into the Dashboard using an LDAP pass-through provider:
+This is an example of a TIB profile that could be used to log a user into the Dashboard using an LDAP pass-through provider:
 
 ```.json
 {
