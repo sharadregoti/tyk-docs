@@ -136,7 +136,7 @@ To perform an advanced LDAP search, you need to specify three additional attribu
 For additional information about [LDAP search protocol](https://www.ldap.com/the-ldap-search-operation)
 
 Example profile using LDAP search filters:
-```.json
+```json
 {
 	"ActionType": "GenerateOAuthTokenForClient",
 	"ID": "2",
