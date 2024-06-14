@@ -9,7 +9,7 @@ weight: 0
 
 Single Sign-On (SSO) gives users the ability to log in to multiple applications without the need to enter their password more than once.
 
-[OpenID Connect]({{< ref "basic-config-and-security/security/authentication-authorization/openid-connect" >}}) (OIDC) and Security Assertion Markup Language (SAML) enable an application (such as Tyk Dashboard) to verify the identity of users without having to manage usernames and passwords locally, by offloading the identification process and secure storage of user credentials to a dedicated Identity Provider (IdP). The Authorisation server of the IdP identifies the users for a pre-registered and approved application (`client` in OAuth and OIDC terminology).
+[OpenID Connect]({{< ref "basic-config-and-security/security/authentication-authorization/openid-connect" >}}) (OIDC) and Security Assertion Markup Language (SAML) enables an application (such as Tyk Dashboard) to verify the identity of users without having to manage usernames and passwords locally, by offloading the identification process and secure storage of user credentials to a dedicated Identity Provider (IdP). The Authorisation server of the IdP identifies the users for a pre-registered and approved application (`client` in OAuth and OIDC terminology).
 
 [Tyk Identity Broker]({{< ref "tyk-identity-broker" >}}) is an open-source project that can be used to integrate Tyk Dashboard and Classic Portal with 3rd party identity providers (IDPs). TIB has been included as a built-in feature of the Tyk Dashboard since Tyk 3.0: no configuration is required and it is readily available for use.
 
