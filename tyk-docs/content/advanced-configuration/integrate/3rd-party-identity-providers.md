@@ -89,7 +89,7 @@ Example profile configuration:
 ```
 ### Example Video
 
-We have a video that walks you through getting Tyk Dashboard SSO Access via SAML using Microsoft Azure as IDP and our internal Dashboard TIB.
+We have a video that explains how to provide Tyk Dashboard SSO Access via SAML using Microsoft Azure as an IDP and our internal Dashboard TIB.
 
 {{< youtube 4L9aetRrHqI >}}
 
