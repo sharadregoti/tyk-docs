@@ -18,6 +18,7 @@ All our components adhere to a few common standards:
 - Check our [versioning and long-term-support policies]({{< ref "developer-support/special-releases-and-features/long-term-support-releases" >}}) for more details on the way we release major and minor features, patches and the support dates for each release.
 - Before starting the upgrade make sure you have consulted the [preparation guidelines]({{< ref "developer-support/upgrading-tyk/upgrade-prerequisites" >}}) before starting the upgrade.
 - Make sure you have planned an [upgrade strategy]({{< ref "developer-support/upgrading-tyk/upgrade-strategy" >}}).
+- All release notes have an "Upgrade Instructions" section. Please make sure to check it in the relevant release notes.
 - Make sure you follow our [comprehensive guide for backing up Tyk]({{< ref "frequently-asked-questions/how-to-backup-tyk" >}}) before starting the upgrade.
 - If you experience any issues with the new version you pulled, please contact Tyk Support or [Tyk community forum](https://community.tyk.io/).
 
@@ -25,7 +26,7 @@ All our components adhere to a few common standards:
 
 ## Upgrade Guides
 
-Tyk provide upgrade guides for a variety of platforms.
+Tyk provides upgrade guides for a variety of platforms.
 
 ### Tyk Cloud 
 
