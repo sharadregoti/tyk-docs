@@ -97,7 +97,7 @@ This configuration is useful for internal APIs that need valid OAuth tokens (e.g
 
 LDAP requires little configuration, we can use the same provider configuration that we used to log into the Dashboard to target the Classic Portal instead - notice the change in the handler configuration and the return URL:
 
-```.json
+```json
 {
   "ActionType": "GenerateOrLoginDeveloperProfile",
   "ID": "5",
