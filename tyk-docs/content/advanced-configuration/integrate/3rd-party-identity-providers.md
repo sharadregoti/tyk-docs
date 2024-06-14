@@ -43,7 +43,7 @@ Tyk Identity Broker can act as the go-between for the Tyk Dashboard and Tyk Clas
 
 The provider config for SAML has the following values that can be configured in a Profile:
 
-`SAMLBaseURL` - The host of TIB that will be used in the metadata document for the Service Provider. This will form part of the metadata URL used as the Entity ID by the IDP. The redirects configured in the IDP must match the expected Host and URI configured in the metadata document made available by Tyk Identity Broker.
+`SAMLBaseURL` - The Tyk Identity Broker host that will be used in the metadata document for the Service Provider. This will form part of the metadata URL used as the Entity ID by the IdP. The redirects configured in the IdP must match the expected host and URI configured in the metadata document made available by Tyk Identity Broker.
 
 `FailureRedirect` - Where to redirect failed login requests.
 
