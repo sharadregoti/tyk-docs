@@ -63,7 +63,7 @@ This metadata XML can be signed providing a public X.509 cert and the private ke
 
 Example profile configuration:
 
-```
+```json
 {
     "ActionType": "GenerateOrLoginUserProfile",
     "ID": "saml-sso-login",
