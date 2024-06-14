@@ -1,11 +1,13 @@
 ---
-title: "Upgrading Custom Go Plugins"
+title: "Upgrade Custom Go Plugins"
 date: 2024-03-1
 tags: ["Upgrade Custom Go Plugins", "Tyk plugins", "Custom Plugins", "Self Managed"]
 description: "Explains how to upgrade Go Plugins"
+aliases:
+    - /developer-support/upgrading-tyk/self-managed/go-plugins
 ---
 
-This guide shows you how to upgrade your custom Go plugins:
+This guide shows you how to compile your custom Go plugins for upgrade:
 - Navigate into the plugins directory that contains your Go module.
 - Use the table below to follow the upgrade process for the version of Tyk you are upgrading to:
 
@@ -15,9 +17,7 @@ This guide shows you how to upgrade your custom Go plugins:
 | [Path 2](#path-2)    | < 4.1.0         | >= 4.1.0       |
 | [Path 3](#path-3)    | >= 4.1.0        | >= 5.1.0       |
 
-Additionally, if you are using bundles to ship your plugins, you will need to build and redploy a new plugin bundle. Please consult our supporting documentation that explains how to build and deploy [Tyk plugin bundles]({{< ref "plugins/how-to-serve-plugins/plugin-bundles#global-parameters" >}}).
-
-### Path 1 - Current Version < 4.1.0 and Target Version < 4.1.0 {#path-1}
+## Path 1 - Current Version < 4.1.0 and Target Version < 4.1.0 {#path-1}
  1. Open a terminal/command prompt in the directory of your plugin source file(s)  
  2. Run the following commands to initialise your plugin:
 
@@ -32,7 +32,7 @@ go mod tidy
 go mod vendor
 ```
 
-### Path 2 - Current Version < 4.1.0 and Target Version >= 4.1.0 {#path-2}
+## Path 2 - Current Version < 4.1.0 and Target Version >= 4.1.0 {#path-2}
 1. Open a terminal/command prompt in the directory of your plugin source file(s)  
 2. Based on your Target Version run the appropriate commands to initialize your plugin:
 
@@ -59,7 +59,7 @@ go mod vendor
     ```
 
 
-### Path 3 - Current Version >= 4.1.0 and Target Version >= 5.1.0 {#path-3}
+## Path 3 - Current Version >= 4.1.0 and Target Version >= 5.1.0 {#path-3}
 1. Open a terminal/command prompt in the directory of your plugin source file(s)  
 2. Based on your Target Version run the appropriate commands to initialise your plugin:
 
@@ -78,7 +78,7 @@ go mod vendor
     go mod tidy
     ```
 
-### Compile the plugins
+## Compile the plugins
 
 Download the plugin compiler for the target Gateway version you’re upgrading to (e.g. 5.2.5). Docker images for plugin compiler versions are available in the [Tyk Docker Hub](https://hub.docker.com/r/tykio/tyk-plugin-compiler/tags). 
 

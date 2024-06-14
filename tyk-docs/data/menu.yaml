@@ -4217,26 +4217,38 @@ menu:
         category: Page
         show: True
       - title: "Preparing For Upgrade"
-        path: /developer-support/upgrading-tyk/upgrade-prerequisites
-        category: Page
-        show: True
-      - title: "Upgrade Strategy"
-        path: /developer-support/upgrading-tyk/upgrade-strategy
-        category: Page
-        show: True
+        category: Directory
+        show: true
+        menu:
+        - title: "Upgrade Guidelines"
+          path: /developer-support/upgrading-tyk/upgrade-prerequisites
+          category: Page
+          show: True
+        - title: "Upgrade Strategy"
+          path: /developer-support/upgrading-tyk/upgrade-strategy
+          category: Page
+          show: True
       - title: "Tyk Platform Upgrades"
         category: Directory
         show: True
         menu:
+        - title: "Go Plugins"
+          path: /developer-support/upgrading-tyk/go-plugins
+          category: Page
+          show: True
         - title: "Tyk Cloud"
           category:  Directory
           show: True
           menu:
-          - title: "Cloud SaaS"
+          - title: "Deploy Custom Go Plugins"
+            path: /developer-support/upgrading-tyk/cloud/deploy-go-plugins
+            category: Page
+            show: True
+          - title: "Upgrade Cloud SaaS"
             path: /developer-support/upgrading-tyk/cloud/cloud-saas
             category: Page
             show: True
-          - title: "Hybrid SaaS"
+          - title: "Upgrade Hybrid SaaS"
             path: /developer-support/upgrading-tyk/cloud/hybrid
             category: Page
             show: True
@@ -4248,22 +4260,14 @@ menu:
             category: Directory
             show: True
             menu:
-            - title: "Upgrade Custom Plugins"
-              path: /developer-support/upgrading-tyk/self-managed/go-plugins
+            - title: "Upgrade Tyk On Debian"
+              path: /developer-support/upgrading-tyk/self-managed/linux-distributions/self-managed-deb
               category: Page
               show: True
-            - title: "Upgrade OS Packages"
-              category: Directory
+            - title: "Upgrade Tyk On Redhat (Cent OS)"
+              path: /developer-support/upgrading-tyk/self-managed/linux-distributions/self-managed-rpm
+              category: Page
               show: True
-              menu:
-              - title: "Debian"
-                path: /developer-support/upgrading-tyk/self-managed/linux-distributions/self-managed-deb
-                category: Page
-                show: True
-              - title: "Redhat (Cent OS)"
-                path: /developer-support/upgrading-tyk/self-managed/linux-distributions/self-managed-rpm
-                category: Page
-                show: True
           - title: "Docker"
             path: /developer-support/upgrading-tyk/self-managed/docker
             category: Page
@@ -4275,6 +4279,10 @@ menu:
             path: /developer-support/upgrading-tyk/self-managed/kubernetes
             category: Page
             show: True
+        - title: "Open Source"
+          category: Page
+          path: /developer-support/upgrading-tyk/open-source
+          show: True
     - title: "Backup APIs and Policies"
       path: /developer-support/backups/backup-apis-and-policies
       category: Page
