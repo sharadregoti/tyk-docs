@@ -13,7 +13,7 @@ Single Sign-On (SSO) gives users the ability to log in to multiple applications 
 
 [Tyk Identity Broker]({{< ref "tyk-identity-broker" >}}) is an open-source project that can be used to integrate Tyk Dashboard and Classic Portal with 3rd party identity providers (IDPs). TIB has been included as a built-in feature of the Tyk Dashboard since Tyk 3.0: no configuration is required and it is readily available for use.
 
-TIB allows you to implement single sign-on and use of your existing user directory for login to the Tyk products.It has been designed as a glue-code solution, so it can integrate with almost any IdP.
+TIB allows you to implement single sign-on and use your existing user directory for login to the Tyk products. It has been designed as a glue-code solution, so it can integrate with almost any IdP.
 <br>
 <br>
 {{< note success >}}
