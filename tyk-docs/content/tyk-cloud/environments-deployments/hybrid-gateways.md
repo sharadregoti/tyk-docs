@@ -1,7 +1,7 @@
 ---
 title: "Deploy Hybrid Gateways"
 date: 2022-03-14
-tags: ["Tyk Cloud", "Hybrid", "Gateways", "data plane", "Kubernetes", "docker"]
+tags: ["Tyk Cloud", "Hybrid", "Gateways", "data plane", "Kubernetes", "docker", "install"]
 description: "How to deploy Hybrid Gateways on Kubernetes and Docker"
 menu:
   main:
