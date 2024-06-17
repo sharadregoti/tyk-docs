@@ -50,6 +50,10 @@ Please consult our guides for upgrading Tyk Gateway in a self managed environmen
 - [Helm]({{< ref "developer-support/upgrading-tyk/self-managed/helm" >}})
 - [Kubernetes]({{< ref "developer-support/upgrading-tyk/self-managed/kubernetes" >}})
 
+### Open Source
+
+Please consult our [guide]({{< ref "/developer-support/upgrading-tyk/open-source" >}}) for upgrading Tyk Gateway in an Open Source environment.
+
 ---
 
 ## Upgrade Tools
