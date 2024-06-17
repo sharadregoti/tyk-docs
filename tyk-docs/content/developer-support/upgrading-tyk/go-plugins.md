@@ -89,7 +89,7 @@ docker pull tykio/tyk-plugin-compiler:v5.2.5
 Recompile your plugin with this version
 
 ```bash
-docker run --rm -v `pwd`:/plugin-source \
+docker run --rm -v "$(pwd)":/plugin-source \
            --platform=linux/amd64 \
            tykio/tyk-plugin-compiler:v5.2.5 plugin.so
 ```
