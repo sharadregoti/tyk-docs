@@ -3976,6 +3976,10 @@ menu:
             path: /product-stack/tyk-streaming/configuration/processors/for-each
             category: Page
             show: True
+          - title: "Group By"
+            path: /product-stack/tyk-streaming/configuration/processors/group-by
+            category: Page
+            show: True
           - title: "Mapping"
             path: /product-stack/tyk-streaming/configuration/processors/mapping
             category: Page
