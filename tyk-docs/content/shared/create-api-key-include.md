@@ -94,6 +94,13 @@ curl -X POST -H "authorization: 1238b7e0e2ff4c2957321724409ee2eb" \
     "quota_renews": 1449051461,
     "quota_remaining": -1,
     "quota_renewal_rate": 60,
+    "smoothing": {
+        "enabled": true,
+        "threshold": 100,
+        "trigger": 0.5,
+        "step": 100,
+        "delay": 10
+    },
     "access_rights": {
       "ad5004d961a147d4649fd3216694ebe2": {
         "api_id": "ad5004d961a147d4649fd3216694ebe2",
@@ -104,3 +111,16 @@ curl -X POST -H "authorization: 1238b7e0e2ff4c2957321724409ee2eb" \
     "meta_data": {}
   }' https://admin.cloud.tyk.io/api/keys | python -mjson.tool
 ```
+
+The above creates a new key with the rate limits, and security profile that grants access to the APIs listed in the `access_rights` section.
+
+- `{API-ID}`: The API ID you wish this policy to grant access to, there can be more than one of these entries.
+- `{API-NAME}`: The name of the API being granted access to (this is not required, but helps when debugging or auditing).
+
+The important elements:
+
+- `access_rights`: A list of objects representing which APIs you have configured to grant access to.
+- `rate` and `per`: The number of allowed requests per period.
+- `smoothing`: The Rate Limit Smooting configuration for Redis Rate Limiter.
+- `quota_max`: The maximum number of allowed requests over a quota period.
+- `quota_renewal_rate`: how often the quota resets, in seconds. In this case, we have set it to renew every hour.
