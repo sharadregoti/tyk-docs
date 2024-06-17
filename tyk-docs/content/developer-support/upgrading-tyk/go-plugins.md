@@ -1,15 +1,15 @@
 ---
-title: "Upgrade Custom Go Plugins"
+title: "Go Plugin Upgrade Guide"
 date: 2024-03-1
 tags: ["Upgrade Custom Go Plugins", "Tyk plugins", "Custom Plugins", "Self Managed"]
 description: "Explains how to upgrade Go Plugins"
 aliases:
-    - /developer-support/upgrading-tyk/self-managed/go-plugins
+    - /developer-support/upgrading-tyk/deployment-model/self-managed/go-plugins
 ---
 
-This guide shows you how to compile your custom Go plugins for upgrade:
-- Navigate into the plugins directory that contains your Go module.
-- Use the table below to follow the upgrade process for the version of Tyk you are upgrading to:
+This guide shows you how to compile your custom Go plugins for upgrade.
+
+The table below links you to the upgrade steps for the version of Tyk you are upgrading from and to:
 
 | Upgrade process | Current Version | Target Version |
 |-----------------|-----------------|----------------|
@@ -18,7 +18,7 @@ This guide shows you how to compile your custom Go plugins for upgrade:
 | [Path 3](#path-3)    | >= 4.1.0        | >= 5.1.0       |
 
 ## Path 1 - Current Version < 4.1.0 and Target Version < 4.1.0 {#path-1}
- 1. Open a terminal/command prompt in the directory of your plugin source file(s)  
+ 1. Open a terminal/command prompt in the directory of your plugin source file(s)
  2. Run the following commands to initialise your plugin:
 
 ```bash
