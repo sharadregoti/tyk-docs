@@ -23,7 +23,8 @@ copies of startup scripts, so any customisations should be saved in advance.
 specifically stated in the release (and it rarely happens).
 - **Long Term Support:** Check our [versioning and long-term-support policies]({{< ref "developer-support/special-releases-and-features/long-term-support-releases" >}})
 for more details on the way we release major and minor features, patches and the support dates for each release.
-- **Preparations:** Before starting the upgrade make sure you have consulted the [preparation guidelines]({{< ref "developer-support/upgrading-tyk/preparations/upgrade-guidelines" >}})
+- **Preparations:** Make sure you have consulted the [preparation guidelines]({{< ref "developer-support/upgrading-tyk/preparations/upgrade-guidelines" >}}) before starting the upgrade.
+ 
 before starting the upgrade.
 - **Release notes:** All release notes have an "Upgrade Instructions" section. Please make sure to check it in the
 relevant release notes.
