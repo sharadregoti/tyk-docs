@@ -1,6 +1,6 @@
 ---
 title: "Go Plugin Upgrade Guide"
-date: 2024-03-1
+date: 2024-06-17
 tags: ["Upgrade Custom Go Plugins", "Tyk plugins", "Custom Plugins", "Self Managed"]
 description: "Explains how to upgrade Go Plugins"
 aliases:
