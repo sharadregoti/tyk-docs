@@ -5,10 +5,13 @@ description: This guide provides essential instructions and considerations for u
 ---
 
 This section provides guides and guidance for upgrading your Tyk installation.
-When upgrading Tyk, you need to consider the model you are on (SaaS, Self Managed, Hybrid or OSS). Then depending on
-that understand which components you should upgrade (e.g. Gateway, Pump, Dashboard, Go Plugins), while taking into
-account the deployment style you've implemented (Docker, Helm, K8S, various Linux distributions).
-This is the way we have structured for you the upgrade guides, so you get all the information you need in one place.
+
++When upgrading Tyk, consider the following:
+- **Deployment model**: SaaS, Self Managed, Hybrid, or OSS.
+- **Installation type**: Take into account the installation style you've implemented, such as Docker, Helm, K8S, or various Linux distributions.
+- **Components**: Depending on your model, upgrade relevant components such as Gateway, Pump, Dashboard, or Go Plugins.
+
+Following these considerations, we have structured this section of upgrade guides in the same way so you get all the information you need in one place.
 
 ---
 
@@ -17,8 +20,7 @@ All our components adhere to a few common standards:
 
 - **Breaking changes:** We do not introduce breaking changes unless specifically stated in the release notes (and it rarely happens).
 - **Overwrite:** Upgrades do not overwrite your configuration files. However, it is a good practice to back up these files routinely
-(using git or another tool). We strongly recommend taking a backup before upgrading Tyk. The upgrade will deploy new
-copies of startup scripts, so any customisations should be saved in advance.
+(using git or another tool). We strongly recommend backing up before upgrading Tyk. The upgrade will deploy new copies of startup scripts, so any customisations should be saved in advance.
 - **BMigration scripts:** You do not need to migrate or run migration scripts for your APIs, policies or other assets created in Tyk unless
 specifically stated in the release (and it rarely happens).
 - **Long Term Support:** Check our [versioning and long-term-support policies]({{< ref "developer-support/special-releases-and-features/long-term-support-releases" >}})
