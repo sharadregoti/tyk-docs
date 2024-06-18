@@ -4213,7 +4213,7 @@ menu:
       show: True
       menu:
       - title: "Overview"
-        path: /developer-support/upgrading-tyk
+        path: /upgrading-tyk
         category: Page
         show: True
       - title: "Preparations"
