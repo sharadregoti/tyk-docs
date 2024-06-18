@@ -26,7 +26,7 @@ When considering upgrading your current configuration to a new Tyk release, we r
 - **Linux users:** Which Linux distributions is currently in use?**
     - Was Tyk deployed via a repository or a local package file `.rpm` (used be *CentOS* and *RHEL*) or `.deb` (*Debian*
      and its derivative *Ubuntu*)?
-    - Is the targeted version available on [packagecloud.io/tyk](https://packagecloud.io/tyk) or in the intended repository?
+    - Is the targeted version available on [packagecloud.io/tyk](https://packagecloud.io/tyk) or in an intended repository?
 
 - **Communication:** Communicate with stakeholders and users about the upgrade schedule and expected impact on services.
 
