@@ -49,7 +49,7 @@ cd tyk-pro-docker-demo/
 
 **Look for extra spaces between quotes ("") and the license key.  It will not work if there are any.**
 
-Inside `tyk_analytics.conf`, `license_key` should look something like this, with a real license however:
+Inside `tyk_analytics.conf`, `license_key` should look something like this, with a real license, however:
 
 `
 "license_key": "eyJhbGciOiJSUzI1NiIsInR5cCI...WQ",
