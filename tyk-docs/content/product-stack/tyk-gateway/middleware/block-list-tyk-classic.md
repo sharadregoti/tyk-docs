@@ -70,13 +70,13 @@ You can use the API Designer in the Tyk Dashboard to configure the block list mi
 
 #### Step 1: Add an endpoint for the path and select the plugin
 
-From the **Endpoint Designer** add an endpoint that matches the path for which you want to prevent access. Select the **Blacklist** plugin.
+From the **Endpoint Designer** add an endpoint that matches the path for which you want to prevent access. Select the **Block list** plugin.
 
 #### Step 2: Configure the block list
 
 Once you have selected the middleware for the endpoint, the only additional feature that you need to configure is whether to make the middleware case insensitive by selecting **Ignore Case**.
 
-{{< img src="/img/2.10/blacklist.png" alt="Blocklist options" >}}
+{{< img src="/img/dashboard/endpoint-designer/block-list.png" alt="Blocklist options" >}}
 
 #### Step 3: Save the API
 
