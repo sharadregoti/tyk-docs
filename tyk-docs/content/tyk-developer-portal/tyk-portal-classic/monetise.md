@@ -1,6 +1,6 @@
 ---
 date: 2017-03-24T17:45:29Z
-title: Monetize
+title: Monetise
 menu:
   main:
     parent: "Tyk Portal Classic"
