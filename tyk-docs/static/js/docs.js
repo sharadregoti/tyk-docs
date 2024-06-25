@@ -207,7 +207,3 @@ $(document).ready(function(e){
     }
 
 });
-
-function sendFeedback(isUseful) {
-    const data = {useful: isUseful};
-}
