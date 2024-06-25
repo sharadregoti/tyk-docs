@@ -84,6 +84,7 @@
                 {{ .Content }}
               {{ end }}
             </div>
+            {{ partial "feedback.html" . }}
             {{- partial "related_posts.html" . -}}
             {{- if not .Params.landingPage -}}
               {{- partial "contribute_data.html" . -}}
