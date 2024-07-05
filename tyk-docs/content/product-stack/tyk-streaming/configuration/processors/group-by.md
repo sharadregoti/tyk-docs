@@ -4,7 +4,7 @@ description: Explains an overview of group by processor
 tags: [ "Tyk Streams", "Stream Processors", "Processors", "Group_By" ]
 ---
 
-Splits a [batch of messages](TODO) into N batches, where each resulting batch contains a group of messages determined by a [Bloblang query](TODO).
+Splits a [batch of messages]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/batching" >}}) into N batches, where each resulting batch contains a group of messages determined by a [Bloblang query]({{< ref "/product-stack/tyk-streaming/guides/bloblang/overview" >}}).
 
 ```yml
 # Config fields, showing default values
@@ -14,13 +14,13 @@ group_by: [] # No default (required)
 
 Once the groups are established a list of processors are applied to their respective grouped batch, which can be used to label the batch as per their grouping. Messages that do not pass the check of any specified group are placed in their own group.
 
-The functionality of this processor depends on being applied across messages that are [batched](TODO).
+The functionality of this processor depends on being applied across messages that are [batched]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/batching" >}}).
 
 ## Fields
 
 ### [].check
 
-A [Bloblang query](TODO) that should return a boolean value indicating whether a message belongs to a given group.
+A [Bloblang query]({{< ref "/product-stack/tyk-streaming/guides/bloblang/overview" >}}) that should return a boolean value indicating whether a message belongs to a given group.
 
 
 Type: `string`  
@@ -47,7 +47,7 @@ Default: `[]`
 
 ### Grouped Processing
 
-Imagine we have a batch of messages that we wish to split into a group of foos and everything else, which should be sent to different output destinations based on those groupings. We also need to send the foos as a tar gzip archive. For this purpose we can use the `group_by` processor with a [switch](TODO) output:
+Imagine we have a batch of messages that we wish to split into a group of foos and everything else, which should be sent to different output destinations based on those groupings. We also need to send the foos as a tar gzip archive. For this purpose we can use the `group_by` processor with a [switch]({{< ref "/product-stack/tyk-streaming/configuration/processors/switch" >}}) output:
 
 ```yaml
 pipeline:
