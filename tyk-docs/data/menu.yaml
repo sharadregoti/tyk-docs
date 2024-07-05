@@ -4081,6 +4081,10 @@ menu:
             path: /product-stack/tyk-streaming/configuration/processors/schema-registry-encode
             category: Page
             show: True
+          - title: "Switch"
+            path: /product-stack/tyk-streaming/configuration/processors/switch
+            category: Page
+            show: True
           - title: "While"
             path: /product-stack/tyk-streaming/configuration/processors/while
             category: Page
