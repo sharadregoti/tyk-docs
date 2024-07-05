@@ -4,6 +4,7 @@ description: Explains batching
 tags: [ "Tyk Streams", "Batching" ]
 ---
 
+<!-- TODO Add Windowing and processing links -->
 Tyk Streams is able to join sources and sinks with sometimes conflicting batching behaviours without sacrificing its strong delivery guarantees. It's also able to perform powerful [processing functions][windowing] across batches of messages such as grouping, archiving and reduction. Therefore, batching within Tyk Streams is a mechanism that serves multiple purposes:
 
 1. [Performance (throughput)](#performance)
