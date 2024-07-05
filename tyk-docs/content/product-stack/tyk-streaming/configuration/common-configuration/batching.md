@@ -46,7 +46,7 @@ output:
 
 Inputs that behave this way are documented as such and have a `batching` configuration block.
 
-Sometimes you may prefer to create your batches before processing in order to benefit from [batch wide processing](#grouped-message-processing), in which case if your input doesn't already support [a batch policy](#batch-policy) you can instead use a [broker](TODO), which also allows you to combine inputs with a single batch policy:
+Sometimes you may prefer to create your batches before processing in order to benefit from [batch wide processing](#grouped-message-processing), in which case if your input doesn't already support [a batch policy](#batch-policy) you can instead use a [broker]({{< ref "/product-stack/tyk-streaming/configuration/inputs/broker" >}}), which also allows you to combine inputs with a single batch policy:
 
 ```yaml
 input:
@@ -59,7 +59,7 @@ input:
       period: 500ms
 ```
 
-This also works the same with [output brokers][TODO].
+This also works the same with [output brokers]({{< ref "/product-stack/tyk-streaming/configuration/outputs/broker" >}}).
 
 ## Grouped Message Processing
 
@@ -97,7 +97,8 @@ output:
     path: docs/${! meta("kafka_partition") }/${! count("files") }-${! timestamp_unix_nano() }.tar.gz
 ```
 
-For more examples of batched (or windowed) processing check out [windowing](TODO).
+<!-- TODO Add Windowing -->
+For more examples of batched (or windowed) processing check out windowing.
 
 ## Compatibility
 
@@ -109,7 +110,8 @@ This behaviour means that not only can multiple part message protocols be easily
 
 ### Shrinking Batches
 
-A message batch (or multiple part message) can be broken down into smaller batches using the [split](TODO) processor:
+<!-- TO DO add split link -->
+A message batch (or multiple part message) can be broken down into smaller batches using the split processor:
 
 ```yaml
 input:
@@ -149,7 +151,7 @@ When an input or output component has a config field `batching` that means it su
 
 - The `byte_size` field is non-zero and the total size of the batch in bytes matches or exceeds it (disregarding metadata.)
 - The `count` field is non-zero and the total number of messages in the batch matches or exceeds it.
-- A message added to the batch causes the [check](TODO) to return to `true`.
+- A message added to the batch causes the [check]({{< ref "/product-stack/tyk-streaming/guides/bloblang/overview" >}}) to return to `true`.
 - The `period` field is non-empty and the time since the last batch exceeds its value.
 
 This allows you to combine conditions:
@@ -175,7 +177,8 @@ A batch policy has the capability to *create* batches, but not to break them dow
 
 If your configured pipeline is processing messages that are batched *before* they reach the batch policy then they may circumvent the conditions you've specified here, resulting in sizes you aren't expecting.
 
-If you are affected by this limitation then consider breaking the batches down with a [split](TODO) processor] before they reach the batch policy.
+<!-- TODO: Add split processor link -->
+If you are affected by this limitation then consider breaking the batches down with a split processor] before they reach the batch policy.
 
 ### Post-Batch Processing
 
