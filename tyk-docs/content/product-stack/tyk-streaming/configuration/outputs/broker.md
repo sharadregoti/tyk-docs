@@ -192,7 +192,8 @@ With the fan out pattern all outputs will be sent every message that passes thro
 
 If an output applies back pressure it will block all subsequent messages, and if an output fails to send a message it will be retried continuously until completion or service shut down. This mechanism is in place in order to prevent one bad output from causing a larger retry loop that results in a good output from receiving unbounded message duplicates.
 
-Sometimes it is useful to disable the back pressure or retries of certain fan out outputs and instead drop messages that have failed or were blocked. In this case you can wrap outputs with a [drop_on](TODO) output.
+<!-- Add drop_on output -->
+Sometimes it is useful to disable the back pressure or retries of certain fan out outputs and instead drop messages that have failed or were blocked. In this case you can wrap outputs with a drop_on output.
 
 ### fan_out_fail_fast
 
