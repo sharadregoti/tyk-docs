@@ -3893,6 +3893,10 @@ menu:
             path: /product-stack/tyk-streaming/configuration/inputs/amqp-1
             category: Page
             show: True
+          - title: "Broker"
+            path: /product-stack/tyk-streaming/configuration/inputs/broker
+            category: Page
+            show: True
           - title: "Http Server"
             path: /product-stack/tyk-streaming/configuration/inputs/http-server
             category: Page
@@ -3931,6 +3935,10 @@ menu:
             show: True
           - title: "Amqp_1"
             path: /product-stack/tyk-streaming/configuration/outputs/amqp-1
+            category: Page
+            show: True
+          - title: "Broker"
+            path: /product-stack/tyk-streaming/configuration/outputs/broker 
             category: Page
             show: True
           - title: "Fallback"
