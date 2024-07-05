@@ -68,7 +68,7 @@
       <article class="page-content {{if .Params.hideSidebar}}home-mobile-padding{{end}}">
         <main class="page-content__main">
           <div class="wysiwyg page-content__container">
-
+            <div class="title-container">
             {{ if .Params.diffTitle }}
               {{if .Params.diffTitleName}}
               <h1>{{ .Params.diffTitleName }}</h1>
@@ -76,7 +76,13 @@
             {{else}}
               <h1>{{.Title}}</h1>
             {{ end }}
-
+            <div id="feedback-buttons">
+              <a href="https://5898904.hubspotpreview-na1.com/_hcms/preview/preview-interactive?previewInteractiveId=171975448169&_preview=true&portalId=5898904"
+                 class="button button-purple center button hs-cta-trigger-button hs-cta-trigger-button-171975448169">
+                feedback button!!!
+              </a>
+            </div>
+            </div>
             {{- partial "page_metadata.html" . -}}
 
             <div id="main-content">
