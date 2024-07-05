@@ -27,7 +27,7 @@ output:
       period: 100ms
 ```
 
-However, a small number of inputs such as [`kafka`][input_kafka] must be consumed sequentially (in this case by partition) and therefore benefit from specifying your batch policy at the input level instead:
+However, a small number of inputs such as [kafka]({{< ref "/product-stack/tyk-streaming/configuration/inputs/kafka" >}}) must be consumed sequentially (in this case by partition) and therefore benefit from specifying your batch policy at the input level instead:
 
 ```yaml
 input:
@@ -46,7 +46,7 @@ output:
 
 Inputs that behave this way are documented as such and have a `batching` configuration block.
 
-Sometimes you may prefer to create your batches before processing in order to benefit from [batch wide processing](#grouped-message-processing), in which case if your input doesn't already support [a batch policy](#batch-policy) you can instead use a [`broker`][input_broker], which also allows you to combine inputs with a single batch policy:
+Sometimes you may prefer to create your batches before processing in order to benefit from [batch wide processing](#grouped-message-processing), in which case if your input doesn't already support [a batch policy](#batch-policy) you can instead use a [broker](TODO), which also allows you to combine inputs with a single batch policy:
 
 ```yaml
 input:
@@ -59,11 +59,11 @@ input:
       period: 500ms
 ```
 
-This also works the same with [output brokers][output_broker].
+This also works the same with [output brokers][TODO].
 
 ## Grouped Message Processing
 
-And some processors such as [`while`][processor.while] are executed once across a whole batch, you can avoid this behaviour with the [`for_each` processor][proc_for_each]:
+And some processors such as [while]({{< ref "/product-stack/tyk-streaming/configuration/processors/while" >}})) are executed once across a whole batch, you can avoid this behaviour with the [for_each]({{< ref "/product-stack/tyk-streaming/configuration/processors/for-each" >}}) processor:
 
 ```yaml
 pipeline:
@@ -78,8 +78,9 @@ pipeline:
             - resource: foo # Attempt this processor until success
 ```
 
-There's a vast number of processors that specialise in operations across batches such as [grouping][proc_group_by] and [archiving][proc_archive]. For example, the following processors group a batch of messages according to a metadata field and compresses them into separate `.tar.gz` archives:
+There's a vast number of processors that specialise in operations across batches such as [grouping]({{< ref "/product-stack/tyk-streaming/configuration/processors/group-by" >}}). For example, the following processors group a batch of messages according to a metadata field and compresses them into separate `.tar.gz` archives:
 
+<!-- fix the inherited TODO comment -->
 ```yaml
 pipeline:
   processors:
@@ -96,19 +97,19 @@ output:
     path: docs/${! meta("kafka_partition") }/${! count("files") }-${! timestamp_unix_nano() }.tar.gz
 ```
 
-For more examples of batched (or windowed) processing check out [this document][windowing].
+For more examples of batched (or windowed) processing check out [windowing](TODO).
 
 ## Compatibility
 
 Tyk Streams is able to read and write over protocols that support multiple part messages, and all payloads travelling through Tyk Streams are represented as a multiple part message. Therefore, all components within Tyk Streams are able to work with multiple parts in a message as standard.
 
-When messages reach an output that _doesn't_ support multiple parts the message is broken down into an individual message per part, and then one of two behaviours happen depending on the output. If the output supports batch sending messages then the collection of messages are sent as a single batch. Otherwise, Tyk Streams falls back to sending the messages sequentially in multiple, individual requests.
+When messages reach an output that *doesn't* support multiple parts the message is broken down into an individual message per part, and then one of two behaviours happen depending on the output. If the output supports batch sending messages then the collection of messages are sent as a single batch. Otherwise, Tyk Streams falls back to sending the messages sequentially in multiple, individual requests.
 
 This behaviour means that not only can multiple part message protocols be easily matched with single part protocols, but also the concept of multiple part messages and message batches are interchangeable within Tyk Streams.
 
 ### Shrinking Batches
 
-A message batch (or multiple part message) can be broken down into smaller batches using the [`split`][split] processor:
+A message batch (or multiple part message) can be broken down into smaller batches using the [split](TODO) processor:
 
 ```yaml
 input:
@@ -148,7 +149,7 @@ When an input or output component has a config field `batching` that means it su
 
 - The `byte_size` field is non-zero and the total size of the batch in bytes matches or exceeds it (disregarding metadata.)
 - The `count` field is non-zero and the total number of messages in the batch matches or exceeds it.
-- A message added to the batch causes the [`check`][bloblang] to return to `true`.
+- A message added to the batch causes the [check](TODO) to return to `true`.
 - The `period` field is non-empty and the time since the last batch exceeds its value.
 
 This allows you to combine conditions:
@@ -166,17 +167,19 @@ output:
       period: 100ms
 ```
 
-:::caution
-A batch policy has the capability to _create_ batches, but not to break them down.
-:::
+{{< note >}}
+**Note**
+A batch policy has the capability to *create* batches, but not to break them down.
 
-If your configured pipeline is processing messages that are batched _before_ they reach the batch policy then they may circumvent the conditions you've specified here, resulting in sizes you aren't expecting.
+{{</ note>}}
 
-If you are affected by this limitation then consider breaking the batches down with a [`split` processor][split] before they reach the batch policy.
+If your configured pipeline is processing messages that are batched *before* they reach the batch policy then they may circumvent the conditions you've specified here, resulting in sizes you aren't expecting.
+
+If you are affected by this limitation then consider breaking the batches down with a [split](TODO) processor] before they reach the batch policy.
 
 ### Post-Batch Processing
 
-A batch policy also has a field `processors` which allows you to define an optional list of [processors][processors] to apply to each batch before it is flushed. This is a good place to aggregate or archive the batch into a compatible format for an output:
+A batch policy also has a field `processors` which allows you to define an optional list of processors to apply to each batch before it is flushed. This is a good place to aggregate or archive the batch into a compatible format for an output:
 
 ```yaml
 output:
@@ -192,18 +195,3 @@ output:
 The above config will batch up messages and then merge them into a line delimited format before sending it over HTTP. This is an easier format to parse than the default which would have been [rfc1342](https://www.w3.org/Protocols/rfc1341/7_2_Multipart.html).
 
 During shutdown any remaining messages waiting for a batch to complete will be flushed down the pipeline.
-
-[processors]: /docs/components/processors/about
-[processor.while]: /docs/components/processors/while
-[split]: /docs/components/processors/split
-[archive]: /docs/components/processors/archive
-[unarchive]: /docs/components/processors/unarchive
-[proc_for_each]: /docs/components/processors/for_each
-[proc_group_by]: /docs/components/processors/group_by
-[proc_archive]: /docs/components/processors/archive
-[input_broker]: /docs/components/inputs/broker
-[output_broker]: /docs/components/outputs/broker
-[input_kafka]: /docs/components/inputs/kafka
-[function_interpolation]: /docs/configuration/interpolation#bloblang-queries
-[bloblang]: /docs/guides/bloblang/about
-[windowing]: /docs/configuration/windowed_processing
