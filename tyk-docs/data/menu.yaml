@@ -3941,6 +3941,10 @@ menu:
             path: /product-stack/tyk-streaming/configuration/outputs/broker 
             category: Page
             show: True
+          - title: "Drop on"
+            path: /product-stack/tyk-streaming/configuration/outputs/drop_on
+            category: Page
+            show: True
           - title: "Fallback"
             path: /product-stack/tyk-streaming/configuration/outputs/fallback
             category: Page
