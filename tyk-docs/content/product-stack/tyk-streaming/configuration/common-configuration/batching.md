@@ -80,7 +80,6 @@ pipeline:
 
 There's a vast number of processors that specialise in operations across batches such as [grouping]({{< ref "/product-stack/tyk-streaming/configuration/processors/group-by" >}}). For example, the following processors group a batch of messages according to a metadata field and compresses them into separate `.tar.gz` archives:
 
-<!-- fix the inherited TODO comment -->
 ```yaml
 pipeline:
   processors:
@@ -93,7 +92,7 @@ pipeline:
 
 output:
   aws_s3:
-    bucket: TODO
+    bucket: todo
     path: docs/${! meta("kafka_partition") }/${! count("files") }-${! timestamp_unix_nano() }.tar.gz
 ```
 
