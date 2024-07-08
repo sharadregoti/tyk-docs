@@ -225,8 +225,7 @@ Default: `"10s"`
 
 ### batching
 
-<!-- TODO: add link to batching policy -->
-Allows you to configure a batching policy.
+Allows you to configure a [batching policy]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/batching#batch-policy" >}}).
 
 
 Type: `object`  
