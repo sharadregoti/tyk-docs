@@ -496,9 +496,7 @@ Default: `[]`
 
 ### inject_tracing_map
 
-<!-- TODO: Add bloblang mapping link -->
-
-EXPERIMENTAL: A [Bloblang]({{< ref "/product-stack/tyk-streaming/guides/bloblang/overview" >}}) mapping used to inject an object containing tracing propagation information into outbound messages. The specification of the injected fields will match the format used by the service wide tracer.
+A [Bloblang]({{< ref "/product-stack/tyk-streaming/guides/bloblang/overview" >}}) mapping used to inject an object containing tracing propagation information into outbound messages. The specification of the injected fields will match the format used by the service wide tracer.
 
 
 Type: `string`  

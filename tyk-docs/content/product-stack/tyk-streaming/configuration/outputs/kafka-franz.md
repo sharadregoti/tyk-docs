@@ -284,7 +284,6 @@ period: 500ms
 
 ### batching.check
 
-<!-- TODO: add link to bloblang query -->
 A [Bloblang]({{< ref "/product-stack/tyk-streaming/guides/bloblang/overview" >}}) query that should return a boolean value indicating whether a message should end a batch.
 
 
