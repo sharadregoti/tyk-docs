@@ -1,7 +1,7 @@
 ---
 title: Drop on
 description: Explains drop on
-tags: [ "Tyk Streams", "Batching", "Drop on" ]
+tags: [ "Tyk Streams", "Batching", "Drop On", "drop_on" ]
 ---
 
 Attempts to write messages to a child output and if the write fails for one of a list of configurable reasons the message is dropped (acked) instead of being reattempted (or nacked).
