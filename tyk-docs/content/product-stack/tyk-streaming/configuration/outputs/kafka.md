@@ -116,8 +116,6 @@ This output benefits from sending multiple messages in flight in parallel for im
 
 This output benefits from sending messages as a [batch]({< ref "/product-stack/tyk-streaming/configuration/common-configuration/batching" >}) for improved performance. Batches can be formed at both the input and output level. 
 
-<!-- TODO add link to batching You can find out more [in this doc](/docs/configuration/batching). -->
-
 ## Fields
 
 ### addresses
