@@ -160,7 +160,7 @@ Fixed an issue where Tyk was not autodetecting the installed Python version if i
  <details>
  <summary>Gateway blocked trying to retrieve keys via MDCB when using JWT auth</summary>
 
-Improved the behavior when using JWTs and the MDCB (Multi Data Centre Bridge) link is down; the Gateway will no longer be blocked attempting to fetch OAuth client info. We’ve also enhanced the error messages to specify which type of resource (API key, certificate, OAuth client) the data plane Gateway failed to retrieve due to a lost connection with the control plane.
+Improved the behavior when using JWTs and the MDCB (Multi Data Center Bridge) link is down; the Gateway will no longer be blocked attempting to fetch OAuth client info. We’ve also enhanced the error messages to specify which type of resource (API key, certificate, OAuth client) the data plane Gateway failed to retrieve due to a lost connection with the control plane.
  </details>
  </li>
  <li>
@@ -278,7 +278,7 @@ Fixed an issue where [enforced timeouts]({{< ref "planning-for-production/ensure
 <details>
 <summary>Incorrect access privileges were granted in security policies</summary>
 
-Fixed an issue when using MongoDB and [Tyk Security Policies]({{< ref "getting-started/key-concepts/what-is-a-security-policy" >}}) where Tyk could incorrectly grant access to an API after that API had been deleted from the associated policy. This was due to the policy cleaning operation that is triggered when an API is deleted from a policy in a MongoDB installation. With this fix, the policy cleaning operation will not remove the final (deleted) API from the policy; Tyk recognises that the API record is invalid and denies granting access rights to the key.
+Fixed an issue when using MongoDB and [Tyk Security Policies]({{< ref "getting-started/key-concepts/what-is-a-security-policy" >}}) where Tyk could incorrectly grant access to an API after that API had been deleted from the associated policy. This was due to the policy cleaning operation that is triggered when an API is deleted from a policy in a MongoDB installation. With this fix, the policy cleaning operation will not remove the final (deleted) API from the policy; Tyk recognizes that the API record is invalid and denies granting access rights to the key.
 </details>
 </li>
 <li>
@@ -420,7 +420,7 @@ Fixed a memory leak issue in Gateway 5.2.0 if [OpenTelemetry](https://openteleme
 <details>
 <summary>Memory leak encountered when enabling the strict routes option</summary>
 
-Fixed a memory leak that occurred when enabling the [strict routes option]({{< ref "tyk-oss-gateway/configuration#http_server_optionsenable_strict_routes" >}}) to change the routing to avoid nearest-neighbour requests on overlapping routes (`TYK_GW_HTTPSERVEROPTIONS_ENABLESTRICTROUTES`)
+Fixed a memory leak that occurred when enabling the [strict routes option]({{< ref "tyk-oss-gateway/configuration#http_server_optionsenable_strict_routes" >}}) to change the routing to avoid nearest-neighbor requests on overlapping routes (`TYK_GW_HTTPSERVEROPTIONS_ENABLESTRICTROUTES`)
 </details>
 </li>
 <li>

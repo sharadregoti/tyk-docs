@@ -83,7 +83,7 @@ For a comprehensive list of changes, please refer to the detailed [changelog]({{
  <details>
  <summary>Poor experience when using the Open Policy Agent (OPA) editor</summary>
 
- Fixed two UI issues with the [OPA editor]({{< ref "tyk-dashboard/open-policy-agent#using-the-open-policy-agent-in-the-dashboard" >}}) in the Tyk Dashboard to improve experience when using this feature. Scrolling beyond the end of the OPA window does not now start to scroll the API Designer window, and minimising then re-expanding the OPA editor no longer limits the text to one line.
+ Fixed two UI issues with the [OPA editor]({{< ref "tyk-dashboard/open-policy-agent#using-the-open-policy-agent-in-the-dashboard" >}}) in the Tyk Dashboard to improve experience when using this feature. Scrolling beyond the end of the OPA window does not now start to scroll the API Designer window, and minimizing then re-expanding the OPA editor no longer limits the text to one line.
  </details>
  </li>
  <li>
@@ -254,7 +254,7 @@ Added a new Dashboard configuration option `allow_unsafe_oas`. This permits the 
 <details>
 <summary>Fixed security policy grant permissions issue encountered with MongoDB</summary>
 
-Fixed an issue when using MongoDB and [Tyk Security Policies]({{< ref "getting-started/key-concepts/what-is-a-security-policy" >}}) where Tyk could incorrectly grant access to an API after that API had been deleted from the associated policy. This was due to the policy cleaning operation that is triggered when an API is deleted from a policy in a MongoDB installation. With this fix, the policy cleaning operation will not remove the final (deleted) API from the policy; Tyk recognises that the API record is invalid and denies granting access rights to the key.
+Fixed an issue when using MongoDB and [Tyk Security Policies]({{< ref "getting-started/key-concepts/what-is-a-security-policy" >}}) where Tyk could incorrectly grant access to an API after that API had been deleted from the associated policy. This was due to the policy cleaning operation that is triggered when an API is deleted from a policy in a MongoDB installation. With this fix, the policy cleaning operation will not remove the final (deleted) API from the policy; Tyk recognizes that the API record is invalid and denies granting access rights to the key.
 </details>
 </li>
 <li>
