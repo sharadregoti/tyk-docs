@@ -18,7 +18,6 @@ If your mapping is large and you'd prefer for it to live in a separate file then
 
 ## Component Rename
 
-<!-- TODO: add mapping processor and link to it -->
 This processor was recently renamed to the [mapping processor]({{< ref "/product-stack/tyk-streaming/configuration/processors/mapping" >}}) in order to make the purpose of the processor more prominent. It is still valid to use the existing `bloblang` name but eventually it will be deprecated and replaced by the new name in example configs.
 
 ## Examples
