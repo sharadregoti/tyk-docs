@@ -92,4 +92,4 @@ pipeline:
         }
 ```
 
-[Bloblang]({{< ref "/product-stack/tyk-streaming/guides/bloblang/overview" >}}) is very powerful, and by using[from]({{< ref "/product-stack/tyk-streaming/guides/bloblang/methods#from" >}}) and [from_all]({{< ref "/product-stack/tyk-streaming/guides/bloblang/methods#from_all" >}}) it's possible to perform a wide range of batch-wide processing.
+[Bloblang]({{< ref "/product-stack/tyk-streaming/guides/bloblang/overview" >}}) is very powerful, and by using [from]({{< ref "/product-stack/tyk-streaming/guides/bloblang/methods#from" >}}) and [from_all]({{< ref "/product-stack/tyk-streaming/guides/bloblang/methods#from_all" >}}) it's possible to perform a wide range of batch-wide processing.
