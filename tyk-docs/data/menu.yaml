@@ -4137,6 +4137,10 @@ menu:
             path: "/product-stack/tyk-streaming/guides/bloblang/methods"
             category: Page
             show: True
+        - title: "Sync Response"
+          path: "/product-stack/tyk-streaming/guides/sync-responses"
+          category: Page
+          show: True
       - title: "Deployment Considerations"
         path: /product-stack/tyk-streaming/deployment-considerations
         category: Page
