@@ -47,8 +47,7 @@ schema_registry_decode:
     client_certs: []
 ```
 
-<!-- TODO: add error handling methods link -->
-Decodes messages automatically from a schema stored within a [Confluent Schema Registry service](https://docs.confluent.io/platform/current/schema-registry/index.html) by extracting a schema ID from the message and obtaining the associated schema from the registry. If a message fails to match against the schema then it will remain unchanged and the error can be caught using error handling methods.
+Decodes messages automatically from a schema stored within a [Confluent Schema Registry service](https://docs.confluent.io/platform/current/schema-registry/index.html) by extracting a schema ID from the message and obtaining the associated schema from the registry. If a message fails to match against the schema then it will remain unchanged and the error can be caught using [error handling]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/error-handling" >}}) methods.
 
 Avro, Protobuf and Json schemas are supported, all are capable of expanding from schema references.
 
