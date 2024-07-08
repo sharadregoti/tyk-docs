@@ -628,7 +628,7 @@ The base period to wait between failed requests.
 Type: `string`  
 Default: `"1s"`  
 
-### `max_retry_backoff`
+### max_retry_backoff
 
 The maximum period to wait between failed requests.
 
