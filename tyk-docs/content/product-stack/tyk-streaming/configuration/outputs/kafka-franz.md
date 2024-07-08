@@ -95,7 +95,7 @@ seed_brokers:
 ### topic
 
 A topic to write messages to.
-<!-- TODO add interpolation functions This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries). -->
+This field supports [interpolation functions]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/interpolation#bloblang-queries" >}}).
 
 
 Type: `string`  
@@ -103,7 +103,7 @@ Type: `string`
 ### key
 
 An optional key to populate for each message.
-<!-- TODO add interpolation functions This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries). -->
+This field supports [interpolation functions]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/interpolation#bloblang-queries" >}}).
 
 
 Type: `string`  
@@ -126,7 +126,7 @@ Type: `string`
 ### partition
 
 An optional explicit partition to set for each message. This field is only relevant when the `partitioner` is set to `manual`. The provided interpolation string must be a valid integer.
-<!-- TODO add interpolation functions This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries). -->
+This field supports [interpolation functions]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/interpolation#bloblang-queries" >}}).
 
 Type: `string`  
 
