@@ -361,7 +361,7 @@ Default: `""`
 ### topic
 
 The topic to publish messages to.
-<!-- TODO: add interpolation functions link - This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries). -->
+This field supports [interpolation functions]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/interpolation#bloblang-queries" >}}).
 
 
 Type: `string`  
@@ -400,7 +400,7 @@ Default: `""`
 ### key
 
 The key to publish messages with.
-<!-- TODO: add interpolation functions link - This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries). -->
+This field supports [interpolation functions]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/interpolation#bloblang-queries" >}}).
 
 
 Type: `string`  
@@ -418,7 +418,7 @@ Options: `fnv1a_hash`, `murmur2_hash`, `random`, `round_robin`, `manual`.
 ### partition
 
 The manually-specified partition to publish messages to, relevant only when the field `partitioner` is set to `manual`. Must be able to parse as a 32-bit integer.
-<!-- TODO: add interpolation functions link - This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries). -->
+This field supports [interpolation functions]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/interpolation#bloblang-queries" >}}).
 
 
 Type: `string`  
