@@ -4,8 +4,7 @@ description: Explains batching
 tags: [ "Tyk Streams", "Batching" ]
 ---
 
-<!-- TODO Add Windowing and processing links -->
-Tyk Streams is able to join sources and sinks with sometimes conflicting batching behaviours without sacrificing its strong delivery guarantees. It's also able to perform powerful [processing functions][windowing] across batches of messages such as grouping, archiving and reduction. Therefore, batching within Tyk Streams is a mechanism that serves multiple purposes:
+Tyk Streams is able to join sources and sinks with sometimes conflicting batching behaviours without sacrificing its strong delivery guarantees. It's also able to perform powerful [processing functions]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/windowed_processing" >}}) across batches of messages such as grouping and reduction. Therefore, batching within Tyk Streams is a mechanism that serves multiple purposes:
 
 1. [Performance (throughput)](#performance)
 2. [Grouped message processing](#grouped-message-processing)
@@ -98,8 +97,7 @@ output:
     path: docs/${! meta("kafka_partition") }/${! count("files") }-${! timestamp_unix_nano() }.tar.gz
 ```
 
-<!-- TODO Add Windowing -->
-For more examples of batched (or windowed) processing check out windowing.
+Consult our [windowing]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/windowed_processing" >}}) guide for further examples of batched (or windowed) processing.
 
 ## Compatibility
 
