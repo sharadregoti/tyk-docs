@@ -64,7 +64,7 @@ This also works the same with [output brokers]({{< ref "/product-stack/tyk-strea
 
 ## Grouped Message Processing
 
-And some processors such as [while]({{< ref "/product-stack/tyk-streaming/configuration/processors/while" >}})) are executed once across a whole batch, you can avoid this behaviour with the [for_each]({{< ref "/product-stack/tyk-streaming/configuration/processors/for-each" >}}) processor:
+Some processors, such as [while]({{< ref "/product-stack/tyk-streaming/configuration/processors/while" >}}) are executed once across a whole batch. You can avoid this behaviour with the [for_each]({{< ref "/product-stack/tyk-streaming/configuration/processors/for-each" >}}) processor:
 
 ```yaml
 pipeline:
