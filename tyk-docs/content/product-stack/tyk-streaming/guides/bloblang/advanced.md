@@ -4,7 +4,7 @@ description: Explains some advanced Bloblang patterns
 tags: [ "Tyk Streams", "Bloblang", "Bloblang Advanced", "Bloblang Patterns" ]
 ---
 
-This section explains some advanced [Bloblang]({< ref "/product-stack/tyk-streaming/guides/bloblang/overview" >}) patterns
+This section explains some advanced [Bloblang]({{< ref "/product-stack/tyk-streaming/guides/bloblang/overview" >}}) patterns
 
 ## Map Parameters
 
