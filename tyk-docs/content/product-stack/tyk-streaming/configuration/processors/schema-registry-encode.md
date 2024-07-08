@@ -97,7 +97,8 @@ Type: `string`
 ### subject
 
 The schema subject to derive schemas from.
-<!-- TODO: add link This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries). -->
+
+This field supports [interpolation functions]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/interpolation#bloblang-queries" >}}).
 
 
 Type: `string`  

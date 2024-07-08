@@ -42,7 +42,7 @@ Type: `string`
 ### key
 
 An interpolated string yielding the key to deduplicate by for each message.
-<!-- TODO: Add link to interpolated functions This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries). -->
+This field supports [interpolation functions](#bloblang-queries).
 
 
 Type: `string`  

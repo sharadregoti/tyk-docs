@@ -136,8 +136,8 @@ Type: `string`
 ### value
 
 A value to use with the cache (when applicable).
-<!-- TODO: add a link -->
-This field supports interpolation functions.
+
+This field supports [interpolation functions]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/interpolation#bloblang-queries" >}}).
 
 
 Type: `string`
@@ -145,8 +145,8 @@ Type: `string`
 ### ttl
 
 The TTL of each individual item as a duration string. After this period an item will be eligible for removal during the next compaction. Not all caches support per-key TTLs, those that do will have a configuration field `default_ttl`, and those that do not will fall back to their generally configured TTL setting.
-<!-- TODO: add a link -->
-This field supports interpolation functions.
+
+This field supports [interpolation functions]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/interpolation#bloblang-queries" >}}).
 
 
 Type: `string`  

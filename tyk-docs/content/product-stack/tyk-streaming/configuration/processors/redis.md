@@ -333,8 +333,8 @@ password: ${KEY_PASSWORD}
 ### command
 
 The command to execute.
-<!-- TODO: add a link -->
-This field supports interpolation functions.
+
+This field supports [interpolation functions]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/interpolation#bloblang-queries" >}}).
 
 Type: `string`  
 
