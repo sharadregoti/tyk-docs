@@ -30,7 +30,7 @@ Input (HTTP Server) -> Processors -> Output (Sync Response)
 
 ## Routing Processed Messages Back
 
-It's possible to route the result of any Tyk Streams processing pipeline directly back to an input with a [sync_response](TODOsync-res) output:
+It's possible to route the result of any Tyk Streams processing pipeline directly back to an input with a [sync_response]({{< ref "/product-stack/tyk-streaming/configuration/outputs/sync-response" >}}) output:
 
 ```yaml
 input:
@@ -45,7 +45,7 @@ output:
 
 Using the above example, POSTING *foo bar* to the path `/post` returns the response *FOO BAR*.
 
-It's also possible to combine a [sync_response](TODO) output with other outputs using a [broker](TODO):
+It's also possible to combine a [sync_response]({{< ref "/product-stack/tyk-streaming/configuration/outputs/sync-response" >}}) output with other outputs using a [broker](TODO):
 
 ```yaml
 input:
@@ -98,7 +98,7 @@ However, it is important to keep in mind that due to Tyk Streams' strict deliver
 
 ## Routing Output Responses Back
 
-Some outputs, such as [http_client](TODO), have the potential to propagate payloads received from their destination after sending a message back to the input:
+Some outputs, such as [http_client]({{< ref "/product-stack/tyk-streaming/configuration/outputs/http-client" >}}), have the potential to propagate payloads received from their destination after sending a message back to the input:
 
 ```yaml
 input:
