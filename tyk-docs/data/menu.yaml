@@ -4115,9 +4115,6 @@ menu:
           menu:
           - title: "Batching"
             path: /product-stack/tyk-streaming/configuration/common-configuration/batching
-            path: /
-            category: Page
-            show: True
             category: Page
             show: True
           - title: "Error Handling"
