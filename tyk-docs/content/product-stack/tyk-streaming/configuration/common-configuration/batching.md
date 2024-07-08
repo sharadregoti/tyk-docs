@@ -177,7 +177,7 @@ A batch policy has the capability to *create* batches, but not to break them dow
 
 If your configured pipeline is processing messages that are batched *before* they reach the batch policy then they may circumvent the conditions you've specified here, resulting in sizes you aren't expecting.
 
-If you are affected by this limitation then consider breaking the batches down with a [split]({{ ref "/product-stack/tyk-streaming/configuration/processors/split" }}) processor before they reach the batch policy.
+If you are affected by this limitation then consider breaking the batches down with a [split]({{< ref "/product-stack/tyk-streaming/configuration/processors/split" >}}) processor before they reach the batch policy.
 
 ### Post-Batch Processing
 
