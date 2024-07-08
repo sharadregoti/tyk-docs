@@ -1,5 +1,5 @@
 ---
-title: Kafka
+title: Kafka Franz
 description: Explains configuration of Kafka Franz output
 tags: [ "Tyk Streams", "Stream Outputs", "Outputs", "Kafka", "Kafka Franz" ]
 ---
