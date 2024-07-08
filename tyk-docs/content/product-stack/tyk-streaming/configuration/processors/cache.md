@@ -172,9 +172,7 @@ overridden.
 ### add
 
 Set a key in the cache to a value. If the key already exists the action fails
-with a 'key already exists' error, which can be detected with
-<!-- TODO: add a link -->
-processor error handling.
+with a 'key already exists' error, which can be detected with processor [error handling]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/error-handling" >}}).
 
 ### get
 
