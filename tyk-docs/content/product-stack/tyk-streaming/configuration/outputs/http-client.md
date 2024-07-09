@@ -100,7 +100,7 @@ When the number of retries expires the output will reject the message, the behav
 
 The URL and header values of this type can be dynamically set using [function interpolations]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/interpolation#bloblang-queries" >}}).
 
-The body of the HTTP request is the raw contents of the message payload. If the message has multiple parts (is a batch) the request will be sent according to [RFC1341](https://www.w3.org/Protocols/rfc1341/7_2_Multipart.html). This behaviour can be disabled by setting the field [`batch_as_multipart`](#batch_as_multipart) to `false`.
+The body of the HTTP request is the raw contents of the message payload. If the message has multiple parts (is a batch) the request will be sent according to [RFC1341](https://www.w3.org/Protocols/rfc1341/7_2_Multipart.html). This behaviour can be disabled by setting the field [batch_as_multipart](#batch_as_multipart) to `false`.
 
 ### Propagating Responses
 

@@ -3942,7 +3942,7 @@ menu:
             category: Page
             show: True
           - title: "Http Client"
-            path: /product-stack/tyk-streaming/configuration/inputs/http-client
+            path: /product-stack/tyk-streaming/configuration/outputs/http-client
             category: Page
             show: True
           - title: "Http Server"
