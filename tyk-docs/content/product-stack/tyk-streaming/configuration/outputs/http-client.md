@@ -104,7 +104,7 @@ The body of the HTTP request is the raw contents of the message payload. If the 
 
 ### Propagating Responses
 
-It's possible to propagate the response from each HTTP request back to the input source by setting `propagate_response` to `true`. Only inputs that support [synchronous responses]({{< ref "/product-stack/tyk-streaming/guides/sync-responses" >}} are able to make use of these propagated responses.
+It's possible to propagate the response from each HTTP request back to the input source by setting `propagate_response` to `true`. Only inputs that support [synchronous responses]({{< ref "/product-stack/tyk-streaming/guides/sync-responses" >}}) are able to make use of these propagated responses.
 
 ## Performance
 
