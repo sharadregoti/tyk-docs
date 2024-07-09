@@ -30,3 +30,4 @@ If the processor `foo` fails for a particular message, that message will be fed 
 When messages leave the catch block their fail flags are cleared. This processor is useful for when it's possible to recover failed messages, or when special actions (such as logging/metrics) are required before dropping them.
 
 Consult the [error handling]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/error-handling" >}}) guide for further information related to handling errors in Tyk Streams.
+
