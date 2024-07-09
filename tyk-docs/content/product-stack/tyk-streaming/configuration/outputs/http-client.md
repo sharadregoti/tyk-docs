@@ -760,7 +760,7 @@ period: 500ms
 
 ### batching.check
 
-A [Bloblang query](/docs/guides/bloblang/about/) that should return a boolean value indicating whether a message should end a batch.
+A [Bloblang query]({{< ref "/product-stack/tyk-streaming/guides/bloblang/overview" >}}) that should return a boolean value indicating whether a message should end a batch.
 
 
 Type: `string`  
