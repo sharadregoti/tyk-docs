@@ -10,11 +10,12 @@ menu:
         parent: Tyk Self-Managed
 aliases:
   - /tyk-self-managed/istio/
-  - "tyk-self-managed/install"
+  - /tyk-self-managed/install/
   - /getting-started/installation/with-tyk-on-premises/
   - /get-started/with-tyk-on-premise/installation/
 ---
 
+<<<<<<< HEAD
 ## Docker Quick Start
 
 **Prerequisites**
@@ -34,6 +35,15 @@ docker-compose up
 Then navigate to [http://localhost:3000](http://localhost:3000) and input the licence key we've emailed you. If you do not have a key then please visit [https://tyk.io/sign-up/](https://tyk.io/sign-up/)
 
 ## Other Deployment Methods
+=======
+First, click here to get a trial license
+
+</br>
+
+{{< button_left href="https://tyk.io/sign-up/#self" color="green" content="Self-managed Free License" >}}
+
+**Now choose your preferred installation option**
+>>>>>>> b47ad917e... double alias /getting-started/installation/with-tyk-on-premises/ (#5031)
 
 {{< grid >}}
 
