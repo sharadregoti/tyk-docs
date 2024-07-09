@@ -6,6 +6,12 @@ tags: [ "streaming", "getting started" ]
 
 In this guide, you'll learn how to set up Tyk Streams and configure your first asynchronous API. By the end of this guide, you will have a fully functional API that allows you to subscribe to a WebSocket and see the messages you post to Tyk (REST) in real-time.
 
+{{< note >}}
+**We value your feedback**
+
+Please use the following [survey](https://survey.hsforms.com/1lb_eMrtRR5W3WoEEuACQ2Q3ifmg) to provide feedback on your experience so far with Tyk Streams.
+{{< /note >}}
+
 Let's get started and unlock the power of Tyk for your asynchronous API needs!
 
 

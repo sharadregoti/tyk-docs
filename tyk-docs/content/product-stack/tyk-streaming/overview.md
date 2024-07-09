@@ -24,6 +24,8 @@ The purpose of Tyk Streams is to provide a unified platform for managing both sy
 
 {{< /warning >}}
 
+We value your feedback. Please consider completing the following [feedback form](https://survey.hsforms.com/1ItPCBg-_Tre8WFJZL4pp6Q3ifmg) to explain your interest and use case for Tyk Streams.
+
 ---
 
 ## How Tyk Streams Enables Async API Support?
