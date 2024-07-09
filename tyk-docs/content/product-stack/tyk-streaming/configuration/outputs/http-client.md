@@ -774,7 +774,7 @@ check: this.type == "end_of_transaction"
 
 ### batching.processors
 
-A list of [processors](/docs/components/processors/about) to apply to a batch as it is flushed. This allows you to aggregate and archive the batch however you see fit. Please note that all resulting messages are flushed as a single batch, therefore splitting the batch into smaller batches using these processors is a no-op.
+A list of processorsto apply to a batch as it is flushed. This allows you to aggregate and archive the batch however you see fit. Please note that all resulting messages are flushed as a single batch, therefore splitting the batch into smaller batches using these processors is a no-op.
 
 
 Type: `array`  
@@ -807,7 +807,7 @@ Requires version 3.63.0 or newer
 ### multipart[].content_type
 
 The content type of the individual message part.
-This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries).
+This field supports [interpolation functions]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/interpolation#bloblang-queries" >}})
 
 
 Type: `string`  
@@ -822,7 +822,7 @@ content_type: application/bin
 ### multipart[].content_disposition
 
 The content disposition of the individual message part.
-This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries).
+This field supports [interpolation functions]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/interpolation#bloblang-queries" >}})
 
 
 Type: `string`  
@@ -837,7 +837,7 @@ content_disposition: form-data; name="bin"; filename='${! @AttachmentName }
 ### multipart[].body
 
 The body of the individual message part.
-This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries).
+This field supports [interpolation functions]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/interpolation#bloblang-queries" >}}).
 
 
 Type: `string`  
