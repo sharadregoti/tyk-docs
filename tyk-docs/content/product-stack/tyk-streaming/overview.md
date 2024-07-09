@@ -4,7 +4,13 @@ description: Explains the purpose of Tyk Streaming and use cases
 tags: [ "streaming", "events", "event-driven architecture", "event-driven architectures", "kafka" ]
 ---
 We are excited to introduce our new product, *Tyk Streams*! 
-*Tyk Streams* is a powerful new feature in the Tyk API management platform that enables organisations to securely expose, manage and monetize real-time event streams and asynchronous APIs. With *Tyk Streams*, you can easily connect to various event brokers and streaming platforms, such as [Apache Kafka](https://github.com/TykTechnologies/tyk-pro-docker-demo/tree/kafka), MQTT, AMQP etc. and expose them as managed API endpoints to internal and external consumers.
+*Tyk Streams* is a powerful new feature in the Tyk API management platform that enables organisations to securely expose, manage and monetize real-time event streams and asynchronous APIs.
+
+We value your feedback. Please consider completing the following feedback form to explain your interest and use case for Tyk Streams.
+
+{{< button_left href="https://survey.hsforms.com/1ItPCBg-_Tre8WFJZL4pp6Q3ifmg" color="green" content="Feedback" >}}
+
+With *Tyk Streams*, you can easily connect to various event brokers and streaming platforms, such as [Apache Kafka](https://github.com/TykTechnologies/tyk-pro-docker-demo/tree/kafka), MQTT, AMQP etc. and expose them as managed API endpoints to internal and external consumers.
 
 <div style="display: flex; justify-content: center;">
 {{< img src="/img/streams/tyk-streams-overview.png" alt="Tyk Streams Overview" width="670px" height="500px" >}}
@@ -23,8 +29,6 @@ The purpose of Tyk Streams is to provide a unified platform for managing both sy
 </br>
 
 {{< /warning >}}
-
-We value your feedback. Please consider completing the following [feedback form](https://survey.hsforms.com/1ItPCBg-_Tre8WFJZL4pp6Q3ifmg) to explain your interest and use case for Tyk Streams.
 
 ---
 
