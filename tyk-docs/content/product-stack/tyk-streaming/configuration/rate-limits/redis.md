@@ -87,7 +87,7 @@ Default: `""`
 master: mymaster
 ```
 
-### tls
+<!-- ### tls
 
 Custom TLS settings can be used to override system defaults.
 
@@ -231,7 +231,7 @@ Default: `""`
 password: foo
 
 password: ${KEY_PASSWORD}
-```
+``` -->
 
 ### count
 
