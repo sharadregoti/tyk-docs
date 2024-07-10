@@ -41,36 +41,36 @@ output:
       include_prefixes: []
       include_patterns: []
     dump_request_log_level: ""
-    oauth:
-      enabled: false
-      consumer_key: ""
-      consumer_secret: ""
-      access_token: ""
-      access_token_secret: ""
-    oauth2:
-      enabled: false
-      client_key: ""
-      client_secret: ""
-      token_url: ""
-      scopes: []
-      endpoint_params: {}
-    basic_auth:
-      enabled: false
-      username: ""
-      password: ""
-    jwt:
-      enabled: false
-      private_key_file: ""
-      signing_method: ""
-      claims: {}
-      headers: {}
-    tls:
-      enabled: false
-      skip_cert_verify: false
-      enable_renegotiation: false
-      root_cas: ""
-      root_cas_file: ""
-      client_certs: []
+    # oauth:
+    #   enabled: false
+    #   consumer_key: ""
+    #   consumer_secret: ""
+    #   access_token: ""
+    #   access_token_secret: ""
+    # oauth2:
+    #   enabled: false
+    #   client_key: ""
+    #   client_secret: ""
+    #   token_url: ""
+    #   scopes: []
+    #   endpoint_params: {}
+    # basic_auth:
+    #   enabled: false
+    #   username: ""
+    #   password: ""
+    # jwt:
+    #   enabled: false
+    #   private_key_file: ""
+    #   signing_method: ""
+    #   claims: {}
+    #   headers: {}
+    # tls:
+    #   enabled: false
+    #   skip_cert_verify: false
+    #   enable_renegotiation: false
+    #   root_cas: ""
+    #   root_cas_file: ""
+    #   client_certs: []
     extract_headers:
       include_prefixes: []
       include_patterns: []
@@ -213,7 +213,7 @@ Default: `""`
 Requires version 4.12.0 or newer  
 Options: `TRACE`, `DEBUG`, `INFO`, `WARN`, `ERROR`, `FATAL`, ``.
 
-### oauth
+<!-- ### oauth
 
 Allows you to specify open authentication via OAuth version 1.
 
@@ -557,7 +557,7 @@ password: foo
 
 password: ${KEY_PASSWORD}
 ```
-
+-->
 ### extract_headers
 
 Specify which response headers should be added to resulting synchronous response messages as metadata. Header keys are lowercased before matching, so ensure that your patterns target lowercased versions of the header keys that you expect. This field is not applicable unless `propagate_response` is set to `true`.
