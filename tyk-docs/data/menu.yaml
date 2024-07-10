@@ -4146,7 +4146,7 @@ menu:
         show: true
         menu:
         - title: "Overview"
-          path: /product-stack/tyk-streaming/configuration/rate-limits/local 
+          path: /product-stack/tyk-streaming/configuration/rate-limits/overview 
           category: Page
           show: True
         - title: "Local"
