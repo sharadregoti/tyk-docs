@@ -27,13 +27,13 @@ redis:
   url: redis://:6397 # No default (required)
   kind: simple
   master: ""
-  tls:
-    enabled: false
-    skip_cert_verify: false
-    enable_renegotiation: false
-    root_cas: ""
-    root_cas_file: ""
-    client_certs: []
+  # tls:
+  #   enabled: false
+  #   skip_cert_verify: false
+  #   enable_renegotiation: false
+  #   root_cas: ""
+  #   root_cas_file: ""
+  #   client_certs: []
   count: 1000
   interval: 1s
   key: "" # No default (required)
