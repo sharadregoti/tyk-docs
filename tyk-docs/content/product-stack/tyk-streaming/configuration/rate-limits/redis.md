@@ -87,15 +87,17 @@ Default: `""`
 master: mymaster
 ```
 
-### `tls`
+### tls
 
 Custom TLS settings can be used to override system defaults.
 
-{{< note success >}}
+</br>
+
+{{< warning success >}}
 **Troubleshooting**
 
 Some cloud hosted instances of Redis (such as Azure Cache) might need some hand holding in order to establish stable connections. Unfortunately, it is often the case that TLS issues will manifest as generic error messages such as "i/o timeout". If you're using TLS and are seeing connectivity problems consider setting `enable_renegotiation` to `true`, and ensuring that the server supports at least TLS version 1.2.
-{{< /note >}}
+{{< /warning >}}
 
 Type: `object`  
 
