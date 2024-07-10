@@ -4,10 +4,9 @@ description: Explains an overview of workflow processor
 tags: [ "Tyk Streams", "Stream Processors", "Processors", "Workflow" ]
 ---
 
-Executes a topology of [branch processors]({{< ref "/product-stack/tyk-streaming/configuration/processors/branch" >}}), performing them in parallel where possible.
+The workflow processor in Tyk Streams efficiently manages and executes a topology of [branch processors]({{< ref "/product-stack/tyk-streaming/configuration/processors/branch" >}}), enabling parallel execution where possible. This guide provides a comprehensive overview of both common and advanced configuration fields, demonstrating how to set up and optimize your workflows for performance and simplicity. By leveraging directed acyclic graphs (DAGs) and parallel processing, the workflow processor can significantly reduce message processing latency, especially when dealing with high-latency, low-CPU-activity processors. Detailed examples and explanations are provided to help you configure workflows that can automatically resolve dependencies or manually specify execution order, ensuring optimal performance and flexibility for your processing needs.
 
-
-## Common
+## Common
 
 ```yml
 # Common config fields, showing default values
