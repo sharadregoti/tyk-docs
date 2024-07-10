@@ -4069,6 +4069,10 @@ menu:
             path: /product-stack/tyk-streaming/configuration/processors/protobuf
             category: Page
             show: True
+          - title: "Rate Limit"
+            path: /product-stack/tyk-streaming/configuration/processors/rate-limit 
+            category: Page
+            show: True
           - title: "Redis"
             path: /product-stack/tyk-streaming/configuration/processors/redis
             category: Page
