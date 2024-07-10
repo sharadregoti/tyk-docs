@@ -219,7 +219,7 @@ order:
 
 ### branch_resources
 
-An optional list of [branch processor](TODO) names that are configured as [resources](#resources). These resources will be included in the workflow with any branches configured inline within the [branches](#branches) field. The order and parallelism in which branches are executed is automatically resolved based on the mappings of each branch. When using resources with an explicit order it is not necessary to list resources in this field.
+An optional list of [branch processor]({{< ref "/product-stack/tyk-streaming/configuration/processors/branch" >}}) names that are configured as [resources](#resources). These resources will be included in the workflow with any branches configured inline within the [branches](#branches) field. The order and parallelism in which branches are executed is automatically resolved based on the mappings of each branch. When using resources with an explicit order it is not necessary to list resources in this field.
 
 
 Type: `array`  
@@ -228,7 +228,7 @@ Requires version 3.38.0 or newer
 
 ### branches
 
-An object of named [branch processors](TODO) that make up the workflow. The order and parallelism in which branches are executed can either be made explicit with the field `order`, or if omitted an attempt is made to automatically resolve an ordering based on the mappings of each branch.
+An object of named [branch processors]({{< ref "/product-stack/tyk-streaming/configuration/processors/branch" >}}) that make up the workflow. The order and parallelism in which branches are executed can either be made explicit with the field `order`, or if omitted an attempt is made to automatically resolve an ordering based on the mappings of each branch.
 
 
 Type: `object`  
@@ -236,10 +236,10 @@ Default: `{}`
 
 ### branches.<name>.request_map
 
-A [Bloblang mapping](TODO) that describes how to create a request payload suitable for the child processors of this branch. If left empty then the branch will begin with an exact copy of the origin message (including metadata).
+A [Bloblang mapping]({{< ref "/product-stack/tyk-streaming/guides/bloblang/overview" >}}) that describes how to create a request payload suitable for the child processors of this branch. If left empty then the branch will begin with an exact copy of the origin message (including metadata).
 
 
-Type: `string`  
+Type: `string`
 Default: `""`  
 
 ```yml
@@ -342,6 +342,6 @@ The second error case is when automatic DAG resolution is being used and a resou
 
 The recommended approach to handle failures within a workflow is to query against the [structured metadata](#structured-metadata) it provides, as it provides granular information about exactly which branches failed and which ones succeeded and therefore aren't necessary to perform again.
 
-For example, if our meta object is stored at the path `meta.workflow` and we wanted to check whether a message has failed for any branch we can do that using a [Bloblang query][TODO] like `this.meta.workflow.failed.length() | 0 > 0`, or to check whether a specific branch failed we can use `this.exists("meta.workflow.failed.foo")`.
+For example, if our meta object is stored at the path `meta.workflow` and we wanted to check whether a message has failed for any branch we can do that using a [Bloblang query]({{< ref "/product-stack/tyk-streaming/guides/bloblang/overview" >}}) like `this.meta.workflow.failed.length() | 0 > 0`, or to check whether a specific branch failed we can use `this.exists("meta.workflow.failed.foo")`.
 
 However, if structured metadata is disabled by setting the field `meta_path` to empty then the workflow processor instead adds a general error flag to messages when any executed branch fails. In this case it's possible to handle failures using [standard error handling patterns]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/error-handling" >}}).
