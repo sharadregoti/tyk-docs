@@ -230,7 +230,7 @@ An object of named [branch processors]({{< ref "/product-stack/tyk-streaming/con
 Type: `object`  
 Default: `{}`  
 
-### branches.<name>.request_map
+### branches.name.request_map
 
 A [Bloblang mapping]({{< ref "/product-stack/tyk-streaming/guides/bloblang/overview" >}}) that describes how to create a request payload suitable for the child processors of this branch. If left empty then the branch will begin with an exact copy of the origin message (including metadata).
 
@@ -255,14 +255,14 @@ request_map: |-
   }
 ```
 
-### branches.<name>.processors
+### branches.name.processors
 
 A list of processors to apply to mapped requests. When processing message batches the resulting batch must match the size and ordering of the input batch, therefore filtering, grouping should not be performed within these processors.
 
 
 Type: `array`  
 
-### branches.<name>.result_map
+### branches.name.result_map
 
 A [Bloblang mapping]({{< ref "/product-stack/tyk-streaming/overview" >}}) that describes how the resulting messages from branched processing should be mapped back into the original payload. If left empty the origin message will remain unchanged (including metadata).
 
