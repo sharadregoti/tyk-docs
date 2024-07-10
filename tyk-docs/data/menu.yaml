@@ -4037,6 +4037,10 @@ menu:
             path: /product-stack/tyk-streaming/configuration/processors/for-each
             category: Page
             show: True
+          - title: "Http"
+            path: /product-stack/tyk-streaming/configuration/processors/http
+            category: Page
+            show: True
           - title: "Insert Part"
             path: /product-stack/tyk-streaming/configuration/processors/insert-part
             category: Page
