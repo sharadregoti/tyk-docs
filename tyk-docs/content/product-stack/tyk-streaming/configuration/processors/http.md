@@ -84,7 +84,7 @@ The `rate_limit` field can be used to specify a rate limit [resource](/docs/comp
 
 The URL and header values of this type can be dynamically set using [function interpolations]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/interpolation#bloblang-queries" >}}).
 
-In order to map or encode the payload to a specific request body, and map the response back into the original payload instead of replacing it entirely, you can use the [branch](TODO).
+In order to map or encode the payload to a specific request body, and map the response back into the original payload instead of replacing it entirely, you can use the [branch]({{< ref "/product-stack/tyk-streaming/configuration/processors/branch" >}}).
 
 ## Response Codes
 
@@ -106,9 +106,9 @@ When all retry attempts for a message are exhausted the processor cancels the at
 
 ## Examples
 
-### Branched Request
+### Branched Request
 
-This example uses a [branch processor](TODO) to strip the request message into an empty body, grab an HTTP payload, and place the result back into the original message at the path `repo.status`:
+This example uses a [branch processor]({{< ref "/product-stack/tyk-streaming/configuration/processors/branch" >}}) to strip the request message into an empty body, grab an HTTP payload, and place the result back into the original message at the path `repo.status`:
 
 ```yaml
 pipeline:
@@ -117,7 +117,7 @@ pipeline:
         request_map: 'root = ""'
         processors:
           - http:
-              url: https://hub.docker.com/v2/repositories/jeffail/benthos
+              url: https://hub.docker.com/v2/repositories/tykio/tyk-gateway
               verb: GET
               headers:
                 Content-Type: application/json
@@ -129,7 +129,7 @@ pipeline:
 ### url
 
 The URL to connect to.
-This field supports [interpolation functions](/docs/configuration/interpolation#bloblang-queries).
+This field supports [interpolation functions]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/interpolation#bloblang-queries" >}}).
 
 
 Type: `string`  
@@ -223,7 +223,6 @@ Optionally set a level at which the request and response payload of each request
 
 Type: `string`  
 Default: `""`  
-Requires version 4.12.0 or newer  
 Options: `TRACE`, `DEBUG`, `INFO`, `WARN`, `ERROR`, `FATAL`, ``.
 
 <!-- ### oauth
@@ -328,7 +327,6 @@ A list of optional requested permissions.
 
 Type: `array`  
 Default: `[]`  
-Requires version 3.45.0 or newer  
 
 ### `oauth2.endpoint_params`
 
@@ -337,7 +335,6 @@ A list of optional endpoint parameters, values should be arrays of strings.
 
 Type: `object`  
 Default: `{}`  
-Requires version 4.21.0 or newer  
 
 ```yml
 # Examples
@@ -461,7 +458,6 @@ Whether to allow the remote server to repeatedly request renegotiation. Enable t
 
 Type: `bool`  
 Default: `false`  
-Requires version 3.45.0 or newer  
 
 ### `tls.root_cas`
 
@@ -620,7 +616,7 @@ include_patterns:
 
 ### rate_limit
 
-An optional [rate limit](/docs/components/rate_limits/about) to throttle requests by.
+An optional [rate limit](TODO) to throttle requests by.
 
 
 Type: `string`  
