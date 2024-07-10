@@ -102,7 +102,7 @@ If you enable streaming then Tyk Streams will consume the body of the response a
 
 ### Pagination
 
-This input supports interpolation functions in the `url` and `headers` fields where data from the previous successfully consumed message (if there was one) can be referenced. This can be used in order to support basic levels of pagination. However, in cases where pagination depends on logic it is recommended that you use an [http processor](TODO) instead, often combined with a [generate input](TODO) in order to schedule the processor.
+This input supports interpolation functions in the `url` and `headers` fields where data from the previous successfully consumed message (if there was one) can be referenced. This can be used in order to support basic levels of pagination. However, in cases where pagination depends on logic it is recommended that you use an [http processor](TODO) instead, often combined with a [generate input]({{< ref "/product-stack/tyk-streaming/configuration/inputs/generate" >}}) in order to schedule the processor.
 
 ## Examples
 
