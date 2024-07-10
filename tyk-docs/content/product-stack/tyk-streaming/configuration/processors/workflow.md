@@ -322,7 +322,7 @@ If a field `<meta_path>.apply` exists in the meta object for a message and is an
 
 ## Resources {#resources-config}
 
-It's common to configure processors (and other components) [as resources][TODO] in order to keep the pipeline configuration cleaner. With the workflow processor you can include branch processors configured as resources within your workflow either by specifying them by name in the field `order`, if Benthos doesn't find a branch within the workflow configuration of that name it'll refer to the resources.
+It's common to configure processors (and other components) [as resources]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/resources" >}}) in order to keep the pipeline configuration cleaner. With the workflow processor you can include branch processors configured as resources within your workflow either by specifying them by name in the field `order`, if Tyk Streams doesn't find a branch within the workflow configuration of that name it'll refer to the resources.
 
 Alternatively, if you do not wish to have an explicit ordering, you can add resource names to the field `branch_resources` and they will be included in the workflow with automatic DAG resolution along with any branches configured in the `branches` field.
 
@@ -332,7 +332,7 @@ There are two error conditions that could potentially occur when resources inclu
 
 The first error case is that a resource in the workflow is removed and not replaced, when this happens the workflow will still be executed but the individual branch will fail. This should only happen if you explicitly delete a branch resource, as any mutation operation will create the new resource before removing the old one.
 
-The second error case is when automatic DAG resolution is being used and a resource in the workflow is changed in a way that breaks the DAG (circular dependencies, etc). When this happens it is impossible to execute the workflow and therefore the processor will fail, which is possible to capture and handle using [standard error handling patterns]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/error-handling" >}}).
+The second error case is when automatic Directed Acyclic Graph (DAG) resolution is being used and a resource in the workflow is changed in a way that breaks the DAG (circular dependencies, etc). When this happens it is impossible to execute the workflow and therefore the processor will fail, which is possible to capture and handle using [standard error handling patterns]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/error-handling" >}}).
 
 ## Error Handling
 
