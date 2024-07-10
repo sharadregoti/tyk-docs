@@ -4093,6 +4093,10 @@ menu:
             path: /product-stack/tyk-streaming/configuration/processors/try
             category: Page
             show: True
+          - title: "Workflow"
+            path: /product-stack/tyk-streaming/configuration/processors/workflow
+            category: Page
+            show: True
         - title: "Common Configurations"
           category: Directory
           show: True
@@ -4107,6 +4111,10 @@ menu:
             show: True
           - title: "Interpolation"
             path: /product-stack/tyk-streaming/configuration/common-configuration/interpolation
+            category: Page
+            show: True
+          - title: "Processing Pipelines"
+            path: /product-stack/tyk-streaming/configuration/common-configuration/processing-pipelines
             category: Page
             show: True
       - title: "Guides"
