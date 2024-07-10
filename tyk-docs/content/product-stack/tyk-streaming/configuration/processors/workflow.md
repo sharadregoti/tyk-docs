@@ -186,7 +186,7 @@ processor_resources:
 
 ### meta_path
 
-A [dot path](/docs/configuration/field_paths) indicating where to store and reference [structured metadata](#structured-metadata) about the workflow execution.
+A [dot path]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/field-paths" >}}) indicating where to store and reference [structured metadata](#structured-metadata) about the workflow execution.
 
 
 Type: `string`  
