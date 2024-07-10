@@ -4,7 +4,7 @@ description: Explains an overview of workflow processor
 tags: [ "Tyk Streams", "Stream Processors", "Processors", "Workflow" ]
 ---
 
-Executes a topology of [branch processors]({{< ref "" >}}), performing them in parallel where possible.
+Executes a topology of [branch processors]({{< ref "/product-stack/tyk-streaming/configuration/processors/branch" >}}), performing them in parallel where possible.
 
 
 ## Common
@@ -42,7 +42,7 @@ When a processing pipeline contains multiple network processors that aren't depe
 
 ### Simplifying Processor Topology
 
-A workflow is often expressed as a [Directed Acyclic Graph]([dag_wiki](https://en.wikipedia.org/wiki/Directed_acyclic_graph) of processing stages, where each stage can result in N possible next stages, until finally the flow ends at an exit node.
+A workflow is often expressed as a [Directed Acyclic Graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) of processing stages, where each stage can result in N possible next stages, until finally the flow ends at an exit node.
 
 For example, if we had processing stages A, B, C and D, where stage A could result in either stage B or C being next, always followed by D, it might look something like this:
 
@@ -145,7 +145,7 @@ pipeline:
 
 ## Resources
 
-The `order` field can be used in order to refer to [branch processor resources](#resources), this can sometimes make your pipeline configuration cleaner, as well as allowing you to reuse branch configurations in order places. It's also possible to mix and match branches configured within the workflow and configured as resources.
+The `order` field can be used in order to refer to [branch processor resources](#resources-config), this can sometimes make your pipeline configuration cleaner, as well as allowing you to reuse branch configurations in order places. It's also possible to mix and match branches configured within the workflow and configured as resources.
 
 ```yaml
 pipeline:
@@ -324,7 +324,7 @@ The previous meta object will also be preserved in the field `<meta_path>.previo
 
 If a field `<meta_path>.apply` exists in the meta object for a message and is an array then it will be used as an explicit list of stages to apply, all other stages will be skipped.
 
-## Resources
+## Resources {#resources-config}
 
 It's common to configure processors (and other components) [as resources][TODO] in order to keep the pipeline configuration cleaner. With the workflow processor you can include branch processors configured as resources within your workflow either by specifying them by name in the field `order`, if Benthos doesn't find a branch within the workflow configuration of that name it'll refer to the resources.
 
