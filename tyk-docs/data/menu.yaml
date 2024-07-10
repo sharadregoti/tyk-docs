@@ -3893,6 +3893,10 @@ menu:
             path: /product-stack/tyk-streaming/configuration/inputs/amqp-1
             category: Page
             show: True
+          - title: "Generate"
+            path: /product-stack/tyk-streaming/configuration/inputs/generate
+            category: Page
+            show: True
           - title: "Http Client"
             path: /product-stack/tyk-streaming/configuration/inputs/http-client
             category: Page
