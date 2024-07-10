@@ -4117,6 +4117,10 @@ menu:
             path: /product-stack/tyk-streaming/configuration/common-configuration/processing-pipelines
             category: Page
             show: True
+          - title: "Resources"
+            path: /product-stack/tyk-streaming/configuration/common-configuration/resources
+            category: Page
+            show: True
       - title: "Guides"
         category: Directory
         show: True
