@@ -216,7 +216,7 @@ order:
 
 ### branch_resources
 
-An optional list of [branch processor]({{< ref "/product-stack/tyk-streaming/configuration/processors/branch" >}}) names that are configured as [resources](#resources). These resources will be included in the workflow with any branches configured inline within the [branches](#branches) field. The order and parallelism in which branches are executed is automatically resolved based on the mappings of each branch. When using resources with an explicit order it is not necessary to list resources in this field.
+An optional list of [branch processor]({{< ref "/product-stack/tyk-streaming/configuration/processors/branch" >}}) names that are configured as [resources](#resources-config). These resources will be included in the workflow with any branches configured inline within the [branches](#branches) field. The order and parallelism in which branches are executed is automatically resolved based on the mappings of each branch. When using resources with an explicit order it is not necessary to list resources in this field.
 
 
 Type: `array`  
