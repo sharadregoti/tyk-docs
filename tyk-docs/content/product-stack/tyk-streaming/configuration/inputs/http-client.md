@@ -41,36 +41,36 @@ input:
       include_prefixes: []
       include_patterns: []
     dump_request_log_level: ""
-    oauth:
-      enabled: false
-      consumer_key: ""
-      consumer_secret: ""
-      access_token: ""
-      access_token_secret: ""
-    oauth2:
-      enabled: false
-      client_key: ""
-      client_secret: ""
-      token_url: ""
-      scopes: []
-      endpoint_params: {}
-    basic_auth:
-      enabled: false
-      username: ""
-      password: ""
-    jwt:
-      enabled: false
-      private_key_file: ""
-      signing_method: ""
-      claims: {}
-      headers: {}
-    tls:
-      enabled: false
-      skip_cert_verify: false
-      enable_renegotiation: false
-      root_cas: ""
-      root_cas_file: ""
-      client_certs: []
+    # oauth:
+    #   enabled: false
+    #   consumer_key: ""
+    #   consumer_secret: ""
+    #   access_token: ""
+    #   access_token_secret: ""
+    # oauth2:
+    #   enabled: false
+    #   client_key: ""
+    #   client_secret: ""
+    #   token_url: ""
+    #   scopes: []
+    #   endpoint_params: {}
+    # basic_auth:
+    #   enabled: false
+    #   username: ""
+    #   password: ""
+    # jwt:
+    #   enabled: false
+    #   private_key_file: ""
+    #   signing_method: ""
+    #   claims: {}
+    #   headers: {}
+    # tls:
+    #   enabled: false
+    #   skip_cert_verify: false
+    #   enable_renegotiation: false
+    #   root_cas: ""
+    #   root_cas_file: ""
+    #   client_certs: []
     extract_headers:
       include_prefixes: []
       include_patterns: []
@@ -119,11 +119,11 @@ input:
       ) }${! ("&next_token="+this.meta.next_token.not_null()) | "" }
     verb: GET
     rate_limit: foo_searches
-    oauth2:
-      enabled: true
-      token_url: https://api.example.com/oauth2/token
-      client_key: "${EXAMPLE_KEY}"
-      client_secret: "${EXAMPLE_SECRET}"
+    # oauth2:
+    #   enabled: true
+    #   token_url: https://api.example.com/oauth2/token
+    #   client_key: "${EXAMPLE_KEY}"
+    #   client_secret: "${EXAMPLE_SECRET}"
 
 rate_limit_resources:
   - label: foo_searches
@@ -233,7 +233,7 @@ Default: `""`
 Requires version 4.12.0 or newer  
 Options: `TRACE`, `DEBUG`, `INFO`, `WARN`, `ERROR`, `FATAL`, ``.
 
-### oauth
+<!-- ### oauth
 
 Allows you to specify open authentication via OAuth version 1.
 
@@ -265,7 +265,7 @@ This field contains sensitive information that usually shouldn't be added to a c
 
 
 Type: `string`  
-Default: `""`  
+Default: `""`
 
 ### oauth.access_token
 
@@ -284,9 +284,9 @@ This field contains sensitive information that usually shouldn't be added to a c
 
 
 Type: `string`  
-Default: `""`  
+Default: `""`   -->
 
-### oauth2
+<!-- ### oauth2
 
 Allows you to specify open authentication via OAuth version 2 using the client credentials token flow.
 
@@ -318,7 +318,7 @@ This field contains sensitive information that usually shouldn't be added to a c
 
 
 Type: `string`  
-Default: `""`  
+Default: `""`
 
 ### oauth2.token_url
 
@@ -356,8 +356,9 @@ endpoint_params:
     - meow
     - quack
 ```
+-->
 
-### basic_auth
+<!-- ### basic_auth
 
 Allows you to specify basic authentication.
 
@@ -389,9 +390,9 @@ This field contains sensitive information that usually shouldn't be added to a c
 
 
 Type: `string`  
-Default: `""`  
+Default: `""`   -->
 
-### jwt
+<!-- ### jwt
 
 Allows you to specify JWT authentication.
 
@@ -470,7 +471,7 @@ Type: `bool`
 Default: `false`  
 Requires version 3.45.0 or newer  
 
-### tls.root_cas
+<!-- ### tls.root_cas
 
 An optional root certificate authority to use. This is a string, representing a certificate chain from the parent trusted root certificate, to possible intermediate signing certificates, to the host certificate.
 :::warning Secret
@@ -502,9 +503,9 @@ Default: `""`
 # Examples
 
 root_cas_file: ./root_cas.pem
-```
+``` -->
 
-### tls.client_certs
+<!-- ### tls.client_certs
 
 A list of client certificates to use. For each certificate either the fields `cert` and `key`, or `cert_file` and `key_file` should be specified, but not both.
 
@@ -576,7 +577,7 @@ Default: `""`
 password: foo
 
 password: ${KEY_PASSWORD}
-```
+``` -->
 
 ### extract_headers
 
@@ -741,7 +742,6 @@ The [scanner](TODO) by which the stream of bytes consumed will be broken out int
 
 Type: `scanner`  
 Default: `{"lines":{}}`  
-Requires version 4.25.0 or newer  
 
 ### auto_replay_nacks
 
@@ -749,4 +749,4 @@ Whether messages that are rejected (nacked) at the output level should be automa
 
 
 Type: `bool`  
-Default: `true`  
+Default: `true`
