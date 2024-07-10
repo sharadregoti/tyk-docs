@@ -4142,15 +4142,15 @@ menu:
         show: true
         menu:
         - title: "Overview"
-          path: /product-stack/tyk-streaming/rate-limits/overview
+          path: /product-stack/tyk-streaming/configuration/rate-limits/local 
           category: Page
           show: True
         - title: "Local"
-          path: /product-stack/tyk-streaming/rate-limits/local
+          path: /product-stack/tyk-streaming/configuration/rate-limits/local
           category: Page
           show: True
         - title: "Redis"
-          path: /product-stack/tyk-streaming/rate-limits/redis
+          path: /product-stack/tyk-streaming/configuration/rate-limits/redis
           category: Page
           show: True
       - title: "Deployment Considerations"
