@@ -67,7 +67,7 @@ And imagine doing so knowing that the diagram is subject to change over time. Yi
 
 ## Examples
 
-## Automatic Ordering
+### Automatic Ordering
 
 When the field `order` is omitted a best attempt is made to determine a dependency tree between branches based on their request and result mappings. In the following example the branches foo and bar will be executed first in parallel, and afterwards the branch baz will be executed.
 
@@ -103,7 +103,7 @@ pipeline:
                   value: ${! json("barstuff") }
 ```
 
-## Conditional Branches
+### Conditional Branches
 
 Branches of a workflow are skipped when the `request_map` assigns `deleted()` to the root. In this example the branch A is executed when the document type is "foo", and branch B otherwise. Branch C is executed afterwards and is skipped unless either A or B successfully provided a result at `tmp.result`.
 
@@ -143,7 +143,7 @@ pipeline:
             result_map: 'root.tmp.result = this'
 ```
 
-## Resources
+### Resources
 
 The `order` field can be used in order to refer to [branch processor resources](#resources-config), this can sometimes make your pipeline configuration cleaner, as well as allowing you to reuse branch configurations in order places. It's also possible to mix and match branches configured within the workflow and configured as resources.
 
