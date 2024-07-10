@@ -221,7 +221,6 @@ An optional list of [branch processor]({{< ref "/product-stack/tyk-streaming/con
 
 Type: `array`  
 Default: `[]`  
-Requires version 3.38.0 or newer  
 
 ### branches
 
