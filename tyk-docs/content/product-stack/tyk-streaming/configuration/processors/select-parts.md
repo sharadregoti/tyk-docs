@@ -19,7 +19,7 @@ If none of the selected parts exist in the input batch (resulting in an empty ou
 
 Message indexes can be negative, and if so the part will be selected from the end counting backwards starting from -1. For example, if index = -1 then the selected part will be the last part of the message, if index = -2 then the part before the last element with be selected, and so on.
 
-This processor is only applicable to [batched messages](/docs/configuration/batching).
+This processor is only applicable to [batched messages]({{< ref "/product-stack/tyk-streaming/configuration/common-configuration/batching" >}}).
 
 ## Fields
 
