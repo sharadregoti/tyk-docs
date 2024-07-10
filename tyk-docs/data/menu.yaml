@@ -4137,6 +4137,22 @@ menu:
             path: "/product-stack/tyk-streaming/guides/bloblang/methods"
             category: Page
             show: True
+      - title: "Rate Limits"
+        category: Directory
+        show: true
+        menu:
+        - title: "Overview"
+          path: /product-stack/tyk-streaming/rate-limits/overview
+          category: Page
+          show: True
+        - title: "Local"
+          path: /product-stack/tyk-streaming/rate-limits/local
+          category: Page
+          show: True
+        - title: "Redis"
+          path: /product-stack/tyk-streaming/rate-limits/redis
+          category: Page
+          show: True
       - title: "Deployment Considerations"
         path: /product-stack/tyk-streaming/deployment-considerations
         category: Page
