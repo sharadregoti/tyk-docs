@@ -182,9 +182,6 @@ processor_resources:
             value: ${! json("barstuff") }
 ```
 
-</TabItem>
-</Tabs>
-
 ## Fields
 
 ### meta_path
