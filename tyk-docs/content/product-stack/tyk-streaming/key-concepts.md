@@ -29,6 +29,16 @@ Terms
     - IoT
     - Infrastructure for domain driven design, e.g. event bus to notify state changes between micro-services -->
 
+{{< warning success>}}
+
+**Important notice: Tyk Stream in Lab Release**
+
+*Tyk Streams* is currently in the *Lab Release* phase. It is under active development and testing, and is not intended for production use. For more details and to provide your feedback, please visit our [Lab Release Information Page]({{< ref "developer-support/special-releases-and-features/lab-releases" >}}) and [Signup](https://survey.hsforms.com/1ItPCBg-_Tre8WFJZL4pp6Q3ifmg) for Tyk Streams.
+
+</br>
+
+{{< /warning >}}
+
 Tyk Streams seamlessly integrates with the Tyk API Gateway to provide a unified platform for managing both synchronous and asynchronous APIs. This section will provide an overview of the architecture, integration points, and key capabilities. Please consult the [glossary]({{< ref "product-stack/tyk-streaming/glossary" >}}) for explanations of key terminology.
 
 Tyk Streams natively integrated as part of Tyk API Gateway and does not have any third party dependencies.
