@@ -6,9 +6,9 @@ tags: [ "streaming", "events", "event-driven architecture", "event-driven archit
 We are excited to introduce our new product, *Tyk Streams*! 
 *Tyk Streams* is a powerful new feature in the Tyk API management platform that enables organisations to securely expose, manage and monetize real-time event streams and asynchronous APIs.
 
-## Express Your Interest
+## Signup
 
-We value your interest in using Tyk Streams. Please consider completing the following feedback form to explain your interest and use case for Tyk Streams.
+We value your interest in using Tyk Streams. In order to get started please signup by clicking on the button below.
 
 {{< button_left href="https://survey.hsforms.com/1ItPCBg-_Tre8WFJZL4pp6Q3ifmg" color="green" content="Feedback" >}}
 
@@ -30,7 +30,7 @@ The purpose of Tyk Streams is to provide a unified platform for managing both sy
 
 **Important notice: Tyk Stream in Lab Release**
 
-*Tyk Streams* is currently in the *Lab Release* phase. It is under active development and testing, and is not intended for production use. For more details and to provide your feedback, please visit our [Lab Release Information Page]({{< ref "developer-support/special-releases-and-features/lab-releases" >}}).
+*Tyk Streams* is currently in the *Lab Release* phase. It is under active development and testing, and is not intended for production use. For more details and to provide your feedback, please visit our [Lab Release Information Page]({{< ref "developer-support/special-releases-and-features/lab-releases" >}}) and [signup](https://survey.hsforms.com/1ItPCBg-_Tre8WFJZL4pp6Q3ifmg) for Tyk Streams.
 
 </br>
 
