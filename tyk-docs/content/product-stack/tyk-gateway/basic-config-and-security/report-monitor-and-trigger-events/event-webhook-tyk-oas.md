@@ -23,7 +23,7 @@ When using a local webhook, the event handler element in the `eventHandlers` obj
 - `enabled`: enable the event handler
 - `trigger`: the API event that will trigger the webhook
 - `type`: the type of event handler, in this case should be set to `webhook`
-- `cooldownPeriod`: the [webhook cooldown]({{< ref "basic-config-and-security/report-monitor-trigger-events/webhooks#webhook-cooldown" >}}) for duplicate events (in seconds); use this to prevent flooding of the target endpoint when multiple events are fired in quick succession
+- `cooldownPeriod`: the [webhook cooldown]({{< ref "basic-config-and-security/report-monitor-trigger-events/webhooks#webhook-cooldown" >}}) for duplicate events (in duration format, e.g. 10s, 1m30s); use this to prevent flooding of the target endpoint when multiple events are fired in quick succession
 - `name`: a human readable name for the webhook, which will be displayed in Tyk Dashboard
 - `url`: this is an **absolute URL** to which the request will be sent
 - `method`: this can be any of `GET`, `PUT`, `POST`, `PATCH` or `DELETE` and will be the HTTP method used to send the request; methods that do not support an encoded request body will not have the event metadata provided with the request; we advise using `POST` where possible
@@ -96,7 +96,7 @@ When using a *global webhook*, the event handler element in the `eventHandlers` 
 - `enabled`: enable the event handler
 - `trigger`: the API event that will trigger the webhook
 - `type`: the type of event handler, in this case should be set to `webhook`
-- `cooldownPeriod`: the [webhook cooldown]({{< ref "basic-config-and-security/report-monitor-trigger-events/webhooks#webhook-cooldown" >}}) for duplicate events (in seconds); use this to prevent flooding of the target endpoint when multiple events are fired in quick succession
+- `cooldownPeriod`: the [webhook cooldown]({{< ref "basic-config-and-security/report-monitor-trigger-events/webhooks#webhook-cooldown" >}}) for duplicate events (in duration format, e.g. 10s, 1m30s); use this to prevent flooding of the target endpoint when multiple events are fired in quick succession
 - `id`: the *webhook id* assigned by Tyk to the global webhook when it was created (this can be determined using the [list webhooks]({{< ref "tyk-apis/tyk-dashboard-api/web-hooks#list-web-hooks" >}}) endpoint in the Tyk Dashboard API)
 
 For example:
@@ -193,7 +193,7 @@ Note that Tyk automatically retrieves the details of the *global webhook* and di
 
 Don't forget to select **SAVE API** to apply the changes.
 
-#### Step 3b: Configure local webhoo
+#### Step 3b: Configure local webhook
 
 If you don't want to use a shared *global webhook* but instead want to configure a *local webhook* only available to this API/event then you should ensure that the **Webhook source** is set to **Local webhook**.
 

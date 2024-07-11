@@ -37,7 +37,7 @@ The webhook event handler runs in its own process and so does not block the oper
 
 ### Webhook cooldown
 
-It is very likely that an `AuthFailure` event will fire on the same endpoint more than once if the requesting client is automated. If this event triggered a webhook that caused an email to be sent, then if this event occurred 10 times a second, the email recipient would be flooded with emails. In an attempt to mitigate against events such as this, you can set an `event_timeout` in seconds, in the webhook handler. This acts as a 'cooldown' timer for the event if a message with the same request signature has been fired within the time period specified.
+It is very likely that an `AuthFailure` event will fire on the same endpoint more than once if the requesting client is automated. If this event triggered a webhook that caused an email to be sent, then if this event occurred 10 times a second, the email recipient would be flooded with emails. In an attempt to mitigate against events such as this, you can set a cooldown timer, in the webhook handler. This prevents the webhook from being triggered again if the event is fired again within the time period specified.
 
 ### Webhook payload
 
