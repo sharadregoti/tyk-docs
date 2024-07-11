@@ -121,7 +121,7 @@ root.result = this.foo.exists("bar.baz")
 
 ### from
 
-Modifies a target query such that certain functions are executed from the perspective of another message in the batch. This allows you to mutate events based on the contents of other messages. Functions that support this behaviour are `content`, `json` and `meta`.
+Modifies a target query such that certain functions are executed from the perspective of another message in the batch. This allows you to mutate events based on the contents of other messages. Functions that support this behavior are `content`, `json` and `meta`.
 
 #### Parameters
 
@@ -139,7 +139,7 @@ root.foo = json("foo").from(1)
 
 ### from_all
 
-Modifies a target query such that certain functions are executed from the perspective of each message in the batch, and returns the set of results as an array. Functions that support this behaviour are `content`, `json` and `meta`.
+Modifies a target query such that certain functions are executed from the perspective of each message in the batch, and returns the set of results as an array. Functions that support this behavior are `content`, `json` and `meta`.
 
 #### Examples
 
@@ -1415,7 +1415,7 @@ Attempts to format a timestamp value as a string according to a specified strfti
 #### Examples
 
 
-The format consists of zero or more conversion specifiers and ordinary characters (except `%`). All ordinary characters are copied to the output string without modification. Each conversion specification begins with `%` character followed by the character that determines the behaviour of the specifier. Please refer to [man 3 strftime](https://linux.die.net/man/3/strftime) for the list of format specifiers.
+The format consists of zero or more conversion specifiers and ordinary characters (except `%`). All ordinary characters are copied to the output string without modification. Each conversion specification begins with `%` character followed by the character that determines the behavior of the specifier. Please refer to [man 3 strftime](https://linux.die.net/man/3/strftime) for the list of format specifiers.
 
 ```coffee
 root.something_at = (this.created_at + 300).ts_strftime("%Y-%b-%d %H:%M:%S")
@@ -1456,7 +1456,7 @@ Attempts to parse a string as a timestamp following a specified strptime-compati
 #### Examples
 
 
-The format consists of zero or more conversion specifiers and ordinary characters (except `%`). All ordinary characters are copied to the output string without modification. Each conversion specification begins with a `%` character followed by the character that determines the behaviour of the specifier. Please refer to [man 3 strptime](https://linux.die.net/man/3/strptime) for the list of format specifiers.
+The format consists of zero or more conversion specifiers and ordinary characters (except `%`). All ordinary characters are copied to the output string without modification. Each conversion specification begins with a `%` character followed by the character that determines the behavior of the specifier. Please refer to [man 3 strptime](https://linux.die.net/man/3/strptime) for the list of format specifiers.
 
 ```coffee
 root.doc.timestamp = this.doc.timestamp.ts_strptime("%Y-%b-%d")
@@ -3552,59 +3552,3 @@ Looks up an IP address against a [MaxMind database file](https://www.maxmind.com
 #### Parameters
 
 **path** &lt;string&gt; A path to an mmdb (maxmind) file.  
-
-## Deprecated
-
-### format_timestamp
-
-Attempts to format a timestamp value as a string according to a specified format, or RFC 3339 by default. Timestamp values can either be a numerical unix time in seconds (with up to nanosecond precision via decimals), or a string in RFC 3339 format.
-
-The output format is defined by showing how the reference time, defined to be Mon Jan 2 15:04:05 -0700 MST 2006, would be displayed if it were the value. For an alternative way to specify formats check out the [ts_strftime](#ts_strftime) method.
-
-#### Parameters
-
-**format** &lt;string, default `"2006-01-02T15:04:05.999999999Z07:00"`&gt; The output format to use.  
-**tz** &lt;(optional) string&gt; An optional timezone to use, otherwise the timezone of the input string is used, or in the case of unix timestamps the local timezone is used.  
-
-### format_timestamp_strftime
-
-Attempts to format a timestamp value as a string according to a specified strftime-compatible format. Timestamp values can either be a numerical unix time in seconds (with up to nanosecond precision via decimals), or a string in RFC 3339 format.
-
-#### Parameters
-
-**format** &lt;string&gt; The output format to use.  
-**tz** &lt;(optional) string&gt; An optional timezone to use, otherwise the timezone of the input string is used.  
-
-### format_timestamp_unix
-
-Attempts to format a timestamp value as a unix timestamp. Timestamp values can either be a numerical unix time in seconds (with up to nanosecond precision via decimals), or a string in RFC 3339 format. The [ts_parse](#ts_parse) method can be used in order to parse different timestamp formats.
-
-### format_timestamp_unix_micro
-
-Attempts to format a timestamp value as a unix timestamp with microsecond precision. Timestamp values can either be a numerical unix time in seconds (with up to nanosecond precision via decimals), or a string in RFC 3339 format. The [ts_parse](#ts_parse) method can be used in order to parse different timestamp formats.
-
-### format_timestamp_unix_milli
-
-Attempts to format a timestamp value as a unix timestamp with millisecond precision. Timestamp values can either be a numerical unix time in seconds (with up to nanosecond precision via decimals), or a string in RFC 3339 format. The [ts_parse](#ts_parse) method can be used in order to parse different timestamp formats.
-
-### format_timestamp_unix_nano
-
-Attempts to format a timestamp value as a unix timestamp with nanosecond precision. Timestamp values can either be a numerical unix time in seconds (with up to nanosecond precision via decimals), or a string in RFC 3339 format. The [ts_parse](#ts_parse) method can be used in order to parse different timestamp formats.
-
-### parse_timestamp
-
-Attempts to parse a string as a timestamp following a specified format and outputs a timestamp, which can then be fed into methods such as [ts_format](#ts_format).
-
-The input format is defined by showing how the reference time, defined to be Mon Jan 2 15:04:05 -0700 MST 2006, would be displayed if it were the value. For an alternative way to specify formats check out the [ts_strptime](#ts_strptime) method.
-
-#### Parameters
-
-**format** &lt;string&gt; The format of the target string.  
-
-### parse_timestamp_strptime
-
-Attempts to parse a string as a timestamp following a specified strptime-compatible format and outputs a timestamp, which can then be fed into [ts_format](#ts_format).
-
-#### Parameters
-
-**format** &lt;string&gt; The format of the target string.  

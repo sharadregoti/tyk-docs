@@ -1539,7 +1539,7 @@ menu:
               path: /basic-config-and-security/reduce-latency/caching/invalidate-cache/
               category: Page
               show: True
-            - title: "Optimising the Cache Storage"
+            - title: "Optimizing the Cache Storage"
               path: /basic-config-and-security/reduce-latency/caching/optimise-cache/
               category: Page
               show: True
@@ -2352,7 +2352,7 @@ menu:
           path: /troubleshooting/tyk-gateway/502-error-tyk-gateway
           category: Page
           show: True
-        - title: "proxy error: context cancelled"
+        - title: "proxy error: context canceled"
           path: /troubleshooting/tyk-gateway/context-canceled
           category: Page
           show: True
@@ -3788,14 +3788,27 @@ menu:
         path: /tyk-operator
         category: Page
         show: True
+      - title: "Key Concepts"
+        path: /product-stack/tyk-operator/key-concepts/key-concepts
+        category: Directory
+        show: True
+        menu:
+        - title: "Operator User"
+          path: /product-stack/tyk-operator/key-concepts/key-concepts
+          category: Page
+          show: True
+        - title: "Operator Reconciliation"
+          path: /tyk-stack/tyk-operator/tyk-operator-reconciliation
+          category: Page
+          show: True
+        - title: "Operator Context"
+          path: /product-stack/tyk-operator/key-concepts/operator-context
+          category: Page
+          show: True
       - title: "Getting Started"
         category: Directory
         show: True
         menu:
-        - title: "Overview"
-          path: /tyk-stack/tyk-operator/getting-started-tyk-operator
-          category: Page
-          show: True
         - title: "Installing Tyk Operator"
           path: /tyk-stack/tyk-operator/installing-tyk-operator
           category: Page
@@ -3820,10 +3833,14 @@ menu:
           path: /product-stack/tyk-operator/tyk-ingress-controller
           category: Page
           show: True
-      - title: "Tyk Operator Reconciliation"
-        path: /tyk-stack/tyk-operator/tyk-operator-reconciliation
-        category: Page
-        show: True
+        - title: "Manage Multiple Organisations With OperatorContext"
+          path: /product-stack/tyk-operator/getting-started/tyk-operator-multiple-organisations
+          category: Page
+          show: True
+        - title: "Manage API Ownership with OperatorContext"
+          path: /product-stack/tyk-operator/getting-started/tyk-operator-api-ownership
+          category: Page
+          show: True
       - title: "Migration to Tyk Operator"
         path: /tyk-stack/tyk-operator/migration
         category: Page
@@ -3968,6 +3985,10 @@ menu:
             path: /product-stack/tyk-streaming/configuration/outputs/retry
             category: Page
             show: True
+          - title: "Sleep"
+            path: /product-stack/tyk-streaming/configuration/processors/sleep
+            category: Page
+            show: True
           - title: "Stdout"
             path: /product-stack/tyk-streaming/configuration/outputs/stdout
             category: Page
@@ -4052,6 +4073,14 @@ menu:
             path: /product-stack/tyk-streaming/configuration/processors/noop
             category: Page
             show: True
+          - title: "Parse Log"
+            path: /product-stack/tyk-streaming/configuration/processors/parse-log
+            category: Page
+            show: True
+          - title: "Processors"
+            path: /product-stack/tyk-streaming/configuration/processors/processors
+            category: Page
+            show: True
           - title: "Protobuf"
             path: /product-stack/tyk-streaming/configuration/processors/protobuf
             category: Page
@@ -4070,6 +4099,14 @@ menu:
             show: True
           - title: "Schema Registry Encode"
             path: /product-stack/tyk-streaming/configuration/processors/schema-registry-encode
+            category: Page
+            show: True
+          - title: "Split"
+            path: /product-stack/tyk-streaming/configuration/processors/split
+            category: Page
+            show: True
+          - title: "Try"
+            path: /product-stack/tyk-streaming/configuration/processors/try
             category: Page
             show: True
         - title: "Common Configurations"
@@ -4455,6 +4492,14 @@ menu:
       path: /developer-support/tyk-release-summary/overview
       category: Page
       show: True
+    - title: "Documentation Projects"
+      category: Directory
+      show: True
+      menu:
+      - title: "Inclusive Naming Initiative (INI)"
+        path: /developer-support/documentation-projects/inclusive-naming
+        category: Page
+        show: True
     - title: "Contribute to Tyk Docs"
       path: /contribute
       category: Page

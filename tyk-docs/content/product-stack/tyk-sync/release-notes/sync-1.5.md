@@ -12,7 +12,7 @@ Our minor releases are supported until our next minor comes out.
 
 ## 1.5.0 Release Notes
 
-##### Release date 1 July 2024
+##### Release date 4 July 2024
 
 #### Breaking Changes
 This release has no breaking changes.
@@ -77,7 +77,7 @@ Added support for API templates in `dump`, `sync`, `update`, and `publish` comma
 <details>
 <summary>Support for API Categories of OAS APIs </summary>
 
-Added support for API categories in OAS APIs. Users can now include API Category in the API Definition file. Tyk Sync will update the categories of the API accordingly. It improved organisation and categorisation of APIs, making management more intuitive.
+Added support for API categories in OAS APIs. Users can now include API Category in the API Definition file. Tyk Sync will update the categories of the API accordingly. It improved organisation and categorization of APIs, making management more intuitive.
 </details>
 </li>
 </ul>

@@ -126,14 +126,14 @@ Resolved an issue in the `api/usage` endpoint where the Dashboard with PostgreSQ
 <details>
 <summary>Enhanced Password Reset security</summary>
 
-Modified default OPA rules to prevent unauthorized admins from modifying other admins' passwords, mitigating potential 'rogue admin' behaviour. Tyk Dashboard clients using custom OPA rules should update their rule set accordingly. Contact your assigned Tyk representative for assistance.
+Modified default OPA rules to prevent unauthorized admins from modifying other admins' passwords, mitigating potential 'rogue admin' behavior. Tyk Dashboard clients using custom OPA rules should update their rule set accordingly. Contact your assigned Tyk representative for assistance.
 </details>
 </li>
 <li>
 <details>
 <summary>Fixed Universal Data Graph Schema Editor Import Issue</summary>
 
-Resolved an issue in the GQL schema editor for Data Graphs, where users couldn't utilise the 'Import Schema' button. Now, it's possible to import files containing GQL schemas into the Dashboard.
+Resolved an issue in the GQL schema editor for Data Graphs, where users couldn't utilize the 'Import Schema' button. Now, it's possible to import files containing GQL schemas into the Dashboard.
 </details>
 </li>
 <li>
@@ -241,7 +241,7 @@ An example is given below for illustrative purposes only. Tested Versions and Co
 <details>
 <summary>Improved security: user search method transitioned to POST</summary>
 
-Improved the behaviour of the Dashboard when searching for users to avoid transmitting sensitive information (user email addresses) in the request query parameters. Deprecated the `GET` method for the `/api/users/search` endpoint in favor of a `POST` method with the same logic but with parameters supplied in the request body.
+Improved the behavior of the Dashboard when searching for users to avoid transmitting sensitive information (user email addresses) in the request query parameters. Deprecated the `GET` method for the `/api/users/search` endpoint in favor of a `POST` method with the same logic but with parameters supplied in the request body.
 </details>
 </li>
 <li>
@@ -483,7 +483,7 @@ From Tyk 5.3.0 we support the following features when using Tyk OAS APIs with Ty
 
 #### API Templates
 
-Exclusively for Tyk OAS APIs, we are pleased to announce the introduction of API Templates: an API governance feature provided to streamline the process of creating APIs. An API template is an asset managed by Tyk Dashboard that is used as the starting point - a blueprint - from which you can create a new Tyk OAS API definition. With templates you can standardise configuration of your APIs more easily, combining your service-specific OpenAPI descriptions with enterprise requirements such as health endpoints, caching and authorization.
+Exclusively for Tyk OAS APIs, we are pleased to announce the introduction of API Templates: an API governance feature provided to streamline the process of creating APIs. An API template is an asset managed by Tyk Dashboard that is used as the starting point - a blueprint - from which you can create a new Tyk OAS API definition. With templates you can standardize configuration of your APIs more easily, combining your service-specific OpenAPI descriptions with enterprise requirements such as health endpoints, caching and authorization.
 
 #### Enhanced User Permissions
 
@@ -689,7 +689,7 @@ We fixed an issue where OPA rules were preventing users from importing an OpenAP
 </li>
 <li>
 <details>
-<summary>Optimised Policy Creation Endpoint</summary>
+<summary>Optimized Policy Creation Endpoint</summary>
 
 Fixed an issue where applying security policies to large numbers of APIs took a long time. We’ve implemented bulk processing in the validation step at the api/portal/policies/POLICY_ID endpoint, resulting in an 80% reduction in the time taken to apply a policy to 2000 APIs.
 </details>

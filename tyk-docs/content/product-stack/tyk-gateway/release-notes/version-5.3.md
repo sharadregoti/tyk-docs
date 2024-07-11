@@ -558,14 +558,14 @@ GraphQL APIs can now use the `detailed_tracing` setting in an API definition. Wi
 <details>
 <summary>Enhanced OpenTelemetry trace generation for UDG with mixed data sources</summary>
 
-This release introduces an enhanced trace generation system for Universal Data Graph (UDG). It consolidates all spans from both Tyk-managed and external data source executions into a single trace when used together. Furthermore, when UDG solely utilises Tyk-managed data sources, trace management is simplified and operational visibility is improved.
+This release introduces an enhanced trace generation system for Universal Data Graph (UDG). It consolidates all spans from both Tyk-managed and external data source executions into a single trace when used together. Furthermore, when UDG solely utilizes Tyk-managed data sources, trace management is simplified and operational visibility is improved.
 </details>
 </li>
 <li>
 <details>
-<summary>Disabled normalise and validate in GraphQL Engine</summary>
+<summary>Disabled normalize and validate in GraphQL Engine</summary>
 
-For GraphQL requests normalisation and validation has been disabled in the GraphQL engine. Both of those actions were performed in the Tyk Gateway and were unnecessary to be done again in the engine. This enhances performance slightly and makes detailed OTel traces concise and easier to read.
+For GraphQL requests normalization and validation has been disabled in the GraphQL engine. Both of those actions were performed in the Tyk Gateway and were unnecessary to be done again in the engine. This enhances performance slightly and makes detailed OTel traces concise and easier to read.
 </details>
 </li>
 <li>
@@ -579,7 +579,7 @@ The Tyk Dashboard API endpoint */api/data-graphs/data-sources/import* now handle
 <details>
 <summary>OAS-to-UDG converter support for allOf/anyOf/oneOf keywords</summary>
 
-The OAS-to-UDG converter now seamlessly handles OpenAPI descriptions that utilise the *allOf*, *anyOf* and *oneOf* keywords, ensuring accurate and comprehensive conversion to a Tyk API definition. The feature expands the scope of OpenAPI documents that the converter can handle and allows our users to import REST API data sources defined in OAS in more complex cases.
+The OAS-to-UDG converter now seamlessly handles OpenAPI descriptions that utilize the *allOf*, *anyOf* and *oneOf* keywords, ensuring accurate and comprehensive conversion to a Tyk API definition. The feature expands the scope of OpenAPI documents that the converter can handle and allows our users to import REST API data sources defined in OAS in more complex cases.
 </details>
 </li>
 <li>
@@ -593,7 +593,7 @@ The OAS-to-UDG converter can now create GraphQL types even if an object's defini
 <details>
 <summary>Refined handling of arrays of objects in endpoint responses by OAS-to-UDG Converter</summary>
 
-The OAS-to-UDG converter was unable to handle a document properly if an object within the OpenAPI description had no properties defined. This limitation resulted in unexpected behaviour and errors during the conversion process. The tool will now handle such cases seamlessly, ensuring a smoother and more predictable conversion process.
+The OAS-to-UDG converter was unable to handle a document properly if an object within the OpenAPI description had no properties defined. This limitation resulted in unexpected behavior and errors during the conversion process. The tool will now handle such cases seamlessly, ensuring a smoother and more predictable conversion process.
 </details>
 </li>
 <li>
@@ -630,7 +630,7 @@ Previously, when operating in a worker configuration (in the data plane), the Ty
 
 <br>Now, the worker gateway fetches the session expiry information up front, while there is an active connection to MDCB. This ensures that this data is already available locally in the event of an MDCB disconnection.
 
-<br>This change significantly improves the API response time under MDCB disconnection scenarios by removing the need for the Gateway to wait for a timeout when attempting to fetch session information from the control plane, avoiding the previous 30-second delay. This optimisation enhances the resilience and efficiency of Tyk Gateway in distributed environments.
+<br>This change significantly improves the API response time under MDCB disconnection scenarios by removing the need for the Gateway to wait for a timeout when attempting to fetch session information from the control plane, avoiding the previous 30-second delay. This optimization enhances the resilience and efficiency of Tyk Gateway in distributed environments.
 </details>
 </li>
 <li>
@@ -643,9 +643,9 @@ We have made some changes to the Tyk OAS API Definition to provide a stable cont
 </li>
 <li>
 <details>
-<summary>Optimised Gateway memory usage and reduced network request payload with Redis Rate Limiter</summary>
+<summary>Optimized Gateway memory usage and reduced network request payload with Redis Rate Limiter</summary>
 
-We have optimised the allocation behaviour of our sliding window log rate limiter implementation ([Redis Rate Limiter]({{< ref "getting-started/key-concepts/rate-limiting#redis-rate-limiter" >}})). Previously the complete request log would be retrieved from Redis. With this enhancement only the count of the requests in the window is retrieved, optimising the interaction with Redis and decreasing the Gateway memory usage.
+We have optimized the allocation behavior of our sliding window log rate limiter implementation ([Redis Rate Limiter]({{< ref "getting-started/key-concepts/rate-limiting#redis-rate-limiter" >}})). Previously the complete request log would be retrieved from Redis. With this enhancement only the count of the requests in the window is retrieved, optimizing the interaction with Redis and decreasing the Gateway memory usage.
 
 </details>
 </li>

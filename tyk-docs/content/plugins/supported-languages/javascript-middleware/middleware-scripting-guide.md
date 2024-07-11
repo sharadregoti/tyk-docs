@@ -15,7 +15,7 @@ aliases:
     - /plugins/javascript-middleware/middleware-scripting-guide
 ---
 
-Tyk's JavaScript Virtual Machine (JSVM) provides a serverless compute function that allows for the execution of custom logic directly within the gateway itself. This can be accessed from [multiple locations]({{< ref "plugins/supported-languages/javascript-middleware" >}}) in the API processing chain and allows significant customisation and optimisation of your request handling.
+Tyk's JavaScript Virtual Machine (JSVM) provides a serverless compute function that allows for the execution of custom logic directly within the gateway itself. This can be accessed from [multiple locations]({{< ref "plugins/supported-languages/javascript-middleware" >}}) in the API processing chain and allows significant customisation and optimization of your request handling.
 
 In this guide we will cover the features and resources available to you when creating custom functions, highlighting where there are limitations for the different middleware stages.
 
@@ -127,7 +127,7 @@ The structure of the `request` object is:
 - `AddParams`: you can add parameters to your request here, for example internal data headers that are only relevant to your network setup
 - `DeleteParams`: these parameters will be removed from the request as they pass through the middleware; note `DeleteParams` happens before `AddParams`
 - `ReturnOverrides`: values stored here are used to stop or halt middleware execution and return an error code
-- `IgnoreBody`: if this parameter is set to `true`, the original request body will be used; if set to `false` the `Body` field will be used (`false` is the default behaviour)
+- `IgnoreBody`: if this parameter is set to `true`, the original request body will be used; if set to `false` the `Body` field will be used (`false` is the default behavior)
 - `Method`: contains the HTTP method (`GET`, `POST`, etc.)
 - `RequestURI`: contains the request URI, including the query string, e.g. `/path?key=value`
 - `Scheme`: contains the URL scheme, e.g. `http`, `https`
@@ -229,7 +229,7 @@ Underscore.js is a JavaScript library that provides a lot of useful functional p
 - filter
 - invoke
 
-There are also more specialised goodies, including:
+There are also more specialized goodies, including:
 
 - function binding
 - JavaScript templating
