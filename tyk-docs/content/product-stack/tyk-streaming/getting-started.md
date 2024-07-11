@@ -8,7 +8,7 @@ In this guide, you'll learn how to set up Tyk Streams and configure your first a
 
 ## Feedback
 
-We value your feedback. Please use the following survey to provide feedback on your experience so far with Tyk Streams.
+Thank you for your interest in getting started with Tyk Streams. We would appreciate your feedback by completing the following survey on your experience so far.
 
 </br>
 
