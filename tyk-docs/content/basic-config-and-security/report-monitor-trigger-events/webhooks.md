@@ -13,6 +13,8 @@ In the context of Tyk Gateway, webhooks are event handlers that can be registere
 
 ## When to use webhook event handlers
 
+There are many occasions when you might use webhooks for event handling, here are just a few examples.
+
 #### Rate limit violations
 
 When an API consumer exceeds their allocated rate limit, the `RatelimitExceeded` event will be fired. A webhook event handler can be employed to notify an upstream system to take actions such as updating a dashboard, notifying the account manager, or adjusting the client's service tier.
