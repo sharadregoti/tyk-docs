@@ -10,7 +10,7 @@ We are excited to introduce our new product, *Tyk Streams*!
 
 We value your interest in using Tyk Streams. In order to get started please signup by clicking on the button below.
 
-{{< button_left href="https://survey.hsforms.com/1ItPCBg-_Tre8WFJZL4pp6Q3ifmg" color="green" content="Feedback" >}}
+{{< button_left href="https://survey.hsforms.com/1ItPCBg-_Tre8WFJZL4pp6Q3ifmg" color="green" content="Signup" >}}
 
 ---
 
