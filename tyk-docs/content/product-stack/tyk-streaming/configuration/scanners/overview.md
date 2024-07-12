@@ -1,7 +1,7 @@
 ---
 title: Scanners
 description: Explains an overview of scanners in Tyk Streams
-tags: [ "Tyk Streams", "Stream Processors", "Scanners" ]
+tags: [ "Tyk Streams", "Scanners" ]
 ---
 
 For most Tyk Streams inputs the data consumed comes pre-partitioned into discrete messages which can be comfortably held and processed in memory. However, some inputs such as the socket don't have a concept of consuming the data "entirely".
