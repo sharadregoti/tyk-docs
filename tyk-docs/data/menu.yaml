@@ -4129,6 +4129,10 @@ menu:
             path: /product-stack/tyk-streaming/configuration/scanners/lines
             category: Page
             show: True
+          - title: "Switch"
+            path: /product-stack/tyk-streaming/configuration/scanners/switch
+            category: Page
+            show: True
         - title: "Common Configurations"
           category: Directory
           show: True
