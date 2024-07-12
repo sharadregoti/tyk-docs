@@ -30,11 +30,18 @@ Some components don't have a `rate_limit` field but we might still wish to throt
 
 ```yaml
 input:
-  csv:
-    paths:
-      - ./foo.csv
+  http_server:
+    path: /post
+output:
+  http_server:
+    ws_path: /subscribe
+pipeline:
   processors:
     - rate_limit:
-        resource: foobar
+        resource: example_rate_limit
+rate_limit_resources:
+  - label: example_rate_limit
+    local:
+      count: 3
+      interval: 20s
 ```
-
