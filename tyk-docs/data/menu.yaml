@@ -4113,6 +4113,22 @@ menu:
             path: /product-stack/tyk-streaming/configuration/processors/split
             category: Page
             show: True
+        - title: "Scanners"
+          category: Directory
+          show: True
+          menu:
+          - title: "Overview"
+            path: /product-stack/tyk-streaming/configuration/scanners/overview
+            category: Page
+            show: true
+          - title: "Json Documents"
+            path: /product-stack/tyk-streaming/configuration/scanners/json-documents
+            category: Page
+            show: True
+          - title: "Line"
+            path: /product-stack/tyk-streaming/configuration/scanners/lines
+            category: Page
+            show: True
         - title: "Common Configurations"
           category: Directory
           show: True
