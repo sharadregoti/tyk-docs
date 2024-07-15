@@ -39,7 +39,7 @@ The built-in events that Tyk Gateway will generate are:
 - `HostDown`: the uptime checker has found that a host is down/not available
 - `HostUp`: the uptime checker has found that a host is available again after being offline
 
-## Token lifecycle events
+### Token lifecycle events
 
 - `TokenCreated`: a token has been created
 - `TokenUpdated`: a token has been changed/updated
