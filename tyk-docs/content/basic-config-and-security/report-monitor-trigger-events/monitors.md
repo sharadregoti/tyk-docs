@@ -68,6 +68,7 @@ You can set user- or organisation-specific trigger levels by adding a `monitor` 
 
 This has one field, which is an array of `trigger_limits` (thresholds) that must be in *descending* order and represent the percentage of the quota that must be reached in order for the trigger to be fired, for example:
 
+
 ```json
 "monitor": {
   "trigger_limits": [90.0, 75.0, 50.0]
