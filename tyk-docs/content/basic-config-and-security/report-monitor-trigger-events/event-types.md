@@ -12,7 +12,7 @@ The built-in events that Tyk Gateway will generate are:
 - `RatelimitExceeded`: the rate limit has been exceeded for a specific key
 - `OrgRateLimitExceeded`: the rate limit has been exceeded for a specific organisation
 - `RateLimitSmoothingUp`: the [intermediate rate limit allowance]({{< ref "getting-started/key-concepts/rate-limiting#rate-limit-smoothing" >}}) has been increased for a specific key
-- `RateLimitSmoouthingDown`: the [intermediate rate limit allowance]({{< ref "getting-started/key-concepts/rate-limiting#rate-limit-smoothing" >}}) has been decreased for a specific key
+- `RateLimitSmoothingDown`: the [intermediate rate limit allowance]({{< ref "getting-started/key-concepts/rate-limiting#rate-limit-smoothing" >}}) has been decreased for a specific key
 
 ### Standard quota events
 

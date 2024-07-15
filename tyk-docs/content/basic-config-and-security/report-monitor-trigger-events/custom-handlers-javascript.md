@@ -20,7 +20,7 @@ Custom event handlers are currently only supported by Tyk Classic APIs.
 
 ### Creating a custom event handler
 
-A custom event handler consists of a function that accepts two variables ()`event` and `context`) and has no return value.
+A custom event handler consists of a function that accepts two variables (`event` and `context`) and has no return value.
 
 Creating an event handler is very similar to [creating custom JS plugins]({{< ref "plugins/supported-languages/javascript-middleware/middleware-scripting-guide" >}}), simply invoke the correct constructors with a closure in the TykJS namespace:
 
