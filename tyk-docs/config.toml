@@ -1,5 +1,5 @@
 baseURL = "//tyk.io/docs/nightly/"
-languageCode = "en-gb"
+languageCode = "en-us"
 title = "Tyk Documentation"
 theme = "tykio"
 MetaDataFormat = "yaml"
