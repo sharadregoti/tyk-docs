@@ -1,0 +1,86 @@
+---
+date: 2017-03-24T16:39:31Z
+title: Sample HTTP Proxy
+tags: ["Tyk Operator", "Sample", "Kubernetes"]
+description: "Tyk Operator manifest example"
+---
+
+## HTTP Proxy
+
+This example creates a basic API definition that routes requests to a http://httpbin.org.
+
+```yaml
+apiVersion: tyk.tyk.io/v1alpha1
+kind: ApiDefinition
+metadata:
+  name: httpbin
+spec:
+  name: httpbin
+  use_keyless: true
+  protocol: http
+  active: true
+  proxy:
+    target_url: http://httpbin.org
+    listen_path: /httpbin
+    strip_listen_path: true
+```
+
+## HTTPS Proxy
+
+This example creates a API definition that routes requests to a http://httpbin.org via port 8443.
+
+```yaml
+# Delete a secret
+# kubectl delete secret my-test-tls
+# self-signed issuer & certificate should generate a new secret, reconciler
+#  associates with Tyk API Definition and deletes old certificate
+
+# Rotate a secret
+# kubectl cert-manager renew my-test-cert
+# self-signed issuer & certificate should generate a new secret, reconciler
+#  associates with Tyk API Definition - old cert is left as artifact because
+#  it was not explicitly deleted
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: selfsigned-issuer
+spec:
+  selfSigned: { }
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: my-test-cert
+spec:
+  secretName: my-test-tls
+  dnsNames:
+    - foo.com
+    - bar.com
+  privateKey:
+    rotationPolicy: Always
+  issuerRef:
+    name: selfsigned-issuer
+    # We can reference ClusterIssuers by changing the kind here.
+    # The default value is Issuer (i.e. a locally namespaced Issuer)
+    kind: Issuer
+    # This is optional since cert-manager will default to this value however
+    # if you are using an external issuer, change this to that issuer group.
+    group: cert-manager.io
+---
+apiVersion: tyk.tyk.io/v1alpha1
+kind: ApiDefinition
+metadata:
+  name: httpbin
+spec:
+  name: httpbin
+  use_keyless: true
+  protocol: https
+  listen_port: 8443
+  certificate_secret_names:
+    - my-test-tls
+  active: true
+  proxy:
+    target_url: http://httpbin.org
+    listen_path: /httpbin
+    strip_listen_path: true
+```
