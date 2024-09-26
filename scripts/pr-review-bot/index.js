@@ -7,15 +7,24 @@ import { marked } from 'marked';
 const prBody = await getPRBody()
 console.log("Read PR body")
 
+// Function to check if an item is a checklist
+function isChecklistItem(item) {
+    return item.raw && (item.raw.includes('[ ]') || item.raw.includes('[x]'));
+}
+
 // Parse the markdown to HTML or AST (Abstract Syntax Tree)
 const lexer = marked.lexer(prBody);
 
 // Find the checklist items in the parsed output
-const checklistItems = lexer.find(item => item.type === 'list').items.map(item => {
-    const isChecked = item.raw.includes('[x]');
-    const text = item.raw.replace(/- \[.\] /, '').trim();
-    return { text, checked: isChecked };
-});
+const checklistItems = lexer
+    .filter(item => item.type === 'list') // Filter out non-list items and comments
+    .flatMap(list => list.items) // Extract list items
+    .filter(isChecklistItem) // Only checklist items
+    .map(item => {
+        const isChecked = item.raw.includes('[x]');
+        const text = item.raw.replace(/- \[.\] /, '').trim(); // Remove the checklist syntax
+        return { text, checked: isChecked };
+    });
 
 let checklistFailedTitles = ""
 
