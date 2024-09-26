@@ -17,10 +17,10 @@ jobs:
           node-version: '22' # Use your desired Node.js version
 
       - name: Install dependencies
-        run: npm install
+        run: cd scripts/pr-review-bot/ && npm install
 
       - name: Run PR checklist script
-        run: node path/to/your/script.js
+        run: node scripts/pr-review-bot/index.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Use GitHub's automatically generated token
           PR_NUMBER: ${{ github.event.pull_request.number }}
