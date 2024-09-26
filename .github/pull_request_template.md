@@ -29,7 +29,7 @@
 - [ ] I have [reviewed the guidelines](https://github.com/TykTechnologies/tyk-docs/blob/master/CONTRIBUTING.md) for contributing to this repository.
 - [ ] I have [read the technical guidelines](https://github.com/TykTechnologies/tyk-docs/blob/master/CONTRIBUTING-TECHNICAL-GUIDE.md) for contributing to this repository.
 - [ ] Make sure you have started *your change* off *our latest `master`*.
-- [ ] I **labeled** the PR
+- [ ] Please add the appropriate release label to this PR: if it is for a future release, label it as "future-release" and specify the future version (e.g., future-release-6.0); if it should be merged into an older version, use the specific version label (e.g., 4.1, 5.1); if no label is added, it will be assumed that the PR should be merged into the current latest version (e.g., 5.5) and master.
 <!-- Label your PR according to the type of changes that your code introduces. This ensures that we know how/when to publish the PR. These are the options:
 - Fixing typo (please merge to production) - add the label `now`
 - Documenting a new feature (please merge to production) - add the label `now`
