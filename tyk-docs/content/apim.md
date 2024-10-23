@@ -9,15 +9,7 @@ aliases:
 ---
 
 
-
-Tyk API Platform offers various deployment options, consisting of both [open source and proprietary]({{< ref "tyk-stack" >}})
-components.
-
-Choosing the right one for your organization depends on your specific requirements and preferences.
-</br>Don’t hesitate to contact us for assistance {{< button_left href="https://tyk.io/contact/" color="green" content="Contact us" >}}
-
-|                                                                                                                                                                                                                                    | [Open Source]({{< ref "apim/open-source" >}})  |   [Self-Managed]({{< ref "tyk-on-premises" >}})      |  [Cloud](https://account.cloud-ara.tyk.io/signup)
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|-------------------|---------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|-------------------|---------
 | API Gateway Capabilities <br> <ul><li>Rate Limiting</li><li>Authentication</li> <li>API Versioning</li><li>Granular Access Control</li><li>GraphQL</li>  <li>and [much more]({{< ref "apim/open-source#tyk-gateway" >}})</li></ul> | ✅             |✅	              |✅
 | [Version Control]({{< ref "/product-stack/tyk-sync/overview" >}}) Integration                                                                                                                                                      | ✅		      |✅	              |✅
 | [API Analytics Exporter]({{< ref "tyk-pump" >}})                                                                                                                                                                                   | ✅		      |✅	              |✅	 
