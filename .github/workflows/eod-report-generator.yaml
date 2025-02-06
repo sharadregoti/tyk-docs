@@ -9,7 +9,7 @@ on:
         default: "sharadregoti"
       PR_SCAN_DATE:
         description: "The date when the report was generated. Defaults to the current date (e.g., 2025-02-04)."
-        required: true
+        required: false
 
 jobs:
   run-script:
